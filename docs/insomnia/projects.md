@@ -1,7 +1,7 @@
 ---
 layout: article-detail
 title:  Projects
-category: "Get Started"
+category: "Начать"
 category-url: get-started
 ---
 

@@ -1,31 +1,32 @@
 ---
 layout: article-detail
-title:  Insomnia Configuration File
-category: "Get Started"
+title:  Файл конфигурации Insomnia
+category: "Начать"
 category-url: get-started
 ---
 
-In addition to the Insomnia Preferences available through the UI, computer admins can configure the Insomnia application for other users through an Insomnia Configuration File.
+В дополнение к настройкам Insomnia, доступным через пользовательский интерфейс, администраторы компьютеров могут настроить приложение Insomnia для других пользователей с помощью файла конфигурации Insomnia.
 
-The Insomnia Configuration File enables computer admins to alter some settings and UI components when they set up regulated local environments. Admins may find this useful to overwrite configurations that users cannot change.
-
-{:.alert .alert-primary}
-**Note**: This feature is not related to [team functionality](/insomnia/team-collaboration), so team admins won't be able to control settings for the team's members (unless they also happen to be computer admins).
-
-## Configuration File Location
-
-The Insomnia application does not automatically come with an Insomnia Configuration File. Users or admins will create a file specifically called `insomnia.config.json` in one of two locations:
-- The [app data directory](/insomnia/application-data)
-- The same directory as `insomnia.exe` when running the portable Windows version. This location takes precedence if there is also an Insomnia Configuration File in the app data directory.
+Файл конфигурации Insomnia позволяет администраторам компьютеров изменять некоторые настройки и компоненты пользовательского интерфейса при настройке регулируемых локальных сред. Администраторы могут счесть это полезным для перезаписи конфигураций, которые пользователи не могут изменить.
 
 {:.alert .alert-primary}
-**Note**: In order for the Insomnia Configuration File to apply as expected, ensure that users are unable to modify the file or run the portable `insomnia.exe` file from another location on their computer.
+**Примечание**: Эта функция не связана с [функциональностью команды](/insomnia/team-collaboration), поэтому администраторы группы не смогут управлять настройками членов группы (если они также не являются администраторами компьютеров).
 
-## Configuration File Contents
+## Расположение файла конфигурации
 
-The Insomnia Configuration File must include the property `insomniaConfig` with the value `1.0.0`. The `settings` object can be empty.
+Приложение Insomnia не поставляется автоматически с файлом конфигурации Insomnia. Пользователи или администраторы создадут файл с именем `insomnia.config.json` в одном из двух мест:
 
-The following example shows all of the [`settings`](/insomnia/insomnia-config-file/#settings) options available.
+- [Каталог данных приложения](/insomnia/application-data)
+- Тот же каталог, что и `insomnia.exe` при запуске портативной версии Windows. Это расположение имеет приоритет, если в каталоге данных приложения также есть файл конфигурации Insomnia.
+
+{:.alert .alert-primary}
+**Примечание**: Чтобы файл конфигурации Insomnia применялся должным образом, убедитесь, что пользователи не могут изменить файл или запустить переносимый файл `insomnia.exe` из другого места на своем компьютере.
+
+## Содержимое файла конфигурации
+
+Файл конфигурации Insomnia должен включать свойство `insomniaConfig` со значением `1.0.0`. Объект `settings` может быть пустым.
+
+В следующем примере показаны все доступные параметры [`settings`](/insomnia/insomnia-config-file/#settings).
 
 ```json
 {
@@ -40,18 +41,18 @@ The following example shows all of the [`settings`](/insomnia/insomnia-config-fi
 }
 ```
 
-## Settings
+## Настройки
 
-The following are the settings you're allowed to configure.
+Ниже приведены параметры, которые вам разрешено настраивать.
 
 {:.alert .alert-primary}
-**Note**: If you try to configure a setting that's not allowed to be configured, your application will not run and you will be shown an alert. Verify that all the settings you add are allowed and are configured correctly.
+**Примечание**: Если вы попытаетесь настроить параметр, который нельзя настраивать, ваше приложение не запустится, и вам будет показано предупреждение. Убедитесь, что все добавленные вами параметры разрешены и настроены правильно.
 
 {:.table .table-striped}
-Parameter | Data Type | Default | Description
+Параметр | Тип данных | По умолчанию | Описание
 --------- | --------- | -------| -----------
-`allowNotificationRequests` | Boolean | `true` | If `false`, Insomnia won’t send requests to the api.insomnia.rest/notifications endpoint. This can have effects like the users won’t be notified in-app about billing issues and they won’t receive tips about app usage.
-`disableUpdateNotification` | Boolean | `false` | If `true`, Insomnia won’t show a notification when new updates are available. Users can still check for updates in Preferences.
-`enableAnalytics` | Boolean | `false` | If `true`, Insomnia will send anonymous data about features and plugins used.
-`disablePaidFeatureAds` | Boolean | `false` | If `true`, Insomnia won’t show any visual elements that recommend plan upgrades.
-`incognitoMode` | Boolean | `false` | If `true`, Insomnia won’t make any network requests other than the requests you ask it to send. This configuration controls and overwrites any existing settings for  **Send Usage Stats** and **Allow Notification Requests** by disabling both.
+`allowNotificationRequests` | Boolean | `true` | Если установлено значение `false`, Insomnia не будет отправлять запросы на конечную точку api.insomnia.rest/notifications endpoint. Это может привести к тому, что пользователи не будут получать уведомления в приложении о проблемах с оплатой и не будут получать советы по использованию приложения.
+`disableUpdateNotification` | Boolean | `false` | Если `true`, Insomnia не будет показывать уведомление о появлении новых обновлений. Пользователи по-прежнему могут проверять наличие обновлений в настройках.
+`enableAnalytics` | Boolean | `false` | Если `true`, Insomnia будет отправлять анонимные данные об используемых функциях и плагинах.
+`disablePaidFeatureAds` | Boolean | `false` | Если `true`, Insomnia не будет показывать визуальные элементы, рекомендующие обновления плана.
+`incognitoMode` | Boolean | `false` | Если `true`, Insomnia не будет делать никаких сетевых запросов, кроме запросов, которые вы просите отправить. Эта конфигурация контролирует и перезаписывает любые существующие настройки для **Отправлять статистику использования** и **Разрешить запросы уведомлений** путем отключения обоих.

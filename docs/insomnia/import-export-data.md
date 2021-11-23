@@ -1,37 +1,37 @@
 ---
 layout: article-detail
-title:  Import and Export Data
-category: "Get Started"
+title:  Импорт и экспорт данных
+category: "Начать"
 category-url: get-started
 ---
 
-Insomnia supports importing and exporting. Currently, the supported import formats are Insomnia, Postman v2, HAR, OpenAPI, Swagger, WSDL, and cURL.
+Insomnia поддерживает импорт и экспорт. В настоящее время поддерживаются форматы импорта: Insomnia, Postman v2, HAR, OpenAPI, Swagger, WSDL и cURL.
 
-To import or export data, go to **Preferences**, then the **Data** tab. 
+Чтобы импортировать или экспортировать данные, перейдите в **Preferences**, затем на вкладку **Data**. 
 
-![The Data tab in Preferences allows you to import or export data via dropdown options.](/assets/images/import-export-data.png)
-_The Data tab in Preferences allows you to import or export data via dropdown options._
+![Вкладка «Данные» в настройках позволяет импортировать или экспортировать данные с помощью раскрывающихся опций.](/assets/images/import-export-data.png)
+_Вкладка «Данные» в настройках позволяет импортировать или экспортировать данные с помощью раскрывающихся опций._
 
-## Export Special Resources and Resource Types
+## Экспорт специальных ресурсов и типов ресурсов
 
-The following outlines special resource IDs, used to map to data, and resource types, used to outline what's included and excluded from an export file. 
+Ниже описаны идентификаторы специальных ресурсов, которые используются для сопоставления с данными, и типы ресурсов, используемые для обозначения того, что включено и исключено из файла экспорта.
 
 {:.alert .alert-primary}
-**Note**: The [Insomnia Importers Package](https://github.com/kong/insomnia/tree/develop/packages/insomnia-importers) has support for migrating older export versions to the latest, as well as supporting external formats like HAR, Postman, Swagger/OpenAPI, and Curl. If you want to contribute new formats, feel free to submit a pull request to the [insomnia-importers](https://www.npmjs.com/package/insomnia-importers) NPM package.
+**Примечание**: [Пакет Insomnia Importers](https://github.com/kong/insomnia/tree/develop/packages/insomnia-importers) поддерживает перенос старых экспортных версий на последние, а также поддерживает внешние форматы, такие как HAR, Postman, Swagger/OpenAPI и Curl. Если вы хотите внести новые форматы, не стесняйтесь отправлять пул-реквест в NPM пакет [insomnia-importers](https://www.npmjs.com/package/insomnia-importers).
 
-### Special Resource IDs
+### Специальные идентификаторы ресурсов
 
-Special resource IDs are used to map to data in an active workspace. They look like variables within the export file. Some example special resource IDs are:
+Специальные идентификаторы ресурсов используются для сопоставления с данными в активной рабочей области. Они выглядят как переменные в файле экспорта. Вот некоторые примеры идентификаторов специальных ресурсов:
 
 {:.table .table-striped}
-Resource ID | Description
+Идентификатор ресурса | Описание
 ----------- | -----------
-`__WORKSPACE_ID__` | Maps to the ID of the currently active workspace
-`__BASE_ENVIRONMENT_ID__` | Maps to the ID of the active workspace base environment
-`__<NAME>_<NUMBER>__` |  Any value matching this format will deterministically generate a new ID at import time
+`__WORKSPACE_ID__` | Соответствует идентификатору активной в данный момент рабочей области
+`__BASE_ENVIRONMENT_ID__` | Сопоставляется с идентификатором активной базовой среды рабочего пространства
+`__<NAME>_<NUMBER>__` | Любое значение, соответствующее этому формату, будет детерминированно генерировать новый идентификатор во время импорта
 
-## Resource Types
+## Типы ресурсов
 
-We offer a variety of resource types. Resource types outline what is included and excluded from an export file. Some responses and metadata models aren't exported.
+Мы предлагаем различные типы ресурсов. Типы ресурсов определяют, что включается и исключается из файла экспорта. Некоторые ответы и модели метаданных не экспортируются.
 
-See all resource types listed under [data.resources](https://github.com/Kong/insomnia/blob/7abde2a01700f587179941b3231fb1078fcb1e41/packages/insomnia-app/app/common/export.ts#L185-L198).
+Смотрите все типы ресурсов, перечисленные в разделе [data.resources](https://github.com/Kong/insomnia/blob/7abde2a01700f587179941b3231fb1078fcb1e41/packages/insomnia-app/app/common/export.ts#L185-L198).

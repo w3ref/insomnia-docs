@@ -1,7 +1,7 @@
 ---
 layout: article-detail
 title:  Version Control Sync
-category: "Get Started"
+category: "Начать"
 category-url: get-started
 ---
 

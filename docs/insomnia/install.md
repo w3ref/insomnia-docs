@@ -10,7 +10,6 @@ Insomnia доступна в macOS, Windows и Linux. Если вы еще не 
 ## Mac
 
 {:.alert .alert-primary}
-
 **Примечание**: Минимальная поддерживаемая версия macOS 10.12 Sierra.
 
 Получите Insomnia на macOS, загрузив приложение или используя Brew.

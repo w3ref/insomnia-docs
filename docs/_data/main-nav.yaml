@@ -8,13 +8,13 @@ toc:
         url: /insomnia/install
       - title: Миграция из Designer
         url: /insomnia/migrate-from-designer
-      - title: Import and Export Data
+      - title: Импорт и экспорт данных
         url: /insomnia/import-export-data
-      - title: Environment Variables
+      - title: Переменные среды
         url: /insomnia/environment-variables
-      - title: HTTP(S) Proxy
+      - title: HTTP(S) прокси
         url: /insomnia/http-proxy
-      - title: Insomnia Configuration File
+      - title: Файл конфигурации Insomnia
         url: /insomnia/insomnia-config-file
   - title: Requests and Responses
     collapse-id: requests

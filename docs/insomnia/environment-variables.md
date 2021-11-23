@@ -1,67 +1,71 @@
 ---
 layout: article-detail
-title:  Environment Variables
-category: "Get Started"
+title:  Переменные среды
+category: "Начать"
 category-url: get-started
 ---
 
-Set up environment variables to reuse values across multiple requests. Common variables are base URLs, authentication tokens, and resource IDs.
+Настройте переменные среды для повторного использования значений в нескольких запросах. Общие переменные - это базовые URL-адреса, токены аутентификации и идентификаторы ресурсов.
 
-![Request using base URL and ID variables that can be reused.](/assets/images/env-variables.png)
-_Request using base URL and ID variables that can be reused._
+![Запрос с использованием переменных базового URL и идентификатора, которые можно использовать повторно.](/assets/images/env-variables.png)
+_Запрос с использованием переменных базового URL и идентификатора, которые можно использовать повторно._
 
-## Environment Basics
+## Основы среды
 
-An environment is a [JSON object](https://www.json.org/json-en.html) containing key-value pairs of the data you want to reference. Access the environment manager through the environment dropdown menu at the top of the sidebar. From here, you can edit the base environment, create sub environments, assign colors, and more. 
+Среда - это [объект JSON](https://www.json.org/json-en.html), содержащий пары ключ-значение данных, на которые вы хотите ссылаться. Получите доступ к диспетчеру среды через раскрывающееся меню среды в верхней части боковой панели. Отсюда вы можете редактировать базовую среду, создавать дополнительные среды, назначать цвета и многое другое.
 
-![The Manage Environments modal allows you to access and edit your base and sub environments.](/assets/images/manage-envs.png)
-_The Manage Environments modal allows you to access and edit your base and sub environments._
-
-{:.alert .alert-primary}
-**Note**: Variable names must only contain letters, numbers, and underscores.
-
-## Referencing Environment Variables
-
-Environment variables can be referenced in (almost) any text input within of the Insomnia application. There are two ways to do this:
-
-1. Summon the autocomplete dropdown by pressing Control+Space
-2. Allow the autocomplete to show automatically as you type
-
-![After you have set environment variables, you can access the variables via autocomplete dropdown menu.](/assets/images/reference-env-variables.png)
-_After you have set environment variables, you can access the variables via autocomplete dropdown menu._
-
-Once a variable is selected, it will be displayed with a colored placeholder. Clicking on the button will show a modal dialog for further editing.
+![Модальное окно Manage Environments позволяет вам получать доступ и редактировать вашу базовую и вспомогательную среду.](/assets/images/manage-envs.png)
+_Модальное окно Manage Environments позволяет вам получать доступ и редактировать вашу базовую и вспомогательную среду._
 
 {:.alert .alert-primary}
-**Note**: Hovering over the placeholder with your mouse will show the current value.
+**Примечание**: Имена переменных должны содержать только буквы, цифры и символы подчеркивания.
 
-## Base Environment
+## Ссылка на переменные среды
 
-A base environment is assigned to every workspace within Insomnia and can be accessed via the environment manager. Variables in the base environment are available throughout the entire workspace, even if other environments are defined. A common use for the base environment is to store default variables that will not change across production, staging, or development services such as resource names, languages, sample data, etc.
+На переменные среды можно ссылаться (почти) в любом текстовом вводе в приложении Insomnia. Есть два способа сделать это:
 
-## Sub Environments
-Sub environments are most commonly used for store variables related to production, staging, or development services. They are also sometimes used to defining variables for different users of a single app. Once sub environments exist, they can be activated via the environment dropdown.
+1. Вызовите раскрывающийся список автозаполнения, нажав Control+Space
+2. Разрешите автозаполнение автоматически отображаться при вводе текста
 
-{:.alert .alert-primary}
-**Note**: Sub environments can be created as Private, meaning they will never be synced or exported.
+![После того, как вы установили переменные среды, вы можете получить доступ к переменным через раскрывающееся меню автозаполнения.](/assets/images/reference-env-variables.png)
+_После того, как вы установили переменные среды, вы можете получить доступ к переменным через раскрывающееся меню автозаполнения._
 
-## Folder Environments
-Folder environments are a rarely used feature, but can be invaluable for specific use cases. You can access a folder's environment from the folder dropdown in the sidebar. Any variables defined at the folder-level will be available to all requests within that folder. These will also override any variables defined within a sub environment or base environment.
-
-## Environment Priority
-If two variables with the same name are defined in multiple environments, the environment with higher priority will win. Here is the priority of environment, ranging from highest to lowest:
-
-1. Folder Environment (highest priority)
-2. Sub Environment
-3. Base Environment (lowest priority)
-
-For example, if a variable is defined in a base environment and in a sub environment, the value in the sub environment will overwrite the one in the base environment.
-
-## Recursive Variables
-Environments can reference other variables, including variables defined within itself. This is especially useful for composing more complex variables such as the domain name in the following example.
-
-![Use variables within environment variable json configuration to reference other variables and minimize duplication.](/assets/images/recursive-variables.png)
-_Use variables within environment variable json configuration to reference other variables and minimize hard-coded values._
+После выбора переменной она будет отображаться с цветным заполнителем. При нажатии на кнопку откроется модальное диалоговое окно для дальнейшего редактирования.
 
 {:.alert .alert-primary}
-**Note**: Environment variables can also contain Template Tags. Recursive, or nested, variables only work while the environment is active.
+**Примечание**: При наведении курсора мыши на заполнитель отображается текущее значение.
+
+## Базовая среда
+
+Базовая среда назначается каждой рабочей области в Insomnia, и к ней можно получить доступ через диспетчер среды. Переменные в базовой среде доступны во всем рабочем пространстве, даже если определены другие среды. Обычно базовая среда используется для хранения переменных по умолчанию, которые не изменяются в процессе производства, подготовки или разработки, таких как имена ресурсов, языки, образцы данных и т. д.
+
+## Подокружения
+
+Подсреды чаще всего используются для переменных хранилища, связанных с производственными, промежуточными службами или службами разработки. Они также иногда используются для определения переменных для разных пользователей одного приложения. Как только подсреды существуют, их можно активировать с помощью раскрывающегося списка среды.
+
+{:.alert .alert-primary}
+**Примечание**: Подсреды могут быть созданы как частные, что означает, что они никогда не будут синхронизироваться или экспортироваться.
+
+## Папка Сред
+
+Среды папок - это редко используемая функция, но они могут быть бесценными для конкретных случаев использования. Вы можете получить доступ к среде папки из раскрывающегося списка папок на боковой панели. Любые переменные, определенные на уровне папки, будут доступны для всех запросов в этой папке. Они также переопределят любые переменные, определенные во вспомогательной или базовой среде.
+
+## Приоритет среды
+
+Если две переменные с одинаковыми именами определены в нескольких средах, победит среда с более высоким приоритетом. Вот приоритет среды, от самого высокого до самого низкого:
+
+1. Папка среды (наивысший приоритет)
+2. Дополнительная среда
+3. Базовая среда (самый низкий приоритет)
+
+Например, если переменная определена в базовой среде и во вспомогательной среде, значение во вспомогательной среде перезапишет значение в базовой среде.
+
+## Рекурсивные переменные
+
+Среды могут ссылаться на другие переменные, включая переменные, определенные внутри себя. Это особенно полезно для составления более сложных переменных, таких как имя домена в следующем примере.
+
+![Используйте переменные в конфигурации json переменной среды, чтобы ссылаться на другие переменные и минимизировать дублирование.](/assets/images/recursive-variables.png)
+_Используйте переменные в конфигурации json для переменных среды, чтобы ссылаться на другие переменные и минимизировать жестко заданные значения._
+
+{:.alert .alert-primary}
+**Примечание**: Переменные среды также могут содержать теги шаблона. Рекурсивные или вложенные переменные работают только тогда, когда среда активна.

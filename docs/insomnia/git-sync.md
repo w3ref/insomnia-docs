@@ -1,7 +1,7 @@
 ---
 layout: article-detail
 title:  Sync with Git
-category: "Get Started"
+category: "Начать"
 category-url: get-started
 ---
 
