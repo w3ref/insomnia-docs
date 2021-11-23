@@ -1,22 +1,22 @@
-# Insomnia Documentation
+# Документация Insomnia
 
-Welcome to the open-source Insomnia documentation repository. Find the Insomnia documentation site at [docs.insomnia.rest](https://docs.insomnia.rest/).
+Добро пожаловать в репозиторий документации Insomnia с открытым исходным кодом. Найдите сайт документации Insomnia по адресу [docs.insomnia.rest](https://docs.insomnia.rest/) или ее перевод по адресу [insomnia.w3ref.ru](https://insomnia.w3ref.ru/).
 
-Please refer to our [Contributing Guidelines](/CONTRIBUTING.md).
+Пожалуйста, обратитесь к нашим [Правилам участия](/CONTRIBUTING.md).
 
-## Run locally
+## Запуск локально
 
-1. Clone the repository.
-2. Install [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/).
-3. Run `cd docs`.
-4. Run `bundle install`.
-5. Run `bundle exec jekyll serve`.
-6. Browse to http://localhost:4000.
+1. Клонируйте репозиторий.
+2. Установите [Ruby](https://www.ruby-lang.org/en/) и [Bundler](https://bundler.io/).
+3. Запустите `cd docs`.
+4. Запустите `bundle install`.
+5. Запустите `bundle exec jekyll serve`.
+6. Смотреть на http://localhost:4000.
 
-## Run with Docker
+## Запуск с Docker
 
-1. Clone the repository.
-2. Install [Docker](https://docs.docker.com/get-docker/).
-3. Run `make build`  or `docker build --tag insomnia-docs:latest .`.
-4. Run `make run` or `docker run -it --rm -p 4000:4000 insomnia-docs:latest`.
-5. Browse to http://localhost:4000.
+1. Клонируйте репозиторий.
+2. Установите [Docker](https://docs.docker.com/get-docker/).
+3. Запустите `make build`  or `docker build --tag insomnia-docs:latest .`.
+4. Запустите `make run` or `docker run -it --rm -p 4000:4000 insomnia-docs:latest`.
+5. Смотреть на http://localhost:4000.

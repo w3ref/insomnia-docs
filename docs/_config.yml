@@ -1,10 +1,9 @@
-title: Insomnia Docs
+title: Документация Insomnia
 email: support@insomnia.rest
 description: >- # this means to ignore newlines until "baseurl:"
-  Insomnia Docs: Deliver high quality APIs through standards 
-  and collaboration with the Insomnia API design platform.
+  Документация Insomnia: Предоставление высококачественных API-интерфейсов с помощью стандартов и сотрудничества с платформой разработки Insomnia API.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://docs.insomnia.rest" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://insomnia.w3ref.ru" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: getinsomnia
 github_username:  insomnia
 
