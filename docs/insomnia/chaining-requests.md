@@ -1,61 +1,63 @@
 ---
 layout: article-detail
-title:  Chaining Requests
-category: "Requests and Responses"
+title:  Цепочка запросов
+category: "Запросы и ответы"
 category-url: requests-and-responses
 ---
 
-Insomnia provides the ability to extract values from the responses of other requests. This is commonly referred to as chaining because the dependency upon another request forms a link.
+Insomnia дает возможность извлекать значения из ответов на другие запросы. Это обычно называется цепочкой, потому что зависимость от другого запроса формирует ссылку.
 
-Request chaining may be difficult to understand at first, especially if the concepts of [Template Tags](/insomnia/template-tags) or [Environment Variables](/insomnia/environment-variables) are unfamiliar. I suggest first taking a look at those if you are having trouble getting started.
+Поначалу может быть трудно понять цепочку запросов, особенно если понятия [Теги шаблона](/insomnia/template-tags) или [Переменные среды](/insomnia/environment-variables) незнакомы. Я предлагаю сначала взглянуть на них, если у вас возникли проблемы с началом работы.
 
-First, let's take a look at some examples that chaining may be useful for.
+Во-первых, давайте рассмотрим несколько примеров, для которых может быть полезно объединение в цепочку.
 
-## Common Uses
+## Обычное использование
 
-To help explain request chaining, here are some common use cases:
+Чтобы помочь объяснить формирование цепочки запросов, вот несколько распространенных случаев использования:
 
-* use token from login response as an Authorization header
-* use id from POST `/item in PUT /items/<id>`
-* use entire body from one response to upload to another
+* использовать токен из ответа на вход в качестве заголовка авторизации
+* использовать идентификатор из POST `/item in PUT /items/<id>`
+* использовать все тело из одного ответа для загрузки в другой
 
-There are many other ways to use chaining, but those are the most commonly used examples.
+Есть много других способов использования цепочек, но это наиболее часто используемые примеры.
 
-## Chaining Basics
+## Основы цепочки
 
-To get started, select one of three Response tags from the autocomplete dropdown. You can invoke the dropdown be pressing CTRL+Space or by typing starting characters of the tag (respo...). The response tag can be used anywhere that environment variables are supported (URL, headers, request body, environments, etc).
+Для начала выберите один из трех тегов ответа в раскрывающемся списке автозаполнения. Вы можете вызвать раскрывающийся список, нажав CTRL+Space или введя начальные символы тега (respo...). Тег ответа можно использовать везде, где поддерживаются переменные среды (URL, заголовки, тело запроса, среды и т. д.).
 
-Reference the id property of a created resource from another request. Then, click the tag to select the request and specify the desired parameters. This will open a dialog where you can configure the tag.
-
-{:.alert .alert-primary}
-**Note**: Use this tag inside an Environment Variable to prevent duplicated effort
-
-Now, you can configure the tag parameters and see what the result will be in the Live Preview section of the dialog.
+Ссылка на свойство id созданного ресурса из другого запроса. Затем щелкните тег, чтобы выбрать запрос и указать желаемые параметры. Откроется диалоговое окно, в котором вы можете настроить тег.
 
 {:.alert .alert-primary}
-**Note**: Value is dynamically extracted from the last successful response of the request being referenced.
+**Примечание**: Используйте этот тег внутри переменной среды, чтобы предотвратить дублирование усилий
 
-Data can be extracted from multiple parts of a response. I'll explain the differences now.
-
-## Response Reference Types
-
-There are three types of response tags, each for referencing a different part of the response.
-
-### Raw Body
-
-The Raw Body reference type will reference the entire body contents of a request. This can be useful if you download something in one request that needs to be uploaded in another.
-
-### Body Attribute
-The Body reference type makes it possible to pull specific attributes out of a response body. It allows you to use either JSONPath or XPath queries (depending on the Content-Type) to extract specific attributes from a response body.
+Теперь вы можете настроить параметры тега и посмотреть, какой будет результат, в разделе диалогового окна «Просмотр в реальном времени».
 
 {:.alert .alert-primary}
-**Note**: This reference type only works on JSON or XML responses
+**Примечание**: Значение динамически извлекается из последнего успешного ответа на указанный запрос.
 
-For example, a login request may respond with a JSON object that looks like {"auth_token": "secret-token"}. This will allow you to use a JSONPath filter of $.auth_token to reference the token itself in a subsequent request.
+Данные могут быть извлечены из нескольких частей ответа. Я объясню различия сейчас.
 
-### Header Value
-The Header reference type is for pulling specific header values out of a response, which can be useful for referencing nonce values or other useful information.
+## Типы ссылок на ответы
 
-## Conclusion
+Есть три типа тегов ответа, каждый для ссылки на отдельную часть ответа.
 
-HTTP APIs often have dependencies between endpoints. For example, after creating a resource, it is often required to use that resources ID to fetch or update it. The response tag enables the ability to satisfy these dependencies and eliminate the need to constantly be copying and pasting these values manually. There may be a slight learning curve, but it's definitely worth getting to know these tags, as they can save tremendous amounts of time in the future.
+### Сырое тело запроса
+
+Тип ссылки Raw Body будет ссылаться на все содержимое тела запроса. Это может быть полезно, если вы загружаете что-то в одном запросе, а нужно загрузить в другом.
+
+### Атрибут тела
+
+Тип ссылки Body позволяет извлекать определенные атрибуты из тела ответа. Он позволяет использовать запросы JSONPath или XPath (в зависимости от Content-Type) для извлечения определенных атрибутов из тела ответа.
+
+{:.alert .alert-primary}
+**Примечание**: Этот ссылочный тип работает только с ответами JSON или XML
+
+Например, запрос на вход в систему может отвечать объектом JSON, который выглядит как {"auth_token": "secret-token"}. Это позволит вам использовать фильтр JSONPath filter в $.auth_token для ссылки на сам токен в последующем запросе.
+
+### Значение заголовка
+
+Тип ссылки заголовка предназначен для извлечения определенных значений заголовка из ответа, что может быть полезно для ссылки на значения nonce или другую полезную информацию.
+
+## Заключение
+
+HTTP API часто имеют зависимости между конечными точками. Например, после создания ресурса часто требуется использовать этот идентификатор ресурса для его получения или обновления. Тег ответа позволяет удовлетворить эти зависимости и устранить необходимость постоянного копирования и вставки этих значений вручную. Может потребоваться небольшая кривая обучения, но с этими тегами определенно стоит ознакомиться, поскольку они могут сэкономить огромное количество времени в будущем.

@@ -1,17 +1,17 @@
 ---
 layout: article-detail
-title:  Post CSV Data
-category: "Requests and Responses"
+title:  Размещение данных CSV
+category: "Запросы и ответы"
 category-url: requests-and-responses
 ---
 
-This section outlines how to POST CSV data.
+В этом разделе рассказывается, как отправлять данные CSV на POST.
 
-In the middle column underneath the request box, click Body. Select “Binary file” as the Body type.
+В среднем столбце под полем запроса щелкните Текст. Выберите «Двоичный файл» в качестве типа тела.
 
-![Change the Body type to Binary File from the Body dropdown menu underneath the request box.](/assets/images/binary-file-option.png)
-_To get the option to POST CSV data, select Binary File from the Body dropdown menu._
+![Измените тип тела на двоичный файл в раскрывающемся меню тела под полем запроса.](/assets/images/binary-file-option.png)
+_Чтобы получить возможность POST CSV-данных, выберите Binary File в раскрывающемся меню Body._
 
-You will then be prompted to choose a file.
+Затем вам будет предложено выбрать файл.
 
-Select your CSV data file and you will be able to send a POST request containing data in CSV format. This is given that you set the appropriate content-type headers as needed by the API you're trying to reach.
+Выберите файл данных CSV, и вы сможете отправить запрос POST, содержащий данные в формате CSV. Это при условии, что вы устанавливаете соответствующие заголовки типа контента в соответствии с требованиями API, к которому вы пытаетесь обратиться.

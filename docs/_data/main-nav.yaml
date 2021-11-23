@@ -16,20 +16,20 @@ toc:
         url: /insomnia/http-proxy
       - title: Файл конфигурации Insomnia
         url: /insomnia/insomnia-config-file
-  - title: Requests and Responses
+  - title: Запросы и ответы
     collapse-id: requests
     items: 
-      - title: Responses
+      - title: Ответы
         url: /insomnia/responses
-      - title: Request Collections
+      - title: Коллекция запросов
         url: /insomnia/request-collections
-      - title: Request Timeouts
+      - title: Таймауты запроса
         url: /insomnia/request-timeouts
-      - title: Chaining Requests
+      - title: Цепочка запросов
         url: /insomnia/chaining-requests
-      - title: Post CSV Data
+      - title: Размещение данных CSV
         url: /insomnia/post-csv-data
-      - title: SOAP Requests
+      - title: Запросы SOAP
         url: /insomnia/soap-requests
   - title: Collaboration
     collapse-id: collaboration

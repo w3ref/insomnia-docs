@@ -1,47 +1,47 @@
 ---
 layout: article-detail
-title:  Responses
-category: "Requests and Responses"
+title:  Ответы
+category: "Запросы и ответы"
 category-url: requests-and-responses
 ---
 
-Insomnia is most commonly used for displaying text content like JSON and XML, and it also has the ability to display rich content in the following formats:
+Insomnia чаще всего используется для отображения текстового содержимого, такого как JSON и XML, а также имеет возможность отображать расширенный контент в следующих форматах:
 
 * HTML
-* Images
+* Изображения
 * SVG
-* Audio files
+* Аудио файлы
 * PDF 
 * CSV
 
-Access the **Preview** tab dropdown menu to change the Preview Mode. Note that the tab name changes between Preview, Source, and Raw as you select a new option. 
+Откройте раскрывающееся меню вкладки **Preview**, чтобы изменить режим предварительного просмотра. Обратите внимание, что имя вкладки меняется между Preview, Source и Raw при выборе нового параметра. 
 
-![The Preview tab appears in the right-side panel, and you can access Preview Modes via by clicking on the Preview dropdown menu.](/assets/images/preview.png)
-_Use the Preview dropdown menu to change the Preview Mode._
+![Вкладка Preview отображается на правой панели, и вы можете получить доступ к режимам предварительного просмотра, щелкнув раскрывающееся меню Preview.](/assets/images/preview.png)
+_Используйте раскрывающееся меню предварительного просмотра, чтобы изменить режим предварительного просмотра._
 
-## Search
+## Поиск
 
-To execute a plain text search of a response, click inside the response and type CTRL + F (or CMD + F on Mac) to open the search bar. Type your search term and press enter, and the matching keywords will be highlighted.
+Чтобы выполнить простой текстовый поиск ответа, щелкните внутри ответа и введите CTRL + F (или CMD + F на Mac), чтобы открыть панель поиска. Введите поисковый запрос и нажмите клавишу ВВОД, и соответствующие ключевые слова будут выделены.
 
-## Filter
+## Фильтр
 
-[JSONPath](https://goessner.net/articles/JsonPath/) is used to filter JSON responses, while [XPath](https://www.w3.org/TR/xpath/) is used to filter XML responses. Click on the `?` for examples.
+[JSONPath](https://goessner.net/articles/JsonPath/) используется для фильтрации ответов JSON, а [XPath](https://www.w3.org/TR/xpath/) используется для фильтрации ответов XML. Кликните на `?` для примеров.
 
 {:.alert .alert-primary}
-**Note**: You will only see the `?` icon on JSON and XML responses. 
+**Примечание**: Вы увидите только иконку `?` в ответах JSON и XML. 
 
-![Click on the question mark icon for examples.](/assets/images/json-xml-examples.png)
-_On returned JSON and XML, click the question mark icon for examples._
+![Кликните иконку со знаком вопроса, чтобы просмотреть примеры.](/assets/images/json-xml-examples.png)
+_При возвращении JSON и XML щелкните значок вопросительного знака, чтобы просмотреть примеры._
 
-## Save to File
+## Сохранить в файл
 
-If the response is too large, or you want to save or parse the response outside of Insomnia, you can save the raw response directly to a file. To do this, click the **Preview** dropdown menu then **Save Raw Response**.
+Если ответ слишком велик или вы хотите сохранить или проанализировать ответ вне Insomnia, вы можете сохранить необработанный ответ непосредственно в файл. Для этого щелкните раскрывающееся меню **Preview** и выберите **Save Raw Response**.
 
-## Access Response History
+## Доступ к истории ответов
 
-Past responses can be viewed in the dropdown menu of the response window.
+Предыдущие ответы можно просмотреть в раскрывающемся меню окна ответа.
 
-![Access the response history for a specific request in the response window dropdown menu.](/assets/images/response-history.png)
-_Click the response window dropdown menu to see response history._
+![Доступ к истории ответов для конкретного запроса в раскрывающемся меню окна ответа.](/assets/images/response-history.png)
+_Щелкните раскрывающееся меню окна ответа, чтобы просмотреть историю ответов._
 
-Activating a past response will show the response in the response window. You can also revert the request to the state it was in when the response was saved.
+При активации предыдущего ответа ответ будет отображаться в окне ответа. Вы также можете вернуть запрос в состояние, в котором он был при сохранении ответа.

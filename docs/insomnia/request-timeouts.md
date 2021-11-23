@@ -1,15 +1,15 @@
 ---
 layout: article-detail
-title:  Request Timeouts
-category: "Requests and Responses"
+title:  Таймауты запроса
+category: "Запросы и ответы"
 category-url: requests-and-responses
 ---
 
-An HTTP request timeout can be specified globally in preferences.
+Таймаут HTTP-запроса можно указать глобально в настройках.
 
-![From preferences, update your HTTP request timeout settings.](/assets/images/request-timeouts.png)
+![В настройках обновите настройки времени ожидания HTTP-запроса.](/assets/images/request-timeouts.png)
 
-_Set and change HTTP request timeout options in preferences._
+_Установите и измените параметры тайм-аута HTTP-запроса в настройках._
 
-* Set it to `0` to signify that a request should never time out.
-* Set it to a positive number of milliseconds to have the request automatically cancel after the specified time.
+* Установите значение `0`, чтобы указать, что время ожидания запроса никогда не истекает.
+* Установите положительное число миллисекунд, чтобы запрос автоматически отменялся по истечении указанного времени.

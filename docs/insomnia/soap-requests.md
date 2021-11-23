@@ -1,8 +1,8 @@
 ---
 layout: article-detail
-title:  SOAP Requests
-category: "Requests and Responses"
+title:  Запросы SOAP
+category: "Запросы и ответы"
 category-url: requests-and-responses
 ---
 
-SOAP (simple object access protocol) is an XML-based protocol used to communicate structured data. To send a SOAP request from Insomnia, select the XML body type and setting the Content-Type header to `text/xml`. Then construct your XML body as required.
+SOAP (простой протокол доступа к объектам) - это протокол на основе XML, используемый для передачи структурированных данных. Чтобы отправить запрос SOAP из Insomnia, выберите тип тела XML и установите для заголовка Content-Type значение `text/xml`. Затем создайте свое тело XML по мере необходимости.

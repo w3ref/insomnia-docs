@@ -1,12 +1,12 @@
 ---
 layout: article-detail
-title:  Request Collections
-category: "Requests and Responses"
+title:  Коллекция запросов
+category: "Запросы и ответы"
 category-url: requests-and-responses
 ---
 
-Request Collections are a way to group and share requests within Insomnia. All data, except for global settings, are stored at the request collection-level.
+Коллекции запросов - это способ группировать и делиться запросами в Insomnia. Все данные, кроме глобальных настроек, хранятся на уровне сбора запросов.
 
-For working with API specifications, see [Design Documents](/insomnia/design-documents).
+Для работы со спецификациями API смотрите [Проектную документацию](/insomnia/design-documents).
 
-You can create, delete, and switch between Request Collections and Design Documents from the Dashboard, accessed from the upper left-hand corner of the application.
+Вы можете создавать, удалять и переключаться между коллекциями запросов и проектными документами с панели инструментов, доступной из верхнего левого угла приложения.
