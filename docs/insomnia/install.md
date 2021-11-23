@@ -1,22 +1,23 @@
 ---
 layout: article-detail
-title:  Install Insomnia
-category: "Get Started"
+title:  Установка Insomnia
+category: "Начать"
 category-url: get-started
 ---
 
-Insomnia is available on macOS, Windows, and Linux. If you haven't already downloaded Insomnia, visit the [Download Page](https://insomnia.rest/download).
+Insomnia доступна в macOS, Windows и Linux. Если вы еще не загрузили Insomnia, посетите [страницу загрузки](https://insomnia.rest/download).
 
 ## Mac
 
 {:.alert .alert-primary}
-**Note**: The minimum macOS version supported is macOS 10.12 Sierra.
 
-Get Insomnia on macOS through a download, or by using Brew.
+**Примечание**: Минимальная поддерживаемая версия macOS 10.12 Sierra.
 
-[Download](https://insomnia.rest/download) and double-click the disk image. When prompted, drag Insomnia to your **Applications** folder. This ensures future updates can be installed correctly.
+Получите Insomnia на macOS, загрузив приложение или используя Brew.
 
-macOS users can also install Insomnia using [Brew Cask](https://brew.sh/) via the Insomnia package:
+[Скачать](https://insomnia.rest/download) и дважды щелкните образ диска. При появлении запроса перетащите Insomnia в папку **Applications**. Это гарантирует правильную установку будущих обновлений.
+
+Пользователи macOS также могут установить Insomnia с помощью [Brew Cask](https://brew.sh/) через пакет Insomnia:
 
 ```bash
 brew install --cask insomnia
@@ -24,56 +25,56 @@ brew install --cask insomnia
 
 ## Windows
 
-Get Insomnia on Windows through a download or by downloading our portable version.
+Получите Insomnia для Windows, загрузив или загрузив нашу портативную версию.
 
-The Windows application is a generic installer `.exe`. Double click the installer file to install Insomnia in your existing filesystem. This option is recommended, as it will enable automatic app updates.
+Приложение Windows представляет собой универсальный установщик `.exe`. Дважды щелкните файл установщика, чтобы установить Insomnia в существующую файловую систему. Этот вариант рекомендуется, так как он включает автоматические обновления приложений.
 
-There is also a [portable version](https://github.com/Kong/insomnia/releases/tag/core%402021.6.0) that can be run in place, and without any installation.
+Существует также [портативная версия](https://github.com/Kong/insomnia/releases/tag/core%402021.6.0), которую можно запустить на месте без какой-либо установки.
 
-### Uninstall on Windows
+### Удалить в Windows
 
-To uninstall Insomnia from a Windows computer simply go to the settings menu on Windows and select **Apps**.
+Чтобы удалить Insomnia с компьютера Windows, просто зайдите в меню настроек Windows и выберите **Приложения**.
 
-From the Add/Remove Programs section, click on the app and select to uninstall.
+В разделе «Установка и удаление программ» щелкните приложение и выберите его удаление.
 
 ## Linux
 
-Insomnia runs on common Linux distributions.
+Insomnia работает на распространенных дистрибутивах Linux.
 
-### Ubuntu and Debian
+### Ubuntu и Debian
 
-The Debian package apt repository can be added and installed using `apt-get`.
+Репозиторий пакетов Debian может быть добавлен и установлен с помощью `apt-get`.
 
 ```bash
-# Add to sources
+# Добавить в источники
 echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" \
     | sudo tee -a /etc/apt/sources.list.d/insomnia.list
 
-# Refresh repository sources and install Insomnia
+# Обновите исходники репозитория и установите Insomnia
 sudo apt-get update
 sudo apt-get install insomnia
 ```
 
-You can also download the [latest Debian package](https://download.konghq.com/insomnia-ubuntu/).
+Вы также можете скачать [последний пакет Debian](https://download.konghq.com/insomnia-ubuntu/).
 
 ### Snap
 
-[Snap](https://snapcraft.io/) is a new cross-platform package format that supports convenient auto-updates. You can view [Insomnia on Snapcraft](https://snapcraft.io/insomnia) or install it directly with the following command.
+[Snap](https://snapcraft.io/) - это новый кроссплатформенный формат пакетов, поддерживающий удобные автоматические обновления. Вы можете просмотреть [Insomnia на Snapcraft](https://snapcraft.io/insomnia) или установить его напрямую с помощью следующей команды.
 
 ```bash
 sudo snap install insomnia
 ```
 
-There's also a [portable AppImage package](https://github.com/Kong/insomnia/releases/tag/core%402021.6.0) that can be run directly as an executable.
+Также существует [переносимый пакет AppImage](https://github.com/Kong/insomnia/releases/tag/core%402021.6.0), который можно запускать напрямую как исполняемый файл.
 
-### Troubleshooting Linux Installations
+### Устранение неполадок при установке в Linux
 
-Here are some issues that have caused problems for Linux users in the past:
+Вот некоторые проблемы, которые раньше вызывали проблемы у пользователей Linux:
 
-* `/tmp` folder must allow execution
-* After installed snap, you might need [`systemctl restart snapd.service`](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1631514)
-* Insomnia is only compatible with 64-bit systems
+* Папка `/tmp` должна разрешать выполнение
+* После установки snap, вам может потребоваться [`systemctl restart snapd.service`](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1631514)
+* Insomnia совместима только с 64-битными системами
 
-## Previous Insomnia Versions
+## Предыдущие версии Insomnia
 
-To roll back to a previous Insomnia version, download the version from [GitHub Releases](https://github.com/kong/insomnia/releases). This process is only intended for debugging and emergencies, as the app will try to update itself after it launches.
+Чтобы вернуться к предыдущей версии Insomnia, загрузите версию с [GitHub Релизов](https://github.com/kong/insomnia/releases). Этот процесс предназначен только для отладки и аварийных ситуаций, так как приложение будет пытаться обновиться после запуска.

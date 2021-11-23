@@ -1,12 +1,12 @@
 toc:
-  - title: Get Started
+  - title: Начать
     collapse-id: get-started
     items: 
-      - title: Introduction to Insomnia
+      - title: Введение в Insomnia
         url: /insomnia/get-started
-      - title: Install Insomnia
+      - title: Установка Insomnia
         url: /insomnia/install
-      - title: Migrate from Designer
+      - title: Миграция из Designer
         url: /insomnia/migrate-from-designer
       - title: Import and Export Data
         url: /insomnia/import-export-data
