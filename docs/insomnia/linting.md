@@ -1,13 +1,13 @@
 ---
 layout: article-detail
-title:  Linting
-category: "API Design"
+title:  Линтинг
+category: "Дизайн API"
 category-url: api-design
 ---
 
-Linting is built into Insomnia for Design Documents. As you type, Insomnia validates your spec in the background for issues. Errors are indicated by a red dot next to the line number.
+Линтинг встроен в Insomnia для Design Documents. По мере ввода Insomnia проверяет вашу спецификацию в фоновом режиме на наличие проблем. Ошибки обозначаются красной точкой рядом с номером строки.
 
-The Linter Panel aggregates all errors and warnings from the spec into a centralized location so it’s easier to get an overall sense of what’s going wrong without scrolling through and checking each individual line.
+Панель ЛИНТЕР объединяет все ошибки и предупреждения из спецификации в централизованное хранилище, поэтому легче получить общее представление о том, что происходит не так, без прокрутки и проверки каждой отдельной строки.
 
-![The linting errors appear in a box below the editor.](/assets/images/linting-errors.png)
-_Errors are displayed next to the applicable code line, and in the Linter Panel below the editor._
+![Ошибки линтинга отображаются в поле под редактором.](/assets/images/linting-errors.png)
+_Ошибки отображаются рядом с соответствующей строкой кода и на панели ЛИНТЕР под редактором._

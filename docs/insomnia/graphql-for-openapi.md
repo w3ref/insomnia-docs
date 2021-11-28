@@ -1,18 +1,18 @@
 ---
 layout: article-detail
-title:  GraphQL for OpenAPI
-category: "API Design"
+title:  GraphQL для OpenAPI
+category: "Дизайн API"
 category-url: api-design
 ---
 
-Insomnia has auto-detection for GraphQL APIs documented through OpenAPI. To enable auto-detection your GraphQL API must be documented with the following values before generating debugging requests:
+Insomnia имеет автоматическое обнаружение API-интерфейсов GraphQL, задокументированных через OpenAPI. Чтобы включить автоматическое определение, ваш GraphQL API должен быть задокументирован со следующими значениями перед генерацией запросов на отладку:
 
-* Path must be `/graphql`
-* Method must be POST
-* Request body must be application/json and must contain a property query with the type string
-* Response body must be application/json
+* Путь должен быть `/graphql`
+* Метод должен быть POST
+* Тело запроса должно быть application/json и должно содержать запрос свойства со строкой типа.
+* Тело ответа должно быть application/json.
 
-Below you can see an example of a described GraphQL API endpoint that will trigger auto-detection with a pre-populated request body that will show up in the debug mode requests:
+Ниже вы можете увидеть пример описанной конечной точки API GraphQL, которая будет запускать автоматическое обнаружение с предварительно заполненным телом запроса, которое будет отображаться в запросах режима отладки:
 
 ```
 paths:

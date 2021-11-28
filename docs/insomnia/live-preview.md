@@ -1,13 +1,14 @@
 ---
 layout: article-detail
-title:  Live Preview
-category: "API Design"
+title:  Превью в реальном времени
+category: "Дизайн API"
 category-url: api-design
 ---
 
-Once you’ve added your specification, and you are presented with the Design mode, follow these instructions to enable or disable Live Preview:
+После добавления спецификации и перехода в режим «Дизайн» следуйте этим инструкциям, чтобы включить или отключить предварительный просмотр в реальном времени:
 
-1. Open your OpenAPI document.
-2. Click the Editor icon (if you are not already in the Editor view).
-3. Click the “Preview: On” or "Preview: Off" button to show / hide the Live Preview pane.
-Once enabled a live preview of your document will display to the right of the text editor pane, and as you make changes to the document the preview pane to the right of the text editor will instantly update to reflect the changes made.
+1. Откройте документ OpenAPI.
+2. Щелкните значок «Редактор» (если вы еще не находитесь в представлении «Редактор»).
+3. Нажмите кнопку «Preview: On» или «Preview: Off», чтобы показать / скрыть панель Live Preview.
+
+После включения предварительный просмотр вашего документа в реальном времени будет отображаться справа от панели текстового редактора, а когда вы вносите изменения в документ, панель предварительного просмотра справа от текстового редактора будет мгновенно обновляться, чтобы отразить внесенные изменения.

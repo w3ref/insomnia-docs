@@ -1,67 +1,67 @@
 ---
 layout: article-detail
-title:  Design Documents
-category: "API Design"
+title:  Проектная документация
+category: "Дизайн API"
 category-url: api-design
 ---
 
-Design Documents (also called Documents) are a space to work with API specs - from designing to debugging to testing - all within Insomnia.
+Проектные документы (также называемые документами) - это пространство для работы со спецификациями API - от проектирования до отладки и тестирования - и все это в Insomnia.
 
-## Find Your Documents
+## Найдите свои документы
 
-Documents are accessible through the Dashboard of your Project.
+Документы доступны через панель управления вашего проекта.
 
-If you don't see a Document or Collection you're looking for, ensure you're in the right [Project](/insomnia/projects) by clicking on the Insomnia dropdown menu. Note that the dropdown title will be **Insomnia** if you're in the default Project.  
+Если вы не видите нужный документ или коллекцию, убедитесь, что вы находитесь в правильном [Проекте](/insomnia/projects) щелкнув раскрывающееся меню Insomnia. Обратите внимание, что раскрывающийся заголовок будет **Insomnia**, если вы находитесь в проекте по умолчанию.
 
-![Click Dashboard in the upper left-hand corner to return to a listing of your Documents and Collections.](/assets/images/access-dashboard.png)
-_From inside a Document or Collection, return to your listings by clicking Dashboard._
+![Нажмите «Панель управления» в верхнем левом углу, чтобы вернуться к списку ваших документов и коллекций.](/assets/images/access-dashboard.png)
+_Изнутри документа или коллекции вернитесь к своим объявлениям, щелкнув Панель управления._
 
-For information about working with Collections, see [Request Collections](/insomnia/request-collections).
+Для получения информации о работе с коллекциями смотрите [Коллекции запросов](/insomnia/request-collections).
 
-## Create a New Design Document
+## Создать новый проектный документ
 
-1. Go to the Dashboard.
-2. Click the **Create** button in upper right hand corner.
-3. From the dropdown menu, select **Design Document** or a method of importing.
-    * If you selected **Design Document**, enter a Document name and click **Create**. Spaces and special characters are allowed in your Document name.
-    * If you selected a method of importing, a modal will open prompting you to import your Document.
+1. Перейдите на панель управления.
+2. Нажмите кнопку **Create** в правом верхнем углу.
+3. В раскрывающемся меню выберите **Design Document** или метод импорта.
+    * Если вы выбрали **Design Document**, введите имя документа и нажмите **Create**. В имени вашего документа разрешены пробелы и специальные символы.
+    * Если вы выбрали метод импорта, откроется модальное окно с предложением импортировать документ.
 
-## Rename a Design Document
+## Переименовать проектный документ
 
-Rename a Design Document from either the Dashboard or from within a Design Document.
+Переименуйте проектный документ на панели инструментов или в проектном документе.
 
-### Rename From the Dashboard
+### Переименовать с панели инструментов
 
-1. Open the action menu (visualized by the three dots) on the document you wish to rename.
-2. Select **Rename** action.
-3. Rename the document.
+1. Откройте меню действий (обозначенное тремя точками) документа, который вы хотите переименовать.
+2. Выберите действие **Rename**.
+3. Переименуйте документ.
 
-### Rename From Inside a Design Document
+### Переименовать изнутри проектного документа
 
-1. Click on the dropdown arrow next to the Document name.
-2. Click **Document Settings**.
-3. Rename the document. It will auto-save.
+1. Щелкните стрелку раскрывающегося списка рядом с названием документа.
+2. Щелкните **Document Settings**.
+3. Переименуйте документ. Он будет автоматически сохранен.
 
-## Edit a Design Document
+## Редактировать проектный документ
 
-Access Editor Mode for a Design Document from the Dashboard.
+Доступ к режиму редактора для проектного документа из панели инструментов.
 
-1. Go to the Dashboard.
-2. Click on the Document to get to **Editor Mode**.
+1. Перейдите на панель управления.
+2. Щелкните документ, чтобы перейти в **Editor Mode**.
 
-## Delete a Design Document
+## Удалить проектный документ
 
-Delete a Design Document from either the Dashboard or from within a Design Document.
+Удалите проектный документ с панели инструментов или из проектного документа
 
-### Delete From the Dashboard
+### Удалить из панели управления
 
-1. Go to the Dashboard.
-2. Open the action menu (visualized by the three dots) on the document you wish to rename.
-3. Click **Delete**.
-4. Confirm you want to delete the Document.
+1. Перейдите на панель управления.
+2. Откройте меню действий (обозначенное тремя точками) в документе, который вы хотите переименовать.
+3. Щелкните **Delete**.
+4. Подтвердите, что вы хотите удалить документ.
 
-### Delete From Inside a Design Document
+### Удалить из проектного документа
 
-1. Click on the dropdown arrow next to the Document name.
-2. Click **Document Settings**.
-3. Click **Delete**.
+1. Щелкните стрелку раскрывающегося списка рядом с названием документа.
+2. Щелкните **Document Settings**.
+3. Щелкните **Delete**.

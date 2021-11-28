@@ -42,16 +42,16 @@ toc:
         url: /insomnia/git-sync
       - title: Синхронизация контроля версий
         url: /insomnia/version-control-sync
-  - title: API Design
+  - title: Дизайн API
     collapse-id: design
     items:
-      - title: Design Documents
+      - title: Проектная документация
         url: /insomnia/design-documents
-      - title: Linting
+      - title: Линтинг
         url: /insomnia/linting
-      - title: GraphQL for OpenAPI
+      - title: GraphQL для OpenAPI
         url: /insomnia/graphql-for-openapi
-      - title: Live Preview
+      - title: Превью в реальном времени
         url: /insomnia/live-preview
   - title: Testing
     collapse-id: testing
