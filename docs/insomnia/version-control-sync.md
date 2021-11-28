@@ -1,101 +1,101 @@
 ---
 layout: article-detail
-title:  Version Control Sync
+title:  Синхронизация контроля версий
 category: "Начать"
 category-url: get-started
 ---
 
 {:.alert .alert-primary}
-**Note**: Version Control Sync applies only to remote Collections at this time. Collections use our own Insomnia Sync for versioning. This feature comes with paid subscriptions. See [Pricing](https://insomnia.rest/pricing) for more information. To learn about Git sync for Documents, refer to [Git Sync](/insomnia/git-sync).
+**Примечание**: В настоящее время синхронизация управления версиями применяется только к удаленным коллекциям. Коллекции используют нашу собственную Insomnia Sync для управления версиями. Эта функция предоставляется с платными подписками. Смотрите [Цены](https://insomnia.rest/pricing) для получения дополнительной информации. Чтобы узнать о синхронизации Git для документов, обратитесь к [Git Sync](/insomnia/git-sync).
 
-In this section, you will find documentation on Collections [Sync](#sync) and [Snapshots](#snapshots).
+В этом разделе вы найдете документацию по коллекциям [Sync](#sync) и [Snapshots](#snapshots).
 
 ## Sync
 
-Sync for remote Collections provides the following abilities on top of the base Insomnia functionality:
+Синхронизация для удаленных коллекций предоставляет следующие возможности помимо базовой функциональности Insomnia:
 
-* Snapshot the contents of a request collection
-* Revert a request collection to a previous Snapshot
-* Share Snapshots across devices or with members of your team
-* Create and work on separate branches
+* Снимок содержимого коллекции запросов
+* Вернуть коллекцию запросов к предыдущему снимку
+* Делитесь снимками на разных устройствах или с членами вашей команды
+* Создавать и работать над отдельными ветками
 
-The main features of sync (once enabled automatically or manually) can be accessed from the dropdown at the top right of the application when you are in a remote Collection.
+Доступ к основным функциям синхронизации (после включения автоматически или вручную) можно получить из раскрывающегося списка в правом верхнем углу приложения, когда вы находитесь в удаленной коллекции.
 
-![With a paid subscription, click on the large branch name button within a Collection.](/assets/images/version-control.png)
-_For versioning options on a Collection, click on the large branch name button._
+![При платной подписке нажмите большую кнопку с названием ветки в Коллекции.](/assets/images/version-control.png)
+_Для параметров управления версиями в Коллекции нажмите кнопку с большим именем ветки._
 
-## Enable Sync
+## Включить Sync
 
-On creating a request Collection within a Remote Project, Insomnia will attempt to automatically enable sync and push an initial snapshot.
+При создании коллекции запросов в удаленном проекте Insomnia попытается автоматически включить синхронизацию и отправить исходный снимок.
 
-### Manually Enable Sync
+### Включить вручную Sync
 
-If Insomnia is unable to or has not automatically enabled sync, then you can manually set this up. First click **Setup Sync** then **Create Local Project**. Then you can create and push your first Snapshot.
+Если Insomnia не может или не включила автоматическую синхронизацию, вы можете настроить это вручную. Сначала нажмите **Setup Sync**, затем **Create Local Project**. Затем вы можете создать и отправить свой Снепшот.
 
 {:.alert .alert-primary}
-**Note**: Can't see the Sync menu? Make sure you're logged in by clicking on the person icon in the top right corner of your application. If you see a logout option, you're logged in. If you still can't see the Sync menu, make sure you're inside a remote Project from the Dashboard.
+**Примечание**: Не видите меню синхронизации? Убедитесь, что вы вошли в систему, щелкнув значок человека в правом верхнем углу приложения. Если вы видите вариант выхода, вы вошли в систему. Если вы по-прежнему не видите меню «Синхронизация», убедитесь, что вы находитесь в удаленном проекте с панели инструментов.
 
-![Enable Git sync within a Collection by clicking the Setup Sync button.](/assets/images/setup-sync.png)
-_Enable Git sync within a Collection by clicking the Setup Sync button._
+![Включите синхронизацию Git в коллекции, нажав кнопку «Настроить синхронизацию».](/assets/images/setup-sync.png)
+_Включите синхронизацию Git в коллекции, нажав кнопку «Настроить синхронизацию»._
 
-When sync is enabled on a Collection inside a Project, all users that have access to the Project also gain access to that Collection. You can manage the members in your Project from the [web dashboard](https://app.insomnia.rest/app/signup/).
+Когда синхронизация включена для коллекции внутри проекта, все пользователи, имеющие доступ к проекту, также получают доступ к этой коллекции. Вы можете управлять участниками в своем проекте с [веб-панели управления](https://app.insomnia.rest/app/signup/).
 
-## Snapshots
+## Снепшоты
 
-This section provides information on using the paid Snapshot feature for remote Collections. For pricing information, see our [Pricing](https://insomnia.rest/pricing) page.
+В этом разделе представлена информация об использовании платной функции моментальных снимков для удаленных коллекций. Информацию о ценах смотрите на нашей странице [Цен](https://insomnia.rest/pricing).
 
-### Create Snapshot
+### Создать снимок
 
-To create a Snapshot, open a **remote Collection** and click on the branch dropdown menu next to Preferences, and then click **Create Snapshot**. A **Create Snapshot** modal will open.
+Чтобы создать снимок, откройте **удаленную Коллекцию** и щелкните раскрывающееся меню ветки рядом с «Параметры», а затем щелкните **Создать снимок**. Откроется модальное окно **Создать снимок**.
 
-![To create a new Snapshot, click on the branch dropdown next to Preferences and select Create Snapshot.](/assets/images/create-snapshot.png)
-_Within a remote Collection, click on the branch dropdown and click on Create Snapshot._
+![Чтобы создать новый снимок, щелкните раскрывающееся меню ветки рядом с «Настройки» и выберите «Создать снимок».](/assets/images/create-snapshot.png)
+_В удаленной коллекции щелкните раскрывающееся меню ветки и нажмите «Создать снимок»._
 
-Snapshots represent all data in a Collection (requests, folders, environments) at a specific point in time. Besides the data within the Collection, a Snapshot also details:
+Снимки представляют все данные в Коллекции (запросы, папки, среды) в определенный момент времени. Помимо данных в Коллекции, Снимок также детализирует:
 
-* The Snapshot author
-* The time that the Snapshot was created
-* A message describing any changes in the Snapshot
+* Автор снимка
+* Время создания снимка
+* Сообщение с описанием любых изменений в снимке
 
-Creating a Snapshot requires two actions:
+Для создания снимка требуется два действия:
 
-1. Describe the changes contained within the Snapshot
-2. Select which changes to include
+1. Опишите изменения, содержащиеся в снимке.
+2. Выберите, какие изменения нужно включить.
 
-### Write a Snapshot Message
+### Написать снимок сообщения
 
-Snapshot messages should describe the included changes in as much detail as possible, as this description will help identify the snapshot if you ever need to revert back to it.
+Сообщения моментальных снимков должны описывать включенные изменения как можно более подробно, так как это описание поможет идентифицировать моментальный снимок, если вам когда-либо понадобится вернуться к нему.
 
-### Add Changes to a Snapshot
+### Добавить изменения в снимок
 
-Changes made to a request collection can be added on a granular level. Modifications and deletions to existing requests, folders, etc (AKA objects) will appear under  Modified Objects, while new additions will appear under Unversioned Objects and are unselected by default.
+Изменения, внесенные в коллекцию запросов, можно добавлять на детальном уровне. Изменения и удаления существующих запросов, папок и т. д. (Объекты AKA) будут отображаться в разделе «Измененные объекты», а новые добавления появятся в разделе «Неверсированные объекты» и по умолчанию не выбраны.
 
-### Share Snapshots
+### Поделиться снимками
 
-Once a Snapshot is created, it can be shared to your Insomnia account or team. There are two ways to push Snapshots:
+После создания снимка вы можете поделиться им с вашей учетной записью Insomnia или командой. Отправить снимки можно двумя способами:
 
-* Use the Create and Push option when creating the Snapshot
-* Push un-synced Snapshots from within the main sync menu
+* Используйте опцию Create and Push при создании снимка
+* Отправляйте несинхронизированные снимки из главного меню синхронизации
 
-If there are new Snapshots available that do not yet exist on your device (eg. from a team) these will be available to pull down from within the sync menu.
+Если есть новые доступные снимки, которых еще нет на вашем устройстве (например, от команды), их можно будет извлечь из меню синхронизации.
 
-### Work with Branches
+### Работа с ветками
 
-All Snapshots created for Sync are stored in a branch. Branches are identified by name and each one maintains a list of Snapshots that have been created for it (ie. its history). Branches can be created or deleted at any time, shared with team members, and even merged together.
+Все снимки, созданные для синхронизации, хранятся в ветке. Ветви идентифицируются по имени, и каждая из них поддерживает список снэпшотов, которые были созданы для нее (т. е. ее история). Ветки можно создавать или удалять в любое время, делиться ими с членами команды и даже объединять.
 
-Branches can be useful for many reasons, but the two main use cases are the following:
+Ветви могут быть полезны по многим причинам, но два основных варианта использования следующие:
 
-* Separate personal work from other team members
-* Work on experimental changes that may or may not exist long-term
+* Отделяйте личную работу от других членов команды
+* Работа над экспериментальными изменениями, которые могут существовать или не существовать в долгосрочной перспективе
 
-Branches are managed within the branches dialog. Here, you can create local branches, merge branches, and fetch remote branches.
+Управление ветками осуществляется в диалоговом окне ветвей. Здесь вы можете создавать локальные ветки, объединять ветки и получать удаленные ветки.
 
-### Share a Request Collection
+### Поделиться коллекцией запросов
 
-To get started sharing workspaces with your team, see [Team Collaboration](/insomnia/team-collaboration).
+Чтобы начать совместное использование рабочих мест со своей командой, см. [Совместная работа в команде](/insomnia/team-collaboration).
 
-### Revert to a Previous Snapshot
+### Вернуться к предыдущему снимку
 
-You can revert a Collection to a previous Snapshot. Find the Snapshot you want to revert to by going to the branch dropdown and clicking on **History**. Then click **Restore** on the Snapshot you want to revert to.  
+Вы можете вернуть коллекцию к предыдущему снимку. Найдите снимок, к которому хотите вернуться, перейдя в раскрывающееся меню ветки и нажав **История**. Затем нажмите **Восстановить** на снимке, к которому вы хотите вернуться.
 
-When you restore a Snapshot, it will show the changes locally and you'll need to manually Snapshot the changes.
+Когда вы восстанавливаете снимок, он отображает изменения локально, и вам нужно будет вручную сделать снимок изменений.

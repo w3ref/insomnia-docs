@@ -31,16 +31,16 @@ toc:
         url: /insomnia/post-csv-data
       - title: Запросы SOAP
         url: /insomnia/soap-requests
-  - title: Collaboration
+  - title: Сотрудничество
     collapse-id: collaboration
     items:
-      - title: Teams
+      - title: Команды
         url: /insomnia/teams
-      - title: Projects
+      - title: Проекты
         url: /insomnia/projects
-      - title: Sync with Git
+      - title: Синхронизировать с Git
         url: /insomnia/git-sync
-      - title: Version Control Sync
+      - title: Синхронизация контроля версий
         url: /insomnia/version-control-sync
   - title: API Design
     collapse-id: design

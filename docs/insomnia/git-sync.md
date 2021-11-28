@@ -1,102 +1,103 @@
 ---
 layout: article-detail
-title:  Sync with Git
+title:  Синхронизировать с Git
 category: "Начать"
 category-url: get-started
 ---
 
 {:.alert .alert-primary}
-**Note**: Sync with Git applies only to Design Documents at this time. Collections use our own Insomnia Sync for versioning. To learn about version control sync for Collections, refer to [Version Control Sync](/insomnia/version-control-sync).
+**Примечание**: В настоящее время синхронизация с Git применяется только к проектным документам. Коллекции используют нашу собственную Insomnia Sync для управления версиями. Чтобы узнать о синхронизации управления версиями для коллекций, обратитесь к [Синхронизация управления версиями](/insomnia/version-control-sync).
 
-Sync with Git is a built-in feature for Design Documents that enables you to configure your repository to an external Git version control system like GitHub or BitBucket.
+Синхронизация с Git - это встроенная функция для проектных документов, которая позволяет вам настроить ваш репозиторий для работы с внешней системой управления версиями Git, такой как GitHub или BitBucket.
 
-Pushing to a remote Git repository creates the `.insomnia` directory that can also be used with [Inso CLI](/inso-cli/introduction#data-search-flow).
+При отправке в удаленный репозиторий Git создается каталог `.insomnia`, который также можно использовать с [Inso CLI](/inso-cli/introduction#data-search-flow).
 
-## Clone an Existing Remote Repository
+## Клонировать существующий удаленный репозиторий
 
-Clone a remote Document from Git via the **Create** dropdown on the Dashboard view. You will be prompted to fill out remote [**Repository Settings**](#remote-repository-settings) to gain remote access.
+Клонируйте удаленный документ из Git с помощью раскрывающегося списка **Создать** на панели инструментов. Вам будет предложено заполнить удаленные [**Repository Settings**](#remote-repository-settings), чтобы получить удаленный доступ.
 
-The remote repository must contain the root `.insomnia` directory, otherwise you will be prompted to create a new Design Document.
+Удаленный репозиторий должен содержать корневой каталог `.insomnia`, в противном случае вам будет предложено создать новый проектный документ.
 
-![Click the Create dropdown menu and select Git Clone](/assets/images/git-clone.png)
+![Щелкните раскрывающееся меню «Создать» и выберите «Git Clone»](/assets/images/git-clone.png)
 
-## Enable Git Sync
-
-{:.alert .alert-primary}
-**Note**: This section assumes that you already have a remote Git repository.
-
-Enable Git Sync on Design Documents by clicking on the **Setup Git Sync** button beside Preferences. Then select **Repository Settings**. A **Configure Repository** modal will open.
-
-![Enable Git Sync for Documents by clicking the Setup Git Sync button inside a Document.](/assets/images/document-git-sync.png)
-_Inside a Design Document, click Setup Git Sync._
-
-## Remote Repository Settings
-
-When configuring a remote repository, you will be prompted for the following information.
-
-* **Git URI**: The URI of the Git repository. Both HTTPS and SSH URLs are supported.
-* **Author Name**: The Git author name to store with each commit.
-* **Author Email**: The Git author email to store with each commit.
-* **Username**: The Git author username to match with the authentication token.
-* **Authentication Token**: The token needed to authenticate with remote repository provider, such as GitHub or BitBucket. If you have two-factor authentication (2FA) enabled on your account, it is unlikely you will be able to use your username and password. Instead, generate a personal access token or app password with the scope outlined below.
-
-### Token and App Password Scope
+## Включить Git Sync
 
 {:.alert .alert-primary}
-**Note**: You may fail to set up Git Sync properly due to not enough or the wrong types of Git permissions.
+**Примечание**: В этом разделе предполагается, что у вас уже есть удаленный репозиторий Git.
 
-Find instructions on how to create a personal access token or app password on the following platforms:
+Включите Git Sync в проектных документах, нажав кнопку **Setup Git Sync** рядом с настройками. Затем выберите **Repository Settings**. Откроется модальное окно **Configure Repository**.
+
+![Включите Git Sync для документов, нажав кнопку Setup Git Sync внутри документа.](/assets/images/document-git-sync.png)
+_Внутри проектного документа нажмите Setup Git Sync._
+
+## Настройки удаленного репозитория
+
+При настройке удаленного репозитория вам будет предложено ввести следующую информацию.
+
+* **Git URI**: URI репозитория Git. Поддерживаются URL-адреса HTTPS и SSH.
+* **Author Name**: Имя автора Git, которое сохраняется при каждой фиксации.
+* **Author Email**: Электронная почта автора Git, которую нужно сохранять при каждой фиксации.
+* **Username**: Имя пользователя автора Git, соответствующее токену аутентификации.
+* **Authentication Token**: Токен, необходимый для аутентификации с помощью поставщика удаленного репозитория, такого как GitHub или BitBucket. Если в вашей учетной записи включена двухфакторная аутентификация (2FA), маловероятно, что вы сможете использовать свое имя пользователя и пароль. Вместо этого сгенерируйте личный токен доступа или пароль приложения со сферой действия, описанной ниже.
+
+### Область действия токена и пароля приложения
+
+{:.alert .alert-primary}
+**Примечание**: Вы можете не настроить Git Sync должным образом из-за недостаточного или неправильного типа разрешений Git.
+
+Найдите инструкции о том, как создать личный токен доступа или пароль приложения на следующих платформах:
 
 * [Github](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-  * For public repos, scope at least [`public_repo`](https://github.com/settings/tokens/new?description=insomnia-git-sync&scopes=public_repo) when creating your token.
-  * For private repos, scope at least [`repo`](https://github.com/settings/tokens/new?description=insomnia-git-sync&scopes=repo) when creating your token.
+  * Для общедоступных репозиториев при создании токена укажите как минимум [`public_repo`](https://github.com/settings/tokens/new?description=insomnia-git-sync&scopes=public_repo).
+  * Для частных репозиториев при создании токена укажите как минимум [`repo`](https://github.com/settings/tokens/new?description=insomnia-git-sync&scopes=repo).
 * [Gitlab](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
-  * For public and private GitLab repos, scope at least `api` when creating your personal access token.
+  * Для публичных и частных репозиториев GitLab укажите как минимум `api` при создании вашего личного токена доступа.
 * [Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/)
-  * For _private_ BitBucket repos, scope at least `Read` and `Write` in the `Repository` options when creating your app password.
+  * Для _приватных_ репозиториев BitBucket укажите как минимум `Read` и `Write` в параметрах `Repository` при создании пароля приложения.
 * [Bitbucket Server](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html)
 
-Once complete, click **Done** and the repository settings will be persisted for future operations. The author details and token can be updated as needed.
+После завершения нажмите **Готово**, и настройки репозитория будут сохранены для будущих операций. Сведения об авторе и токен могут быть обновлены по мере необходимости.
 
-## Manage Branches
+## Управление ветками
 
-When working with Git, it's good practice to make changes in separate branches. This has two benefits:
+При работе с Git рекомендуется вносить изменения в отдельные ветки. Это дает два преимущества:
 
-* Reduces the chances of merge conflicts when collaborators are making frequent changes
-* Supports a pull-request workflow where collaborators can leave feedback before merging
-Local branches can be created from the branch management dialog. This dialog presents both local branches and remote branches.
+* Снижает вероятность конфликтов слияния, когда соавторы часто вносят изменения
+* Поддерживает рабочий процесс pull-request, когда соавторы могут оставлять отзывы перед объединением
 
-{:.alert .alert-primary}
-**Note**: Remote branches will only appear if they do not already exist locally.
-
-## Commit Changes
-
-Commit your changes via the branch dropdown menu. You'll be prompted to add a descriptive message as your commit message.
-
-![Click the branch dropdown menu and select commit](/assets/images/commit-git-sync.png)
-
-## Push Changes
-
-Pushing your changes to your remote repository for the first time creates the `.insomnia` directory, which you can use with the [Inso CLI](/inso-cli/introduction#data-search-flow).
+Локальные филиалы могут быть созданы из диалогового окна управления филиалами. В этом диалоговом окне представлены как локальные, так и удаленные ветки.
 
 {:.alert .alert-primary}
-**Note**: If you'd like to push to an alternative branch than the default, click on the branch dropdown menu. Select **Branches**, and add your desired branch name.
+**Примечание**: Удаленные ветки появятся только в том случае, если они еще не существуют локально.
 
-Commits and branches only exist locally when created. A push needs to be done to share the commits and history of a branch remotely. If pushing fails, you will be given the option to force push.
+## Зафиксировать изменения
 
-The push or force push operation can fail for many reasons, and logs will be presented in the Developer Console prefixed with `git-event` with further debugging information. A likely cause is that your user does not have permissions to push to a protected branch.
+Зафиксируйте свои изменения через раскрывающееся меню ветки. Вам будет предложено добавить описательное сообщение в качестве сообщения фиксации.
 
-For instance, with GitLab, the main/master branch is protected by default, and those with the developer role are unable to push directly to it. In that case, push to a separate branch and create a pull request, or update the permissions for your user on the repository.
+![Щелкните раскрывающееся меню ветки и выберите фиксацию.](/assets/images/commit-git-sync.png)
 
-## Pull Changes
+## Отправить изменения
 
-If a collaborator makes a change to the remote repository, pull the changes to access the work locally. Click the branch dropdown menu in a Document and then **Pull**. Any incoming changes will be merged to your local machine.
+При первой передаче ваших изменений в удаленный репозиторий создается каталог `.insomnia`, который вы можете использовать с [Inso CLI](/inso-cli/introduction#data-search-flow).
 
-## Conflict Resolution
+{:.alert .alert-primary}
+**Примечание**: Если вы хотите перейти в альтернативную ветку, а не в ветку по умолчанию, щелкните раскрывающееся меню ветки. Выберите **Branches** и добавьте желаемое имя ветки.
 
-Git sync does not currently support the ability to resolve conflicts within the application. If changes were made locally and remotely, a pull may fail.
+Коммиты и ветки существуют только локально при создании. Чтобы удаленно поделиться коммитами и историей ветки, необходимо выполнить push. Если нажатие не удалось, вам будет предложено принудительное нажатие.
 
-Here are some strategies to help with conflicts:
+Операция push или force push может завершиться ошибкой по многим причинам, и журналы будут представлены в консоли разработчика с префиксом `git-event` с дополнительной отладочной информацией. Вероятная причина в том, что у вашего пользователя нет разрешений на отправку в защищенную ветку.
 
-* Each collaborator should make changes in a separate branch to avoid conflicts. Changes should be merged into master once reviewed and approved by other collaborators (eg. GitHub pull request).
-* If a conflict occurs on pull, delete the branch locally and re-fetch it from the branches dialog.
+Например, в GitLab ветка main/master по умолчанию защищена, и те, кто играет роль разработчика, не могут напрямую к ней подключаться. В этом случае перейдите в отдельную ветку и создайте запрос на перенос или обновите разрешения для вашего пользователя в репозитории.
+
+## Вытяните изменения
+
+Если соавтор вносит изменения в удаленный репозиторий, потяните изменения, чтобы получить доступ к работе локально. Щелкните раскрывающееся меню ветви в документе, а затем выберите **Pull**. Любые входящие изменения будут перенесены на ваш локальный компьютер.
+
+## Решение конфликта
+
+Git sync в настоящее время не поддерживает возможность разрешения конфликтов в приложении. Если изменения были внесены локально или удаленно, извлечение может завершиться ошибкой.
+
+Вот несколько стратегий, которые помогут справиться с конфликтами:
+
+* Каждый соавтор должен вносить изменения в отдельной ветке, чтобы избежать конфликтов. Изменения должны быть объединены в мастер после проверки и утверждения другими соавторами (например, запрос на вытягивание GitHub).
+* Если при извлечении возникает конфликт, удалите ветку локально и повторно загрузите ее из диалогового окна веток.

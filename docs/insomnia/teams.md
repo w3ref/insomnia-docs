@@ -1,28 +1,28 @@
 ---
 layout: article-detail
-title: Teams
-category: "Collaboration"
+title: Команды
+category: "Сотрудничество"
 category-url: collaboration
 ---
 
 {:.alert .alert-primary}
-**Note**: This feature comes with paid subscriptions. See [Pricing](https://insomnia.rest/pricing) for more information.
+**Note**: Эта функция предоставляется с платными подписками. Смотрите [Цены](https://insomnia.rest/pricing) для получения дополнительной информации.
 
-Teams gives you the ability to collaborate on Insomnia Request Collections with other people. Once a Request Collection is shared with a team, data is made available to everyone on the team once pushed.
+Команды дают вам возможность совместно работать над коллекциями запросов Insomnia с другими людьми. После того, как сборник запросов передается группе, данные становятся доступными для всех в команде после отправки.
 
-## Create a Team
+## Создать команду
 
-A team can be created in the [web dashboard](https://app.insomnia.rest/app/signup/).
+Команду можно создать в [веб-панели управления](https://app.insomnia.rest/app/signup/).
 
-## Share Request Collections With a Team
+## Совместное использование коллекций запросов с командой
 
-In the Insomnia client, sync can only be enabled on a Request Collection that is created within a Remote Project. Once sync is enabled, that collection is shared with all members of the team/space.
+В клиенте Insomnia синхронизацию можно включить только для коллекции запросов, созданной в удаленном проекте. После включения синхронизации эта коллекция становится доступной для всех членов команды/пространства.
 
 {:.alert .alert-primary}
-**Note**: All synchronized data is first encrypted before being sent over the network, meaning that even Insomnia's servers cannot access your sensitive data.
+**Примечание**: Все синхронизированные данные перед отправкой по сети сначала шифруются, а это означает, что даже серверы Insomnia не могут получить доступ к вашим конфиденциальным данным.
 
-Once a collection is synced into a remote project, team members that have access to the project will see shared request collections appear under the Pull button on the Dashboard when the project is activated.
+После того, как коллекция будет синхронизирована с удаленным проектом, члены группы, имеющие доступ к проекту, увидят, что общие коллекции запросов отображаются под кнопкой Pull на панели мониторинга при активации проекта.
 
-## Share Request Collections With a Different Team
+## Совместное использование коллекций запросов с другой командой
 
-A Request Collection cannot be moved into a different project, but it can be duplicated into a different project, and sync enabled on the newly duplicated collection. A Collection can be duplicated from the Dashboard.
+Коллекцию запросов нельзя переместить в другой проект, но ее можно скопировать в другой проект и включить синхронизацию для новой дублированной коллекции. Коллекцию можно продублировать с панели инструментов.

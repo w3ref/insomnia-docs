@@ -1,39 +1,41 @@
 ---
 layout: article-detail
-title:  Projects
+title:  Проекты
 category: "Начать"
 category-url: get-started
 ---
 
-With Insomnia 2021.5, Projects introduces a way to group Request Collections (also called Collections) and Design Documents (also called Documents).
+В Insomnia 2021.5 Projects представляет способ группировки коллекций запросов (также называемых коллекциями) и проектных документов (также называемых документами).
 
-A Project can be activated from the Dashboard and the Dashboard will filter to only show the Collections and Documents within the selected Project.
+Проект можно активировать с панели инструментов, и панель инструментов будет отфильтрована, чтобы отображать только коллекции и документы в рамках выбранного проекта.
 
-## Project Types
+## Типы проектов
 
-There are three types of Projects: Default, Local, and Remote.
+Есть три типа проектов: по умолчанию, локальный и удаленный.
 
-![Access Projects from the Projects dropdown next to the Insomnia logo.](/assets/images/projects-dropdown.png)
-_Projects are available via the main Insomnia dropdown. Here, you will find the Default Project listed first next to the home icon._
+![Доступ к проектам из раскрывающегося списка "Проекты" рядом с логотипом Insomnia.](/assets/images/projects-dropdown.png)
+_Проекты доступны в главном раскрывающемся списке Insomnia. Здесь вы найдете проект по умолчанию, указанный первым рядом со значком домашней страницы._
 
-### Default Project
+### Проект по умолчанию
 
-The "Insomnia" Project exists for all users by default. It cannot be renamed or deleted. It appears next to the home icon in the Projects dropdown menu.
+Проект "Insomnia" по умолчанию существует для всех пользователей. Его нельзя переименовать или удалить. Он появляется рядом со значком домашней страницы в раскрывающемся меню Projects.
 
-### Local Project
+### Местный проект
 
-A local project can be created locally within the application to group Collections and Documents. This only exists on your client, it is not included in any export file, and is not part of your sync data.
+Локальный проект можно создать локально в приложении, чтобы сгруппировать Коллекции и Документы. Он существует только на вашем клиенте, он не включен ни в один файл экспорта и не является частью ваших данных синхронизации.
 
-### Remote Project
+### Удаленный проект
 
-If you are signed in and have access to a Team with Insomnia Sync enabled, that Team will be represented as a Remote Project on your client. When opening the Projects dropdown, Remote Projects that you have access to will automatically appear in the list.
+Если вы вошли в систему и имеете доступ к команде с включенной Insomnia Sync, эта команда будет представлена на вашем клиенте как удаленный проект. При открытии раскрывающегося списка "Проекты" в списке автоматически появятся удаленные проекты, к которым у вас есть доступ.
 
-When creating a Request Collection inside a Remote Project, Insomnia will attempt to automatically enable sync. Collections that have been synced into a Remote Project can be pulled from the Dashboard after activating the Remote Project. For instance, inside the Insomnia Testing remote project, a user can pull Collections.
+При создании коллекции запросов внутри удаленного проекта Insomnia попытается автоматически включить синхронизацию. Коллекции, которые были синхронизированы с удаленным проектом, могут быть извлечены из панели мониторинга после активации удаленного проекта. Например, внутри удаленного проекта Insomnia Testing пользователь может извлекать Коллекции.
 
 ## Move Collections and Documents Between Projects
 
-At this time, you cannot move a Collection or Document between Projects. However, you can _duplicate_ a Collection or Document into another Project. The duplicate copy will not update if it's modified in one Project.
+Перемещение коллекций и документов между проектами
 
-Duplicate a Collection or Document from the Dashboard by clicking on the three dot menu on a Collection or Document, then select **Duplicate**. A **Duplicate Collection** modal will open. Enter a new name and select the destination Project.
+В настоящее время вы не можете перемещать коллекцию или документ между проектами. Однако вы можете _дублировать_ коллекцию или документ в другой проект. Дубликат не будет обновлен, если он будет изменен в одном проекте.
 
-You can also duplicate a Collection or Document from **Editor Mode**. Click on the dropdown arrow next to the Collection or Document name. Click **Collection Settings**. Under **Actions**, click **Duplicate**. Enter a new name and select the destination Project from the modal.
+Скопируйте коллекцию или документ из панели управления, щелкнув трехточечное меню в коллекции или документе, затем выберите **Duplicate**. Откроется модальное окно **Duplicate Collection**. Введите новое имя и выберите целевой проект.
+
+Вы также можете скопировать коллекцию или документ в **Editor Mode**. Щелкните стрелку раскрывающегося списка рядом с названием коллекции или документа. Нажмите **Collection Settings**. В разделе **Actions**, нажмите **Duplicate**. Введите новое имя и выберите целевой проект из модального окна.
