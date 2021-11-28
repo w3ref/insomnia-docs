@@ -53,10 +53,10 @@ toc:
         url: /insomnia/graphql-for-openapi
       - title: Превью в реальном времени
         url: /insomnia/live-preview
-  - title: Testing
+  - title: Тестирование
     collapse-id: testing
     items: 
-      - title: Unit and Stress Testing
+      - title: Модульное и стресс-тестирование
         url: /insomnia/unit-testing
   - title: Security
     collapse-id: security

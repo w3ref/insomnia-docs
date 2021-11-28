@@ -1,53 +1,53 @@
 ---
 layout: article-detail
-title:  Unit and Stress Testing
-category: Testing
+title:  Модульное и стресс-тестирование
+category: Тестирование
 category-url: testing
 ---
 
-Insomnia does not have a built-in capability for stress-testing, however there are plenty of tools to do so. Please refer to these following links for further information and use:
+Insomnia не имеет встроенной возможности стресс-тестирования, однако для этого есть множество инструментов. Пожалуйста, обратитесь к этим следующим ссылкам для получения дополнительной информации и использования:
 
 * [k6](https://k6.io/docs/testing-guides/api-load-testing/)
 * [locust](https://locust.io/)
 * [loader](https://loader.io/)
 
-The remainder of this document covers how to use the Unit Testing functionality within Insomnia. Currently, unit testing is only available to Design Documents, although you don't strictly need an OpenAPI specification to write them.
+В оставшейся части этого документа рассказывается, как использовать функциональность модульного тестирования в Insomnia. В настоящее время модульное тестирование доступно только для проектных документов, хотя для их написания строго не требуется спецификация OpenAPI.
 
-## How to create a Unit Test Suite
+## Как создать набор модульных тестов
 
-1. Import and select your OpenAPI Document as a Design Document.
-2. Navigate to the **Debug** tab to ensure that the requests are generated and work.
-3. Navigate to the **Test** tab and click **New Test Suite**.
-4. After naming your test suite, click **Create Suite**.
+1. Импортируйте и выберите документ OpenAPI в качестве документа дизайна.
+2. Перейдите на вкладку **Debug**, чтобы убедиться, что запросы созданы и работают.
+3. Перейдите на вкладку **Test** и нажмите **New Test Suite**.
+4. Назвав свой набор тестов, нажмите **Create Suite**.
 
-## How to delete a Unit Test Suite
+## Как удалить набор модульных тестов
 
-1. Click dropdown arrow on the test suite you’d like to delete in the sidebar.
-2. Click **Delete Suite**.
+1. Нажмите стрелку раскрывающегося списка на наборе тестов, который вы хотите удалить, на боковой панели.
+2. Щелкните **Delete Suite**.
 
-## How to create a Unit Test
+## Как создать модульный тест
 
-Unit tests in Insomnia rely on the [Chai framework](https://www.chaijs.com/api/bdd/).
+Модульные тесты в Insomnia основаны на [фреймворке Chai](https://www.chaijs.com/api/bdd/).
 
-1. Select the Unit Test Suite you wish to create a Unit Test in and click the “New Test” button.
-2. You will be presented with a dialog modal asking you to name the Unit Test.
-3. Once you have named your Unit Test, click “Create Test”, you will now be presented with the Unit Test interface which contains the Unit Test name, debug request dropdown, delete button, run button, and Unit Test code editor button where you can write your unit test in JavaScript.
-4. Click the arrow to show the code editor to be able to edit the test.
-5. Select the request you would like to use for your unit test from the **Select Request** dropdown (we suggest using a simple GET request for your first unit test).
-6. Run the test to ensure that it works correctly.
+1. Выберите набор модульных тестов, в котором вы хотите создать модульный тест, и нажмите кнопку “New Test”.
+2. Вам будет представлено модальное диалоговое окно с просьбой дать имя модульному тесту.
+3. После того, как вы назвали свой модульный тест, нажмите «Создать тест», теперь вам будет представлен интерфейс модульного теста, который содержит имя модульного теста, раскрывающийся список отладочного запроса, кнопку удаления, кнопку запуска и кнопку редактора кода модульного теста, где вы можете написать свой модульный тест на JavaScript.
+4. Щелкните стрелку, чтобы открыть редактор кода, чтобы можно было редактировать тест.
+5. Выберите запрос, который вы хотите использовать для своего модульного теста, из раскрывающегося списка **Select Request** (мы предлагаем использовать простой запрос GET для вашего первого модульного теста).
+6. Запустите тест, чтобы убедиться, что он работает правильно.
 
-### How do I test response bodies?
+### Как проверить тела ответа?
 
-You can test the response payload by accessing the `.data` attribute of the response variable:
+Вы можете проверить полезную нагрузку ответа, обратившись к атрибуту `.data` переменной ответа:
 
 ```ts
 const response = await insomnia.send();
 expect(response.data).to.be.an('string');
 ```
 
-### How do I test JSON payloads?
+### Как проверить полезные данные JSON?
 
-By default, `response.data` will be a string. If you want to validate it as JSON, you must first convert `response.data` to JSON using `JSON.parse`:
+По умолчанию `response.data` будет строкой. Если вы хотите проверить его как JSON, вы должны сначала преобразовать `response.data` в JSON с помощью `JSON.parse`:
 
 ```ts
 const response = await insomnia.send();
@@ -56,9 +56,9 @@ const body = JSON.parse(response.data);
 expect(body).to.be.an('array');
 ```
 
-### How do I test JSON payload properties?
+### Как проверить свойства полезной нагрузки JSON?
 
-Since unit tests rely on the Chai library for unit testing we can test properties easily once we have converted our response payload to JSON:
+Поскольку модульные тесты полагаются на библиотеку Chai для модульного тестирования, мы можем легко тестировать свойства после преобразования нашей полезной нагрузки ответа в JSON:
 
 ```ts
 const response = await insomnia.send();
@@ -70,26 +70,26 @@ expect(item).to.be.an('object');
 expect(item).to.have.property('id');
 ```
 
-### How do I test multiple requests in a single unit test?
+### Как протестировать несколько запросов в одном модульном тесте?
 
-1. You can add additional requests, or target a specific request by pressing CTRL+Space while the unit test code area is focused, from the dropdown menu you can select to run the current selected request or a request by a specific id.
-2. When choosing to send a request by ID, you will be presented with a modal asking which request to send.
-3. The code editor will be pre-populated with the request/response boilerplate for the request selected.
+1. Вы можете добавить дополнительные запросы или настроить таргетинг на конкретный запрос, нажав CTRL + Пробел, когда выделена область кода модульного теста. В раскрывающемся меню вы можете выбрать запуск текущего выбранного запроса или запроса по определенному идентификатору.
+2. При выборе отправки запроса по идентификатору вам будет предложено модальное окно с вопросом, какой запрос отправить.
+3. Редактор кода будет предварительно заполнен шаблоном запроса/ответа для выбранного запроса.
 
-### How do I chain requests?
+### Как связать запросы?
 
-Chaining requests is as simple as following the request chaining guide, and then selecting the chained request from the **Select Request** dropdown.
+Сцепление запросов так же просто, как следование руководству по созданию цепочки запросов, а затем выбор связанного запроса из раскрывающегося списка **Select Request**.
 
-### How do I change request values?
+### Как изменить значения запроса?
 
-Since unit tests rely on the requests and the selected environment under the debug tab, the only way to alter a request being made in a unit test is to alter the request, and its environment variables under the debug tab.
+Поскольку модульные тесты полагаются на запросы и выбранную среду на вкладке отладки, единственный способ изменить запрос, выполняемый в модульном тесте, - это изменить запрос и его переменные среды на вкладке отладки.
 
-### How can I debug my unit test?
+### Как я могу отладить свой модульный тест?
 
-1. Open [DevTools](/insomnia/introduction-to-plugins#debug-in-the-insomnia-app).
-2. Open the **console** tab. It should be open by default.
+1. Откройте [DevTools](/insomnia/introduction-to-plugins#debug-in-the-insomnia-app).
+2. Откройте вкладку **console**. По умолчанию он должен быть открыт.
 
-Now that we have opened DevTools and have the console open, we can `console.log` values in our unit test to the console:
+Теперь, когда мы открыли DevTools и открыли консоль, мы можем выводить значения `console.log` в нашем модульном тесте на консоль:
 
 ```ts
 const response = await insomnia.send();
@@ -99,16 +99,16 @@ const item = body[0];
 console.log(item);
 ```
 
-### How do I run my Unit Tests in CI?
+### Как запустить модульные тесты в CI?
 
-Run unit tests in CI (like GitHub Actions or Azure DevOps) using [git sync](/insomnia/git-sync) and [Inso CLI](/inso-cli/cli-command-reference/inso-run-test) with the `inso run test` command.
+Запускайте модульные тесты в CI (например, GitHub Actions или Azure DevOps) с помощью [git sync](/insomnia/git-sync) и [Inso CLI](/inso-cli/cli-command-reference/inso-run-test) с командой `inso run test`.
 
-### How to rename a Unit Test?
+### Как переименовать модульный тест?
 
-Rename a unit test by double clicking on the unit test’s name and changing the contents.
+Переименуйте модульный тест, дважды щелкнув имя модульного теста и изменив его содержимое.
 
-The value is saved when you click outside the editable area.
+Значение сохраняется, когда вы щелкаете за пределами редактируемой области.
 
-### How to delete a Unit Test?
+### Как удалить модульный тест?
 
-Delete a unit test by clicking the **Delete** icon next to a test.
+Удалите модульный тест, щелкнув иконку **Delete** рядом с тестом.
