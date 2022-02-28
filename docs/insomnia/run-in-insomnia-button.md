@@ -1,13 +1,13 @@
 ---
 layout: article-detail
-title:  Run in Insomnia Button
-category: "Built-In Features"
+title:  Кнопка «Run» в Insomnia
+category: "Встроенные функции"
 category-url: built-in-features
 ---
 
-Generate a **Run in Insomnia** button to start running requests in a few quick clicks. This button can be added to both HTML and Markdown documents. 
+Создайте кнопку **Run in Insomnia**, чтобы запускать запросы в несколько быстрых кликов. Эту кнопку можно добавить как в документы HTML, так и в документы Markdown.
 
-![The Run in Insomnia button appears on an API documentation page.](/assets/images/konnect-api-button.png)
-_Add the Run in Insomnia button to your API documentation so your users can start running requests right away._
+![Кнопка Run in Insomnia появляется на странице документации API.](/assets/images/konnect-api-button.png)
+_Добавьте кнопку Run in Insomnia в свою документацию по API, чтобы ваши пользователи могли сразу начать выполнять запросы._
 
-Use the [Create Run Button](https://insomnia.rest/create-run-button) tool to generate a button.
+Используйте инструмент [Создать кнопку запуска](https://insomnia.rest/create-run-button), чтобы создать кнопку.

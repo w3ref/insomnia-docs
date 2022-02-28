@@ -1,36 +1,36 @@
 ---
 layout: article-detail
-title:  Cookie Management
-category: "Built-In Features"
+title:  Управление файлами cookie
+category: "Встроенные функции"
 category-url: built-in-features
 ---
 
-Insomnia automatically stores cookies from every response and sends them with requests when needed (just like a web browser would).
+Insomnia автоматически сохраняет файлы cookie при каждом ответе и при необходимости отправляет их с запросами (так же, как это делает веб-браузер).
 
-## Manage Cookies
+## Управление файлами cookie
 
-Each workspace has its own cookie jar. Cookies can be added, viewed, modified, or deleted within the cookie manager. The cookie manager is accessible via the **Cookies** button. 
+Каждое рабочее пространство имеет свою собственную банку cookie. Файлы cookie можно добавлять, просматривать, изменять или удалять в диспетчере файлов cookie. Менеджер файлов cookie доступен через кнопку **Cookies**.
 
-![Click the Cookies button to get to the cookie manager.](/assets/images/cookies-button.png)
-_The Cookies button enables you to access the cookie manager._
+![Нажмите кнопку Cookies, чтобы перейти к диспетчеру файлов cookie.](/assets/images/cookies-button.png)
+_Кнопка Cookies позволяет получить доступ к диспетчеру файлов cookie._
 
-## Change Cookie Sending and Storing Behavior
+## Изменить режим отправки и хранения файлов cookie
 
-Cookie storing and sending is done automatically. However, it is possible to change this behavior on a per-request basis, within the request settings dialog. The request settings dialog can be accessed via the request options dropdown beside each request in the sidebar.
+Сохранение и отправка файлов cookie происходит автоматически. Однако это поведение можно изменить для каждого запроса в диалоговом окне настроек запроса. Доступ к диалоговому окну настроек запроса можно получить через раскрывающийся список параметров запроса рядом с каждым запросом на боковой панели.
 
-![Cookie settings appear under individual request dropdown menus.](/assets/images/cookie-settings.png)
-_Access the cookie settings in an individual request dropdown menu._
+![Настройки файлов cookie отображаются в раскрывающихся меню отдельных запросов.](/assets/images/cookie-settings.png)
+_Доступ к настройкам файлов cookie в раскрывающемся меню отдельного запроса._
 
-### Send Cookies Automatically
+### Автоматически отправлять файлы cookie
 
-Enabling this option will cause Insomnia to automatically send cookies with the request via the Cookie header.
+Включение этой опции заставит Insomnia автоматически отправлять файлы cookie с запросом через заголовок Cookie.
 
-### Store Cookies Automatically
+### Автоматически сохранять файлы cookie
 
-Enabling this option will cause Insomnia to save any cookies received via the Set-Cookie header automatically.
+Включение этой опции заставит Insomnia автоматически сохранять все файлы cookie, полученные через заголовок Set-Cookie.
 
-## Reference Cookie Values
+## Справочные значения файлов cookie
 
-Sometimes it is necessary to reference the value of a cookie within part of a request. For example, it is common to receive a CSRF token in as a cookie values and pass it as a header or form value in a subsequent request.
+Иногда необходимо указать значение файла cookie в части запроса. Например, принято получать токен CSRF в виде значений cookie и передавать его в виде заголовка или значения формы в последующем запросе.
 
-This can be done using the Request Template Tag.
+Это можно сделать с помощью тега шаблона запроса.

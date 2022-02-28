@@ -1,112 +1,112 @@
 ---
 layout: article-detail
 title:  gRPC
-category: "Built-In Features"
+category: "Встроенные функции"
 category-url: built-in-features
 ---
 
-With the growing emergence of IoT, microservices and mesh networks, APIs need to be more performant and scalable than ever before. This has given rise to the growing adoption of [gRPC](https://grpc.io/), a high-performance, open source, universal RPC framework developed at Google.
+С появлением Интернета вещей, микросервисов и ячеистых сетей API-интерфейсы должны быть более производительными и масштабируемыми, чем когда-либо прежде. Это привело к растущему внедрению [gRPC](https://grpc.io/), высокопроизводительной универсальной среды RPC с открытым исходным кодом, разработанной в Google.
 
-Insomnia supports making gRPC requests alongside REST and GraphQL.
+Insomnia поддерживает выполнение запросов gRPC вместе с REST и GraphQL.
 
-## Create a Request
+## Создать запрос
 
-In order to create a new gRPC request, click on + in the sidebar and then **New Request**.
+Чтобы создать новый запрос gRPC, нажмите + на боковой панели, а затем **Новый запрос**.
 
-Then, in the modal that opens, set a name for your request and select **gRPC** from the method drop-down. Click **Create**.
+Затем в открывшемся модальном окне задайте имя для вашего запроса и выберите **gRPC** из раскрывающегося списка методов. Нажмите **Создать**.
 
-You will be prompted to select a proto file. Click on **Add Proto File** and select a proto file from your file system. You can get an example proto file from [grpcb.in](https://grpcb.in/). Once added, it should be automatically selected. Click save.
+Вам будет предложено выбрать файл proto. Нажмите **Добавить прото-файл** и выберите прото-файл из вашей файловой системы. Вы можете получить пример прото-файла из [grpcb.in](https://grpcb.in/). После добавления он должен быть выбран автоматически. Нажмите «Сохранить».
 
-You should now see a request in the sidebar, and on clicking **Select Method** you should see the services from your proto file listed.
+Теперь вы должны увидеть запрос на боковой панели, а при нажатии **Выбрать метод** вы должны увидеть службы из вашего прото-файла в списке.
 
-## Proto File Management
+## Протофайловое управление
 
-In the current iteration, Insomnia allows you to upload your proto file or collection of proto files (a directory) to a workspace and consume it with multiple requests. Insomnia will ingest the contents of your proto file(s), and it will not be linked with the source file on your file-system. This means, if you add your proto file into Insomnia, and then change the source file, you will need to re-upload it.
+В текущей итерации Insomnia позволяет вам загружать ваш прото-файл или набор прото-файлов (каталог) в рабочую область и использовать его с несколькими запросами. Insomnia проглотит содержимое ваших прото-файлов и не будет связано с исходным файлом в вашей файловой системе. Это означает, что если вы добавите свой прото-файл в Insomnia, а затем измените исходный файл, вам нужно будет загрузить его повторно.
 
-As such, a proto file also cannot import a different proto file from your file system, because the relative path link will be lost. You can upload a directory which contains multiple proto files, and they can import other proto files within that directory structure (see below). In future iterations we intend to extend the ways in which you can input a proto file, including keeping in sync with the file system, loading from a network location.
+Таким образом, прото-файл также не может импортировать другой прото-файл из вашей файловой системы, поскольку ссылка на относительный путь будет потеряна. Вы можете загрузить каталог, содержащий несколько прото-файлов, и они могут импортировать другие прото-файлы в эту структуру каталогов (см. ниже). В будущих итерациях мы намерены расширить способы ввода прото-файла, включая синхронизацию с файловой системой, загрузку из сетевого расположения.
 
-### Add Proto File
+### Добавить прото файл
 
-We added a proto file when creating a request above. Whenever you need to select a proto file, you will be given the option to add a new one. In the example above, we added a proto file when creating a new request, but lets say we now want to change the proto file linked to the current request by adding a new one. Navigate to the request, and select **click to change proto file**.
+Мы добавили прото-файл при создании запроса выше. Всякий раз, когда вам нужно выбрать прото-файл, вам будет предоставлена возможность добавить новый. В приведенном выше примере мы добавили прото-файл при создании нового запроса, но допустим, теперь мы хотим изменить прото-файл, связанный с текущим запросом, добавив новый. Перейдите к запросу и выберите **щелкните, чтобы изменить прото-файл**.
 
-This will open the proto files modal again, and list the one we added earlier. Click **Add Proto File**, and add a new one. We now see two proto files added to the workspace.
+Это снова откроет модальные файлы proto и отобразит тот, который мы добавили ранее. Нажмите **Добавить протофайл** и добавьте новый. Теперь мы видим два прото-файла, добавленных в рабочую область.
 
-### Add Directory
+### Добавить каталог
 
-Click **Add Directory** to add multiple at once.
+Нажмите **Добавить каталог**, чтобы добавить сразу несколько.
 
-"root.proto" imports all other proto files listed in the **Library** directory.
+«root.proto» импортирует все остальные прото-файлы, перечисленные в каталоге **Library**.
 
-### Rename Proto File
+### Переименовать прото-файл
 
-Double click on a proto file name in order to edit it. Files inside a directory cannot be renamed.
+Дважды щелкните имя прото-файла, чтобы отредактировать его. Файлы внутри каталога не могут быть переименованы.
 
-### Re-upload
+### Повторно загрузить
 
-Click on the upload button and select a proto file from your file system. This can be any file, it does not have to be the exact same file. Just remember, when you re-upload a proto file, all requests that link to the file you have changed, will also update. Ideally you will only re-upload the same proto file, when the service definition has changed, rather than a new file altogether.
+Нажмите кнопку загрузки и выберите прото-файл из вашей файловой системы. Это может быть любой файл, это не обязательно должен быть один и тот же файл. Просто помните, что когда вы повторно загружаете прото-файл, все запросы, которые ссылаются на файл, который вы изменили, также будут обновлены. В идеале вы будете повторно загружать один и тот же прото-файл только тогда, когда определение сервиса изменилось, а не вообще новый файл.
 
-### Delete
+### Удалить
 
-Click on the delete button. You will be prompted with a confirmation message indicating that requests that use that proto file are likely to break because the source proto file information has been lost. In the future, we intend to expand on proto file deletion to allow for more control over dependent requests.
+Нажмите на кнопку удаления. Вам будет предложено сообщение с подтверждением, указывающее, что запросы, использующие этот прото-файл, могут быть нарушены, потому что информация об исходном прото-файле была потеряна. В будущем мы намерены расширить возможности удаления прото-файлов, чтобы обеспечить больший контроль над зависимыми запросами.
 
-## Make requests
+## Делать запросы
 
-Insomnia supports all four RPC types defined by gRPC. These are: [Unary](https://grpc.io/docs/what-is-grpc/core-concepts/#unary-rpc), [Client Streaming](https://grpc.io/docs/what-is-grpc/core-concepts/#client-streaming-rpc), [Server Streaming](https://grpc.io/docs/what-is-grpc/core-concepts/#server-streaming-rpc), and [Bidirectional Streaming](https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc). The following examples use [hello.proto](https://github.com/moul/pb/blob/master/hello/hello.proto) from grpcb.in.
+Insomnia поддерживает все четыре типа RPC, определенные gRPC. Это: [Unary](https://grpc.io/docs/what-is-grpc/core-concepts/#unary-rpc), [Client Streaming](https://grpc.io/docs/what-is-grpc/core-concepts/#client-streaming-rpc), [Server Streaming](https://grpc.io/docs/what-is-grpc/core-concepts/#server-streaming-rpc) и [Bidirectional Streaming](https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc). В следующих примерах используется [hello.proto](https://github.com/moul/pb/blob/master/hello/hello.proto) из grpcb.in.
 
-### Unary
+### Унарный
 
-`/hello.HelloService/SayHello` is unary RPC. You send a single message, and the server responds with a single message.
+`/hello.HelloService/SayHello` — это унарный RPC. Вы отправляете одно сообщение, и сервер отвечает одним сообщением.
 
-Specify a body, and click **Send**.
+Укажите текст и нажмите **Отправить**.
 
-### Server Streaming
+### Потоковая передача сервера
 
-`/hello.HelloService/LotsOfReplies` is server streaming RPC. You send a single message, and the server responds with multiple messages.
+`/hello.HelloService/LotsOfReplies` — сервер, выполняющий потоковую передачу RPC. Вы отправляете одно сообщение, а сервер отвечает несколькими сообщениями.
 
-Specify a body, and click **Send**.
+Укажите текст и нажмите **Отправить**.
 
 {:.alert .alert-primary}
-**Note**: It's up to the server how quickly it responds. In the example below, the second request uses grpcbin.proto, where the server stream responses much slower, and is easier to visualize.
+**Note**: Скорость ответа зависит от сервера. В приведенном ниже примере второй запрос использует grpcbin.proto, где серверный поток отвечает намного медленнее и его легче визуализировать.
 
-### Client Streaming
+### Клиентская потоковая передача
 
-`/hello.HelloService/LotsOfGreetings` is client streaming RPC. You send a multiple messages, and the server responds with single message.
+`/hello.HelloService/LotsOfGreetings` — клиентский потоковый RPC. Вы отправляете несколько сообщений, а сервер отвечает одним сообщением.
 
-Click start to open a channel with the server. Now, edit the body with the contents of your first message, and press the **Stream** button to send that message. You should see a read-only snapshot of the message appear as a tab. You can now edit the contents in the Body tab again, and press "Stream" each time you want to send a new message. Once all messages have been sent, click **Commit** and the server should respond accordingly.
+Нажмите «Пуск», чтобы открыть канал с сервером. Теперь отредактируйте тело с содержимым вашего первого сообщения и нажмите кнопку **Stream**, чтобы отправить это сообщение. Вы должны увидеть снимок сообщения, доступный только для чтения, в виде вкладки. Теперь вы можете снова редактировать содержимое на вкладке «Тело» и нажимать «Поток» каждый раз, когда хотите отправить новое сообщение. Как только все сообщения будут отправлены, нажмите **Commit**, и сервер должен отреагировать соответствующим образом.
 
-### Bidirectional Streaming
+### Двунаправленная потоковая передача
 
-`/hello.HelloService/BiDiHello` is bidirectional streaming RPC. You send multiple messages, and the server responds with multiple messages.
+`/hello.HelloService/BiDiHello` — это двунаправленный потоковый RPC. Вы отправляете несколько сообщений, и сервер отвечает несколькими сообщениями.
 
-As the name suggests, this is a combination of server and client streaming. As such, the steps to send messages are identical to client streaming above, and the manner in which the server chooses to respond is identical to server streaming. Be sure to press "commit" once you have finished sending all your messages, and allow the server to terminate the connection.
+Как следует из названия, это комбинация серверной и клиентской потоковой передачи. Таким образом, шаги по отправке сообщений идентичны клиентской потоковой передаче выше, а способ, которым сервер выбирает ответ, идентичен серверной потоковой передаче. Не забудьте нажать «commit», как только вы закончите отправлять все свои сообщения, и позвольте серверу разорвать соединение.
 
-## Cancel a Request
+## Отменить запрос
 
-Any time a request has been sent (unary, server streaming) or a stream is open (client and bidirectional streaming), the "Send" or "Start" button will change to "Cancel". Pressing this will terminate the connection and show an appropriate message. You can have multiple requests running concurrently, and cancel them individually.
+Каждый раз, когда был отправлен запрос (унарная, серверная потоковая передача) или открыт поток (клиентская и двунаправленная потоковая передача), кнопка «Отправить» или «Пуск» изменится на «Отмена». Нажатие этой кнопки прервет соединение и покажет соответствующее сообщение. Вы можете одновременно выполнять несколько запросов и отменять их по отдельности.
 
 ## TLS/SSL
 
-Often a gRPC endpoint will be secured by TLS, and Insomnia will allow you to connect to these endpoints using simple SSL. The ability to provide custom certificates is coming in the future.
+Часто конечная точка gRPC будет защищена TLS, и Insomnia позволит вам подключаться к этим конечным точкам с помощью простого SSL. Возможность предоставления пользовательских сертификатов появится в будущем.
 
-In order to enable TLS, prefix the host with `grpcs://`.
+Чтобы включить TLS, добавьте к хосту префикс `grpcs://`.
 
-For example, grpcb.in has an unsecured endpoint at `grpcb.in:9000`, and a secured endpoint at `grpcb.in:9001`.
+Например, grpcb.in имеет незащищенную конечную точку по адресу `grpcb.in:9000` и защищенную конечную точку по адресу `grpcb.in:9001`.
 
-Making a request to `grpcb.in:9001` will fail.
+Выполнение запроса к `grpcb.in:9001` не удастся.
 
-Making a request to `grpcs://grpcb.in:9001` will succeed.
+Выполнение запроса к `grpcs://grpcb.in:9001` завершится успешно.
 
-## Environment Variables and Template Tags
+## Переменные среды и теги шаблона
 
-The 2021.1 release of Insomnia introduces support for environment variables and template tags within gRPC. Environment variables and Nunjucks templating can be used in both the URL bar and message body.
+В выпуске 2021.1 Insomnia представлена поддержка переменных среды и тегов шаблонов в gRPC. Переменные среды и шаблоны Nunjucks можно использовать как в адресной строке, так и в теле сообщения.
 
-## Known limitations
+## Известные ограничения
 
-As of version 2021.1, gRPC in Insomnia does not include:
+Начиная с версии 2021.1 gRPC в Insomnia не включает:
 
-* Support for running gRPC requests in unit tests
-* Support for  or request chaining
-* Support for gRPC metadata or deadlines
-* Persistence of request/responses and history
-* Moving gRPC requests between workspaces
-    * If a folder that contains a gRPC request is moved to a different workspace, the request will be moved but the proto file will not.
+* Поддержка выполнения запросов gRPC в модульных тестах.
+* Поддержка или запрос цепочки
+* Поддержка метаданных или крайних сроков gRPC
+* Постоянство запросов/ответов и истории
+* Перемещение запросов gRPC между рабочими областями
+    * Если папка, содержащая запрос gRPC, перемещена в другую рабочую область, запрос будет перемещен, а прото-файл — нет.

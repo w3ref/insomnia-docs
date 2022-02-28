@@ -1,25 +1,24 @@
 ---
 layout: article-detail
-title:  Encoding
-category: "Built-In Features"
+title:  Кодирование
+category: "Встроенные функции"
 category-url: built-in-features
 ---
 
-Insomnia automatically encodes special characters in request URLs. Auto-encoding can cause issues for some users who want to send non-encoded special characters. 
+Insomnia автоматически кодирует специальные символы в URL-адресах запросов. Автокодирование может вызвать проблемы у некоторых пользователей, которые хотят отправлять незакодированные специальные символы.
 
-Check the exact request URL sent using the **Timeline** tab. 
+Проверьте точный URL-адрес отправленного запроса на вкладке **Хронология**.
 
-![The Timeline tab appears on the right-side panel after a request is sent.](/assets/images/timeline-tab.png)
-_Upon sending a request, check the Timeline tab to see the encoded values sent._
+![Вкладка Временная шкала появляется на правой боковой панели после отправки запроса.](/assets/images/timeline-tab.png)
+_После отправки запроса перейдите на вкладку «Временная шкала», чтобы увидеть отправленные закодированные значения._
 
-## Troubleshoot Special Character Issues
+## Устранение проблем с особыми символами
 
-The following are options for troubleshooting special character issues. 
+Ниже приведены варианты устранения неполадок, связанных со специальными символами.
 
-* Encode your own request URL using an encoding tool like [urlencoder](https://www.urlencoder.org/) or [W3Schools](https://www.w3schools.com/tags/ref_urlencode.ASP).
-* Disable automatic encoding completely (likely too disruptive of a change)
-In this scenario, there could be a Template Tag for encoding values explicitly
-* Add option on each query parameter to enable or disable encoding
-* Add global workspace-level setting to enable or disable encoding
-* Have a character allowlist for encoding
-* Use the [Insomnia encoder plugin](https://github.com/sypbiz/insomnia-plugin-encode-uri)
+* Закодируйте свой собственный URL-адрес запроса с помощью инструмента кодирования, такого как [urlencoder](https://www.urlencoder.org/) или [W3Schools](https://www.w3schools.com/tags/ref_urlencode.ASP).
+* Полностью отключить автоматическое кодирование (вероятно, слишком разрушительное изменение). В этом сценарии может быть тег шаблона для явного кодирования значений.
+* Добавить опцию для каждого параметра запроса, чтобы включить или отключить кодировку
+* Добавлен глобальный параметр уровня рабочей области для включения или отключения кодирования.
+* Иметь белый список символов для кодирования
+* Используйте [плагин кодировщика Insomnia](https://github.com/sypbiz/insomnia-plugin-encode-uri)

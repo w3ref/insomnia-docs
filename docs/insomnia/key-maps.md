@@ -1,21 +1,21 @@
 ---
 layout: article-detail
-title:  Key Maps
-category: "Built-In Features"
+title:  Карта клавиш
+category: "Встроенные функции"
 category-url: built-in-features
 ---
 
-Insomnia supports various text editor key maps,under Preferences > General > Font > Text Editor Key Map.
+Insomnia поддерживает различные карты клавиш текстового редактора, выбрав `Preferences > General > Font > Text Editor Key Map`.
 
-![Access text editor key map options through the general preferences tab.](/assets/images/key-maps.png)
-_To select a text editor key map, go to the font section of the preferences general tab._
+![Доступ к параметрам карты клавиш текстового редактора осуществляется через вкладку общих настроек.](/assets/images/key-maps.png)
+_Чтобы выбрать раскладку клавиш текстового редактора, перейдите в раздел шрифтов на вкладке общих настроек._
 
-The key maps currently available are Vim, Emacs, and Sublime.
+В настоящее время доступны ключевые карты: Vim, Emacs и Sublime.
 
-## Vim on Mac
+## Vim на Mac
 
-By default, press-and-hold on macOS shows special characters.
+По умолчанию при нажатии и удержании в macOS отображаются специальные символы.
 
-This is not particularly useful when using the Vim key map, because navigation is restricted to one move at a time. In order to enable key-repeating, execute the following in your terminal and restart Insomnia:
+Это не особенно полезно при использовании карты клавиш Vim, поскольку навигация ограничена одним движением за раз. Чтобы включить повторение клавиш, выполните в терминале следующее и перезапустите Insomnia:
 
 `defaults write com.insomnia.app ApplePressAndHoldEnabled -bool false`

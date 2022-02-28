@@ -1,26 +1,26 @@
 ---
 layout: article-detail
-title:  Client Certificates
-category: "Built-In Features"
+title:  Сертификаты клиентов
+category: "Встроенные функции"
 category-url: built-in-features
 ---
 
-Client certificates are used by some APIs to as a means of authentication. Insomnia supports assigning a client certificate to a specific domain name and will automatically use them automatically whenever a request to that domain is sent.
+Сертификаты клиента используются некоторыми API в качестве средства проверки подлинности. Insomnia поддерживает назначение клиентского сертификата определенному доменному имени и будет автоматически использовать их автоматически всякий раз, когда отправляется запрос на этот домен.
 
-## Import Certificates
+## Импорт сертификатов
 
-Insomnia supports `PFX` (Mac) and `PEM` (Windows and Linux) certificates. 
+Insomnia поддерживает сертификаты `PFX` (Mac) и `PEM` (Windows и Linux).
 
-To import a new certificate, click **Document Settings** or **Collection Settings** then the **Client Certificates** tab. 
+Чтобы импортировать новый сертификат, нажмите **Настройки документа** или **Настройки коллекции**, затем перейдите на вкладку **Клиентские сертификаты**.
 
-![Access client certificate settings via Document or Collection Settings.](/assets/images/document-settings.png)
-_Depending on whether you are working with a Document or Collection, access client certificate settings via Document Settings or Collection Settings._
+![Доступ к настройкам сертификата клиента через настройки документа или коллекции.](/assets/images/document-settings.png)
+_В зависимости от того, работаете ли вы с документом или коллекцией, доступ к настройкам сертификата клиента можно получить через «Настройки документа» или «Настройки коллекции»._
 
-Once you click **New Certificate** in the **Client Certificates** tab, you will be prompted to fill out the following information. 
+Когда вы нажмете **Новый сертификат** на вкладке **Клиентские сертификаты**, вам будет предложено ввести следующую информацию.
 
-* `Host`: certificate will be sent when the host (and port if specified) matches
-* `PFX`: certificate in `PFX` or `PKCS12` format (only supported on Mac)
-* `CRT File + Key File`: certificate and key pair (only supported on Windows and Linux)
-* `Passphrase`: An optional passphrase for the certificate, if required
+* `Host`: сертификат будет отправлен, когда хост (и порт, если он указан) совпадает
+* `PFX`: сертификат в формате `PFX` или `PKCS12` (поддерживается только на Mac)
+* `CRT File + Key File`: сертификат и пара ключей (поддерживается только на Windows и Linux)
+* `Passphrase`: необязательная парольная фраза для сертификата, если требуется
 
-After importing a certificate, it will show up in the main certificates list in the **Client Certificates** tab. From here, the certificate can be enabled, disabled, or deleted.
+После импорта сертификата он появится в основном списке сертификатов на вкладке **Клиентские сертификаты**. Отсюда сертификат можно включить, отключить или удалить.

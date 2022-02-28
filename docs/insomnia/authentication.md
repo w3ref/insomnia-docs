@@ -1,61 +1,61 @@
 ---
 layout: article-detail
-title:  Authentication
-category: "Built-In Features"
+title:  Аутентификация
+category: "Встроенные функции"
 category-url: built-in-features
 ---
 
-Insomnia provides a number of authentication helpers to make it trivial to interface with the most common authentication standards. Choose your standard, fill in the prompted fields, and Insomnia will take care of the rest.
+Insomnia предоставляет ряд помощников по аутентификации, упрощающих взаимодействие с наиболее распространенными стандартами аутентификации. Выберите свой стандарт, заполните предложенные поля, а Insomnia позаботится обо всем остальном.
 
-## Authentication Basics
+## Основы аутентификации
 
-To set up authentication for a given request, select the desired authentication type from the **Auth** dropdown. Then, fill out the required fields.
+Чтобы настроить аутентификацию для данного запроса, выберите нужный тип аутентификации в раскрывающемся списке **Auth**. Затем заполните необходимые поля.
 
-![The Auth dropdown menu shows all of the built-in authentication types.](/assets/images/authentication-menu.png)
-_Select your authentication type from the Auth dropdown menu._
+![В раскрывающемся меню Аутентификация показаны все встроенные типы аутентификации.](/assets/images/authentication-menu.png)
+_Выберите тип аутентификации в раскрывающемся меню "Аутентификация"._
 
-## Supported Authentication Types
+## Поддерживаемые типы аутентификации
 
-Currently, Insomnia supports the following authentication standards.
+В настоящее время Insomnia поддерживает следующие стандарты аутентификации.
 
-### Basic Auth
+### Базовая аутентификация
 
-Basic authentication is one of the most basic ways to authenticate an HTTP request and is commonly used for passing API keys to authenticate popular APIs such as [Stripe](https://stripe.com/docs/api/authentication).
+Обычная проверка подлинности — это один из основных способов проверки подлинности HTTP-запроса, который обычно используется для передачи ключей API для проверки подлинности популярных API, таких как [Stripe](https://stripe.com/docs/api/authentication).
 
-### Digest Auth
+### ### Дайджест-аутентификация
 
-Digest is sometimes confused with Basic because it also uses a username and password, but it is much more complicated. To authenticate with a Digest endpoint, the client must send two requests instead of one. The first request sent to the server receives a nonce value, which is then used to produce a one-time-use hash key to authenticate the request.
+Дайджест иногда путают с Basic, потому что он также использует имя пользователя и пароль, но это намного сложнее. Для аутентификации с помощью конечной точки Digest клиент должен отправить два запроса вместо одного. Первый запрос, отправленный на сервер, получает значение nonce, которое затем используется для создания одноразового хеш-ключа для аутентификации запроса.
 
 ### OAuth 1.0
 
-OAuth 1.0 provides a method for clients to access server resources on behalf of a resource owner. OAuth 1.0 is used for many popular application APIs such as Twitter.
+OAuth 1.0 предоставляет клиентам метод доступа к ресурсам сервера от имени владельца ресурса. OAuth 1.0 используется для многих популярных API-интерфейсов приложений, таких как Twitter.
 
 ### OAuth 2.0
 
-The OAuth 2.0 authorization framework enables applications to obtain limited access to an HTTP service, usually on behalf of a resource owner. OAuth 2.0 is used for many popular application APIs such as GitHub, Facebook, Google, Dropbox, and many more.
+Платформа авторизации OAuth 2.0 позволяет приложениям получать ограниченный доступ к службе HTTP, обычно от имени владельца ресурса. OAuth 2.0 используется для многих популярных API-интерфейсов приложений, таких как GitHub, Facebook, Google, Dropbox и многих других.
 
 ### Microsoft NTLM
 
-NTLM is the authentication protocol used on networks that include systems running the Windows operating system and on stand-alone systems. Learn more by visiting the [Microsoft NTLM Documentation](https://docs.microsoft.com/en-us/windows/win32/secauthn/microsoft-ntlm?redirectedfrom=MSDN).
+NTLM — это протокол проверки подлинности, используемый в сетях, включающих системы, работающие под управлением операционной системы Windows, и в автономных системах. Узнайте больше, посетив [Документацию Microsoft NTLM](https://docs.microsoft.com/en-us/windows/win32/secauthn/microsoft-ntlm?redirectedfrom=MSDN).
 
 ### AWS IAM v4
 
-AWS IAM v4 is the mechanism used to authenticate with the AWS API. Read more in the [AWS Docs Signature Version 4 documentation](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
+AWS IAM v4 — это механизм, используемый для аутентификации с помощью AWS API. Дополнительные сведения смотрите в [документации AWS Docs Signature Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 
 ### Bearer Token
 
-The bearer token mechanism is commonly used within the OAuth 2.0 protocol and is outlined in [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750).
+Механизм токена-носителя обычно используется в протоколе OAuth 2.0 и описан в [RFC6750](https://datatracker.ietf.org/doc/html/rfc6750).
 
 ### HawK
 
-Hawk is an HTTP authentication scheme using a message authentication code (MAC) algorithm to provide partial HTTP request cryptographic verification. Learn more via the [Hawk GitHub project](https://github.com/mozilla/hawk).
+Hawk — это схема аутентификации HTTP, использующая алгоритм кода аутентификации сообщения (MAC) для обеспечения частичной криптографической проверки HTTP-запроса. Узнайте больше в [проекте Hawk GitHub](https://github.com/mozilla/hawk).
 
 ### Atlassian ASAP
 
-Learn more about [Atlassian S2S Authentication Protocol Specification](https://s2sauth.bitbucket.io/spec/).
+Узнайте больше о [Спецификации протокола аутентификации Atlassian S2S](https://s2sauth.bitbucket.io/spec/).
 
 ### Netrc file
 
-The `.netrc` file contains login and initialization information used by the auto-login process. Learn more via the [GNU documentation](https://www.gnu.org/software/inetutils/manual/html_node/The-_002enetrc-file.html).
+Файл `.netrc` содержит информацию для входа и инициализации, используемую процессом автоматического входа в систему. Узнайте больше в [документации GNU](https://www.gnu.org/software/inetutils/manual/html_node/The-_002enetrc-file.html).
 
-This authentication type requires no user input. The `.netrc` file on your computer will be located and used automatically.
+Этот тип аутентификации не требует ввода данных пользователем. Файл `.netrc` на вашем компьютере будет найден и использован автоматически.

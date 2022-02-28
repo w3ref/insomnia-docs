@@ -1,38 +1,38 @@
 ---
 layout: article-detail
-title:  GraphQL Queries
-category: "Built-In Features"
+title:  GraphQL-запросы
+category: "Встроенные функции"
 category-url: built-in-features
 ---
 
-[GraphQL](https://graphql.org/) is a query language for APIs that uses a type system to help with correctness and maintainability. Insomnia makes use of this type system to provide auto-completion and linting of GraphQL queries. This article will explain how to create and execute GraphQL queries within Insomnia.
+[GraphQL](https://graphql.org/) — это язык запросов для API, который использует систему типов для обеспечения корректности и удобства сопровождения. Insomnia использует эту систему типов для обеспечения автозаполнения и анализа запросов GraphQL. В этой статье объясняется, как создавать и выполнять запросы GraphQL в Insomnia.
 
-## Using GraphQL
+## Использование GraphQL
 
-Creating a GraphQL request in Insomnia is easy. It can be done be either selecting the GraphQL request type during creation or by changing the body type of an existing request using the body menu.
+Создать запрос GraphQL в Insomnia очень просто. Это можно сделать либо путем выбора типа запроса GraphQL во время создания, либо путем изменения типа тела существующего запроса с помощью меню тела.
 
-Once this is done, you can fill in the query and variables section of the query.
+Как только это будет сделано, вы можете заполнить раздел запроса и переменных запроса.
 
-### Query Section
+### Раздел запроса
 
-The query is the only required field of a GraphQL request. Queries can include arguments, comments, fragment, as well as any other valid query constructs. While editing the query, Insomnia will provide auto-completion and errors messages based on the API schema.
+Запрос — единственное обязательное поле запроса GraphQL. Запросы могут включать аргументы, комментарии, фрагменты, а также любые другие допустимые конструкции запросов. При редактировании запроса Insomnia будет предоставлять автозаполнение и сообщения об ошибках на основе схемы API.
 
 {:.alert .alert-primary}
-**Note**: GraphQL queries cannot include Insomnia templating but variables can.
+**Note**: Запросы GraphQL не могут включать шаблоны Insomnia, но переменные могут.
 
-### Variables Section
+### Раздел переменных
 
-GraphQL [variables](https://graphql.org/learn/queries/#variables) are defined in the Query Variables section below the query. Variables must be defined as a valid JSON object and can include Environment Variables and Template Tags if desired. If the variables section is left empty the variables attribute will not be included in the request payload.
+[Переменные GraphQL](https://graphql.org/learn/queries/#variables) определяются в разделе «Переменные запроса» под запросом. Переменные должны быть определены как действительный объект JSON и при желании могут включать переменные среды и теги шаблона. Если раздел переменных оставить пустым, атрибут переменных не будет включен в полезную нагрузку запроса.
 
-### Construct the Request Payload
+### Создайте полезную нагрузку запроса
 
-Insomnia automatically constructs the payload of a GraphQL request and saves it whenever the query or variables sections are modified. There are three possible attributes that make up a GraphQL request.
+Insomnia автоматически создает полезную нагрузку запроса GraphQL и сохраняет ее всякий раз, когда изменяется раздел запроса или переменных. Существует три возможных атрибута, составляющих запрос GraphQL.
 
-* `query` (string): The GraphQL query to be sent.
-* `variables` (object): An optional object of variables to be included with the query.
-* `operationName` (string): An optional operation name, populated automatically using the first named query if one exists.
+* `query` (string): Отправляемый запрос GraphQL.
+* `variables` (object): Необязательный объект переменных, которые должны быть включены в запрос.
+* `operationName` (string): необязательное имя операции, заполняемое автоматически с использованием первого именованного запроса, если таковой существует.
 
-The following is an example of a GraphQL request payload that makes use of all three parameters.
+Ниже приведен пример полезной нагрузки запроса GraphQL, в которой используются все три параметра.
 
 ```
 {
@@ -45,21 +45,21 @@ The following is an example of a GraphQL request payload that makes use of all t
 ```
 
 {:.alert .alert-primary}
-**Note**: It may be useful to know that this is how Insomnia stores the request body behind the scenes. Try converting the body type to JSON and back and see for yourself.
+**Note**: Может быть полезно знать, что именно так Insomnia хранит тело запроса за кулисами. Попробуйте преобразовать тип тела в JSON и обратно и убедитесь сами.
 
-### Schema Fetching
+### Получение схемы
 
-To provide auto-complete and error checking of GraphQL queries, Insomnia automatically fetches the schema by sending an [introspection](https://graphql.org/learn/introspection/) query. This query is performed both when switching to a new GraphQL request in the app or when various properties of the request are modified (eg. URL). 
+Чтобы обеспечить автозаполнение и проверку ошибок запросов GraphQL, Insomnia автоматически извлекает схему, отправляя запрос [introspection](https://graphql.org/learn/introspection/). Этот запрос выполняется как при переключении на новый запрос GraphQL в приложении, так и при изменении различных свойств запроса (например, URL).
 
 {:.alert .alert-primary}
-**Note**: All attributes of the request (authentication, headers, etc) are also sent with the introspection query
+**Note**: Все атрибуты запроса (аутентификация, заголовки и т. д.) также отправляются с запросом самоанализа
 
-### Documentation Browser
+### Браузер документации
 
-Insomnia supports the ability to browse the documentation for the current GraphQL endpoint. 
+Insomnia поддерживает возможность просмотра документации для текущей конечной точки GraphQL.
 
-There are three ways to show the documentation pane.
+Есть три способа отобразить панель документации.
 
-1. Click **Show Documentation** in the Schema dropdown near the query.
-2. Hover over a field and click within the popup documentation.
-3. `Control+click` (on Mac) a field within a query.
+1. Нажмите **Показать документацию** в раскрывающемся списке Схема рядом с запросом.
+2. Наведите указатель мыши на поле и щелкните во всплывающей документации.
+3. `Control+click` (на Mac) поле в запросе.

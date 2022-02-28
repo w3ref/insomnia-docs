@@ -69,26 +69,26 @@ toc:
         url: /insomnia/signup-and-auth
       - title: Шифрование данных
         url: /insomnia/data-encryption
-  - title: Built-In Features
+  - title: Встроенные функции
     collapse-id: features
     items: 
-      - title: Authentication
+      - title: Аутентификация
         url: /insomnia/authentication
-      - title: Client Certificates
+      - title: Сертификаты клиентов
         url: /insomnia/client-certificates
-      - title: Generate Code Snippet
+      - title: Создать фрагмент кода
         url: /insomnia/generate-code-snippet
-      - title: Cookie Management
+      - title: Управление файлами cookie
         url: /insomnia/cookie-management
-      - title: Encoding
+      - title: Кодирование
         url: /insomnia/encoding
-      - title: GraphQL Queries
+      - title: GraphQL-запросы
         url: /insomnia/graphql-queries
       - title: gRPC
         url: /insomnia/grpc
-      - title: Run in Insomnia Button
+      - title: Кнопка «Run» в Insomnia
         url: /insomnia/run-in-insomnia-button
-      - title: Key Maps
+      - title: Карта клавиш
         url: /insomnia/key-maps
   - title: Plugins
     collapse-id: plugins
