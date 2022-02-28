@@ -1,52 +1,52 @@
 ---
 layout: article-detail
-title:  Security Standards
-category: Security
+title:  Стандарты безопасности
+category: Безопасность
 category-url: security
 ---
 
-This document addresses common questions we get about our security standards. 
+В этом документе рассматриваются часто задаваемые вопросы о наших стандартах безопасности.
 
-**How is data processed when sent to Insomnia servers?**
+**Как обрабатываются данные при отправке на серверы Insomnia?**
 
-* Information is sent over TLS
-* Information sent is end-to-end encrypted, learn more here.
+* Информация отправляется по TLS
+* Отправляемая информация зашифрована сквозным шифрованием, подробнее здесь.
 
-**Where is our information stored?**
+**Где хранится наша информация?**
 
-* Information is stored in GCP, in US Central region
-* Information inside of GCP is stored within Postgres
+* Информация хранится в GCP, в Центральном регионе США.
+* Информация внутри GCP хранится в Postgres
 
-**Do we have any compliance certifications?**
+**Есть ли у нас какие-либо сертификаты соответствия?**
 
-Not at the moment.
+Не в данный момент.
 
-**Do you have any penetration test results from external parties?**
+**Есть ли у вас какие-либо результаты тестирования на проникновение от внешних сторон?**
 
-Not at the moment.
+Не в данный момент.
 
-**What authentication is implemented by the application?**
+**Какая аутентификация реализована в приложении?**
 
-* Secure Remote Passwords (SRP) encrypted key exchange protocol.
+* Протокол обмена зашифрованными ключами Secure Remote Passwords (SRP).
 
-**How often do you release major updates, and or security patches?**
+**Как часто вы выпускаете основные обновления или исправления безопасности?**
 
-* Major updates are usually released once a month, or every two weeks depending on the scope.
-* Security, and hotfix patches are handled on a case-by-case basis and can occur at any time.
+* Основные обновления обычно выпускаются один раз в месяц или каждые две недели в зависимости от объема.
+* Исправления безопасности и исправления обрабатываются в каждом конкретном случае и могут появиться в любое время.
 
-**Do you retain server logs, or event logs?**
+**Сохраняете ли вы журналы сервера или журналы событий?**
 
-* All server logs stored, are kept within GCP, and only accessed by engineers authorized to manage the Insomnia servers.
+* Все журналы сервера сохраняются, хранятся в GCP, и доступ к ним имеют только инженеры, уполномоченные управлять серверами Insomnia.
 
-**Do you maintain documentation when an incident/event occurs?**
+**Ведете ли вы документацию при возникновении инцидента/события?**
 
-* When an incident occurs, we perform an internal post-mortem and delegate information accordingly. Either through the site in the form of a blog post, or through social media/support on a case-by-case basis.
+* Когда происходит инцидент, мы проводим внутреннюю вскрытие и соответствующим образом делегируем информацию. Либо через сайт в виде сообщения в блоге, либо через социальные сети/поддержку в каждом конкретном случае.
 
-**In case of a breach, do you notify customers?**
+**В случае нарушения вы уведомляете клиентов?**
 
-* Yes, via email.
+* Да, по электронной почте.
 
-**What is your primary point of contact?**
+**Кто является вашим основным контактным лицом?**
 
-* [Open Source](https://github.com/kong/insomnia)
-* [Support channels](https://insomnia.rest/support)
+* [Открытый исходный код](https://github.com/kong/insomnia)
+* [Каналы поддержки](https://insomnia.rest/support)

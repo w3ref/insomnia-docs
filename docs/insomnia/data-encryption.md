@@ -1,22 +1,22 @@
 ---
 layout: article-detail
-title:  Data Encryption
-category: Security
+title:  Шифрование данных
+category: Безопасность
 category-url: security
 ---
 
-HTTP requests often contain sensitive information like API keys, usernames, and passwords. This is why Insomnia treats security with such a high priority, implementing many of the same techniques used by industry-leading password managers like [1Password](https://1password.com/), [LastPass](https://www.lastpass.com/), [DashLane](https://www.dashlane.com/), and others.
+HTTP-запросы часто содержат конфиденциальную информацию, такую как ключи API, имена пользователей и пароли. Вот почему Insomnia уделяет безопасности такой высокий приоритет, применяя многие из тех же методов, которые используются ведущими в отрасли менеджерами паролей, такими как [1Password](https://1password.com/), [LastPass](https://www.lastpass.com/), [DashLane](https://www.dashlane.com/) и другие.
 
-As detailed above, the user’s password is used to derive a secret key, which is then used to encrypt the account private key. Once decrypted, the private key can then be used to decrypt the keys for the Resource Group.
+Как подробно описано выше, пароль пользователя используется для получения секретного ключа, который затем используется для шифрования закрытого ключа учетной записи. После расшифровки закрытый ключ можно использовать для расшифровки ключей для группы ресурсов.
 
-Now you may be asking why all these keys are necessary. Why not just encrypt and decrypt data using the user’s password directly? There are few key scenarios that make having this many keys necessary.
+Теперь вы можете спросить, зачем нужны все эти ключи. Почему бы просто не зашифровать и не расшифровать данные, используя пароль пользователя напрямую? Есть несколько ключевых сценариев, которые требуют наличия такого количества ключей.
 
-### Changing Passwords
+### Смена паролей
 
-The ability for a user to change passwords is one reason that data is not directly encrypted using a password. If the user has large amounts of encrypted data, changing the password would mean decrypting and re-encrypting all data with the new password. This would quickly become too slow with even medium sized amounts of data.
+Возможность для пользователя изменять пароли является одной из причин того, что данные не шифруются напрямую с помощью пароля. Если у пользователя есть большие объемы зашифрованных данных, изменение пароля будет означать расшифровку и повторное шифрование всех данных с новым паролем. Это быстро станет слишком медленным даже для средних объемов данных.
 
-### Sharing a Resource Group
+### Совместное использование группы ресурсов
 
-The ability to share Resource Groups is the reason that every Resource Group needs its own key, and every account needs a public/private key-pair to securely share said key. Here’s an example involving two users, Jane and Bob.
+Возможность совместного использования групп ресурсов является причиной того, что каждой группе ресурсов нужен собственный ключ, а каждой учетной записи требуется пара открытого/закрытого ключа для безопасного совместного использования указанного ключа. Вот пример с участием двух пользователей, Джейн и Боба.
 
-For Jane to share a Resource Group with Bob, she must encrypt the Resource Group’s key with Bob’s public key and store it on the server (`M_Link`). Now, Bob can use his account’s private key to decrypt the Resource Group’s key and gain access to the data. This is a classic example of the [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) being put to good use.
+Чтобы Джейн могла поделиться группой ресурсов с Бобом, она должна зашифровать ключ группы ресурсов с помощью открытого ключа Боба и сохранить его на сервере (`M_Link`). Теперь Боб может использовать закрытый ключ своей учетной записи, чтобы расшифровать ключ группы ресурсов и получить доступ к данным. Это классический пример эффективного использования [обмена ключами Diffie–Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange).

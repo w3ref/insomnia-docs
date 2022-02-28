@@ -58,16 +58,16 @@ toc:
     items: 
       - title: Модульное и стресс-тестирование
         url: /insomnia/unit-testing
-  - title: Security
+  - title: Безопасность
     collapse-id: security
     items:
-      - title: Key Security Features
+      - title: Основные функции безопасности
         url: /insomnia/security-features
-      - title: Security Standards
+      - title: Стандарты безопасности
         url: /insomnia/security-standards
-      - title: Signup and Authentication
+      - title: Регистрация и аутентификация
         url: /insomnia/signup-and-auth
-      - title: Data Encryption
+      - title: Шифрование данных
         url: /insomnia/data-encryption
   - title: Built-In Features
     collapse-id: features
