@@ -103,16 +103,16 @@ toc:
         url: /insomnia/hooks-and-actions
       - title: Пользовательские темы
         url: /insomnia/custom-themes
-  - title: Troubleshooting
+  - title: Устранение неполадок
     collapse-id: troubleshooting
     items:
       - title: FAQ
         url: /insomnia/faq
-      - title: Application Data
+      - title: Данные Приложения
         url: /insomnia/application-data
-      - title: SSL Validation
+      - title: Валидация SSL
         url: /insomnia/ssl-validation
-      - title: Password Recovery
+      - title: Восстановление пароля
         url: /insomnia/password-recovery
   - title: Inso CLI
     collapse-id: cli

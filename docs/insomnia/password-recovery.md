@@ -1,29 +1,29 @@
 ---
 layout: article-detail
-title:  Password Recovery
-category: Support
+title:  Восстановление пароля
+category: Поддержка
 category-url: support
 ---
 
 {:.alert .alert-primary}
-**Note**: If you already know your password and want to change it, login to your account and change your password from the web (not the client application).
+**Note**: Если вы уже знаете свой пароль и хотите изменить его, войдите в свою учетную запись и измените пароль через Интернет (не через клиентское приложение).
 
-For your security, your Insomnia password is:
+В целях безопасности ваш пароль Insomnia:
 
-* never transmitted over the Internet
-* never logged locally
-* never known to us at Insomnia
-* only known to you
-* the only way to decrypt your data
+* никогда не передается через Интернет
+* никогда не регистрировался локально
+* никогда не известный нам в Insomnia
+* известно только вам
+* единственный способ расшифровать ваши данные
 
-This ensures that your data is safe from intruders, but it also means that no one can reset your password.  Read more about how your data is protected in the Security Overview.
+Это гарантирует, что ваши данные в безопасности от злоумышленников, но это также означает, что никто не сможет сбросить ваш пароль. Узнайте больше о том, как ваши данные защищены, в Обзоре безопасности.
 
-## Change Password from Desktop App
+## Изменить пароль из настольного приложения
 
-Because the desktop application has access to your encryption keys, it is possible to change your password from there without providing your old one. To do this, launch Insomnia, navigate to **Settings** > **Account**, and click on **Change Password**. From here, you will be able to request that a confirmation code be sent to your email address, which you can then use to change your password.
+Поскольку настольное приложение имеет доступ к вашим ключам шифрования, вы можете изменить свой пароль оттуда, не предоставляя старый. Для этого запустите Insomnia, перейдите в **Настройки** > **Учетная запись** и нажмите **Изменить пароль**. Отсюда вы сможете запросить отправку кода подтверждения на ваш адрес электронной почты, который затем можно использовать для изменения пароля.
 
-![Account tab with option to change password](/assets/images/password-recovery.png)
+![Вкладка Учетная запись с возможностью смены пароля](/assets/images/password-recovery.png)
 
-## Still Stuck?
+## Все еще застряли?
 
-In the case that you are not logged into the app, have tried all the passwords you can think of, and still cannot login, contact [support@insomnia.rest](mailto:support@insomnia.rest) with the email you used to sign up and we will walk you through the process of deleting your old account and transferring any data (eg. billing details) necessary.
+В случае, если вы не вошли в приложение, перепробовали все пароли, которые только могли придумать, и по-прежнему не можете войти, свяжитесь с [support@insomnia.rest](mailto:support@insomnia.rest), указав адрес электронной почты, который вы использовали для зарегистрируйтесь, и мы проведем вас через процесс удаления вашей старой учетной записи и переноса любых необходимых данных (например, платежных реквизитов).

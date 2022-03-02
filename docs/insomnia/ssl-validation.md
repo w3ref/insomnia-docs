@@ -1,11 +1,11 @@
 ---
 layout: article-detail
-title:  SSL Validation
-category: Support
+title:  Валидация SSL
+category: Поддержка
 category-url: support
 ---
 
-Have you seen certificate errors like these?
+Видели ли вы подобные ошибки сертификатов?
 
 ```bash
 Error: unable to verify the first certificate
@@ -15,4 +15,4 @@ Error: unable to verify the first certificate
 Error: Hostname/IP doesn't match certificate's altnames: "Host: example.com is not in the cert's altnames: DNS:*.surge.sh, DNS:surge.sh"
 ```
 
-If you are testing on a local development server, or know that the certificate is invalid, you can disable validation in the settings by deselecting the **Validate SSL Certificates** option.
+Если вы тестируете на локальном сервере разработки или знаете, что сертификат недействителен, вы можете отключить проверку в настройках, сняв флажок **Проверять SSL-сертификаты**.

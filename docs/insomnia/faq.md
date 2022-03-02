@@ -1,122 +1,121 @@
 ---
 layout: article-detail
 title:  FAQ
-category: Support
+category: Поддержка
 category-url: support
 ---
 
-Here are the answers to the most frequently asked questions that we receive. For support, see our [support community page](https://insomnia.rest/support). 
+Вот ответы на наиболее часто задаваемые вопросы, которые мы получаем. Для получения поддержки посетите нашу [страницу сообщества поддержки](https://insomnia.rest/support).
 
-## General Questions
+## Основные вопросы
 <hr>
 
-The following are general questions we frequently get about Insomnia. 
+Ниже приведены общие вопросы, которые мы часто получаем о бессоннице.
 
-### What platforms does Insomnia run on?
+### На каких платформах работает Insomnia?
 
-Insomnia has desktop apps for 64-bit versions of Mac, Windows, and Linux.
+У Insomnia есть настольные приложения для 64-битных версий Mac, Windows и Linux.
 
-### Does Insomnia provide 32-bit binaries?
+### Предоставляет ли Insomnia 32-битные двоичные файлы?
 
-At this time, Insomnia is 64-bit only.
+В настоящее время Insomnia только 64-битная.
 
-### What software license does Insomnia use?
+### Какую лицензию на программное обеспечение использует Insomnia?
 
-The Insomnia desktop application and related software packages are open source software under the MIT license and the source code is available at github.com/kong/insomnia. The server-side software that backed the paid sync service is closed source.
+Настольное приложение Insomnia и сопутствующие пакеты программного обеспечения являются программным обеспечением с открытым исходным кодом в соответствии с лицензией MIT, а исходный код доступен по адресу github.com/kong/insomnia. Программное обеспечение на стороне сервера, поддерживающее платную службу синхронизации, имеет закрытый исходный код.
 
-### Can I use Insomnia for commercial use?
+### Могу ли я использовать Insomnia в коммерческих целях?
 
-Yes, of course!
+Ну конечно; естественно!
 
-### How can I support Insomnia?
+### Как я могу поддержать Insomnia?
 
-First of all, thank you! Since Insomnia is just starting out, the best thing you can do is help spread the word! You can also submit bug reports on our open source repository, let us know how you use Insomnia, or sign up for a paid plan.
+Прежде всего, спасибо! Поскольку Insomnia только начинается, лучшее, что вы можете сделать, это помочь распространить информацию! Вы также можете отправлять отчеты об ошибках в наш репозиторий с открытым исходным кодом, рассказывать нам, как вы используете Insomnia, или подписаться на платный план.
 
-### Does Insomnia have a EULA agreement?
+### Есть ли у Insomnia соглашение EULA?
 
-Currently there is no EULA that is provided for Insomnia. As of now we only have our [Terms of Service](https://insomnia.rest/terms) and [Privacy Policy](https://insomnia.rest/privacy).
+В настоящее время для Insomnia не предусмотрено лицензионное соглашение с конечным пользователем. На данный момент у нас есть только наши [Условия обслуживания](https://insomnia.rest/terms) и [Политика конфиденциальности](https://insomnia.rest/privacy).
 
-Currently we consider the [MIT](https://opensource.org/licenses/MIT) license as a EULA but we are looking to change this in the future.
+В настоящее время мы рассматриваем лицензию [MIT](https://opensource.org/licenses/MIT) как лицензионное соглашение с конечным пользователем, но мы планируем изменить это в будущем.
 
-### What is the team size limit for a free trial?
+### Каков предельный размер команды для бесплатной пробной версии?
 
-The free trial is limited to 5 team members. Once the trial has expired you will be billed for each team member, which means the post-trial limit is the number of member seats you purchase.
+Бесплатная пробная версия ограничена 5 членами команды. По истечении пробного периода вам будет выставлен счет за каждого члена команды, а это означает, что лимит после пробного периода — это количество приобретенных вами рабочих мест.
 
-### How do I increase the number of seats on my team?
+### Как мне увеличить количество мест в моей команде?
 
-In order to add more people, the team owner needs to first update the subscription to include more seats. This can be simply accomplished by going to the Insomnia dashboard, located at https://app.insomnia.rest, then select Account -> Change Subscription, and then increase the "Team Size" as needed. You will be billed accordingly on your next statement.
+Чтобы добавить больше людей, владелец команды должен сначала обновить подписку, включив в нее больше мест. Это можно легко сделать, перейдя на панель инструментов Insomnia, расположенную по адресу https://app.insomnia.rest, затем выберите «Учетная запись» -> «Изменить подписку», а затем при необходимости увеличьте «Размер команды». При следующей выписке вам будет выставлен счет соответственно.
 
-### How can I customize receipt data?
+### Как настроить данные чека?
 
-It is often necessary to include company information on receipts. For example, to include the company name, address, or VAT number. 
+Часто бывает необходимо включать информацию о компании в квитанции. Например, чтобы включить название компании, адрес или номер плательщика НДС.
 
 {:.alert .alert-primary}
-**Note**: Invoice data will only appear on downloaded invoices, not invoices received by email.
+**Note**: Данные счета будут отображаться только в загруженных счетах, а не в счетах, полученных по электронной почте.
 
-Additional information can be specified when [Creating or Updating a Subscription](https://app.insomnia.rest/app/subscribe/). Any changes to this information will appear on any invoices downloaded from the [Invoice History](https://app.insomnia.rest/app/invoices/) page.
+Дополнительную информацию можно указать при [Создании или обновлении подписки](https://app.insomnia.rest/app/subscribe/). Любые изменения этой информации будут отображаться во всех счетах, загруженных со страницы [История счетов](https://app.insomnia.rest/app/invoices/) page.
 
-### Why do I have multiple charges on my plan?
+### Почему в моем плане несколько списаний?
 
-When you notice that there are dual, or multiple, charges for your Insomnia plan. This is because some banks may display charge attempts as multiple entries when the currency differs. Our payment provider (Stripe) will only attempt to charge your designated payment method once.
+Когда вы заметите, что для вашего плана Insomnia взимается двойная или множественная плата. Это связано с тем, что некоторые банки могут отображать попытки списания в виде нескольких записей, когда валюта различается. Наш платежный провайдер (Stripe) попытается снять средства с указанного вами способа оплаты только один раз.
 
-## Technical Questions
+## Технические вопросы
 <hr>
 
-These technical questions commonly come up when user interact with Insomnia. 
+Эти технические вопросы обычно возникают, когда пользователь взаимодействует с Insomnia.
 
-### My app is not responding. What should I do?
+### Мое приложение не отвечает. Что я должен делать?
 
-Sometimes, if you make a request that returns a lot of data, Insomnia will become unresponsive. If this happens, you can manually delete the large response file by doing the following.
+Иногда, если вы делаете запрос, который возвращает много данных, Insomnia перестает отвечать на запросы. В этом случае вы можете вручную удалить большой файл ответов, выполнив следующие действия.
 
-1. Locate the Application Data Folder
+1. Найдите папку данных приложения
 
-    You can find the application data folder in the Help menu. If the help menu is not accessible, here are the default paths for each operating system.
+    Вы можете найти папку данных приложения в меню «Справка». Если меню справки недоступно, вот пути по умолчанию для каждой операционной системы.
 
-    `%APPDATA%` on Windows
-    `$XDG_CONFIG_HOME` or `~/.config` on Linux
-    `~/Library/Application Support` on macOS
+    `%APPDATA%` на Windows
+    `$XDG_CONFIG_HOME` или `~/.config` на Linux
+    `~/Library/Application Support` на macOS
 
-2. Delete the Offending Response Body
+2. Удалите оскорбительный текст ответа
 
-    Each response stores the body inside its own file in the "responses" folder. Locate the large responses and delete them, then restart Insomnia.
+    Каждый ответ хранит тело в своем собственном файле в папке «ответы». Найдите большие ответы и удалите их, затем перезапустите Insomnia.
 
-    It's safe to delete responses. Insomnia will simply report that it cannot locate the body.
+    Удалять ответы безопасно. Бессонница просто сообщит, что не может найти тело.
 
-### How can I temporarily disable Nunjucks template?
+### Как я могу временно отключить шаблон Nunjucks?
 
-You can disable templating of the request body via the request settings dialog (accessed from the sidebar). For more control, you can also disable templating by wrapping the desired content in the Nunjucks {% raw %}{% raw %}{% endraw %} Tag.
+Вы можете отключить шаблонирование тела запроса через диалоговое окно настроек запроса (доступное с боковой панели). Для большего контроля вы также можете отключить шаблоны, заключив нужный контент в тег Nunjucks {% raw %}{% raw %}{% endraw %}.
 
-### Why don’t I see anything after importing a backup?
+### Почему я ничего не вижу после импорта резервной копии?
 
-The import/export feature acts similarly to copying files in a filesystem. If the import contains data that originated from your application, data will be overwritten. However, if the import contains data that did not originate from your application, new data (including request collections / design documents) may have be created.
+Функция импорта/экспорта действует аналогично копированию файлов в файловой системе. Если импорт содержит данные, полученные из вашего приложения, данные будут перезаписаны. Однако, если импорт содержит данные, которые не были получены из вашего приложения, возможно, были созданы новые данные (включая наборы запросов/проектные документы).
 
 {:.alert .alert-primary}
-**Note**: You can check for newly created Collections and Documents on the Dashboard.
+**Note**: Вы можете проверить наличие вновь созданных коллекций и документов на панели инструментов.
 
-### Where does the application store data?
+### Где приложение хранит данные?
 
-Insomnia stores data in Electron’s appData directory, which differs depending on platform. The local database is distributed across files with the name `insomnia.${resourceName}.db`.
+Insomnia хранит данные в каталоге appData Electron, который отличается в зависимости от платформы. Локальная база данных распределена по файлам с именем `insomnia.${resourceName}.db`.
 
-* `%APPDATA%/Insomnia` on Windows
-* `XDG_CONFIG_HOME/Insomnia` or `~/.config/Insomnia` on Linux
-* `~/Library/Application Support/Insomnia` on macOS
+* `%APPDATA%/Insomnia` на Windows
+* `XDG_CONFIG_HOME/Insomnia` или `~/.config/Insomnia` на Linux
+* `~/Library/Application Support/Insomnia` на macOS
 
-The app data directory can also be shown by navigating to Help > Show App Data Folder.
+Каталог данных приложения также можно отобразить, выбрав «Справка» > «Показать папку данных приложения».
 
-### Where does the application store logs?
+### Где приложение хранит журналы?
 
-Insomnia stores logs in the following location, depending on the platform:
+Insomnia хранит журналы в следующем месте, в зависимости от платформы:
 
-* `%APPDATA%/Insomnia/logs` on Windows
-* `$XDG_CONFIG_HOME/Insomnia/logs` or `~/.config/Insomnia/logs` on Linux
-* `~/Library/Logs/Insomnia` on macOS
+* `%APPDATA%/Insomnia/logs` на Windows
+* `$XDG_CONFIG_HOME/Insomnia/logs` или `~/.config/Insomnia/logs` на Linux
+* `~/Library/Logs/Insomnia` на macOS
+Вы можете открыть родительскую папку, выбрав «Справка» > «Показать папку журналов приложений» в Insomnia.
 
-You can open the parent folder, by navigating to Help > Show App Logs Folder in Insomnia.
+### Где найти сочетания клавиш?
 
-### Where do I find keyboard shortcuts?
+Список всех сочетаний клавиш можно найти в приложении в разделе «Настройки» > «Клавиатура».
 
-A list of all keyboard shortcuts can be found within the application under Preferences > Keyboard.
+### Где Insomnia хранит информацию об окружении при установке Linux (Snap)?
 
-### Where does Insomnia store environment information on a Linux (snap) install?
-
-Various forms of user data, log files and environment information — the kind of data that’s generated and consumed by applications during operations can be located in the `/var/snap/` directory. Additionally, the `~/snap` directory that exists in a user’s home directory will contain directories using some of the names seen in `/var/snap`. These directories are meant to store versioned data related to settings used by your user account.
+Различные формы пользовательских данных, файлов журналов и информации о среде  — данные, генерируемые и потребляемые приложениями во время операций, могут находиться в каталоге `/var/snap/`. Кроме того, каталог `~/snap`, существующий в домашнем каталоге пользователя, будет содержать каталоги, использующие некоторые имена из `/var/snap`. Эти каталоги предназначены для хранения версионных данных, связанных с настройками, используемыми вашей учетной записью пользователя.
