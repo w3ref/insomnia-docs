@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="/assets/images/insomnia-docs-share.png">
+    <link rel="shortcut icon" type="image/svg" href="/assets/images/insomnia-favicon.svg">
+    
+    <link rel="canonical" href="https://insomnia.w3ref.ru/insomnia/version-control-sync/">
+    
+    
+        <title>Синхронизация контроля версий | Документация Insomnia</title>
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!--  Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- Algolia Styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+</head>
+
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a href="/">
+    <img src="/assets/images/insomnia-docs-logo.png" alt="Insomnia лого" id="inso-logo">
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <form class="form-inline">
+        <input id="algolia-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <!-- <button class="btn btn-light my-2 my-sm-0" id="main-search" type="button">Search</button> -->
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/insomnia/get-started">Документация</a>
+        </li>
+        <li class="nav-item">
+            <span>
+              <a class="nav-link" href="https://insomnia.rest/download">
+                Скачать
+                <img class="ext-arrow" src="/assets/images/ext-arrow-white.svg" alt="">
+              </a>
+            </span>
+          </li>
+        <li class="nav-item">
+          <span>
+            <a class="nav-link" href="https://insomnia.rest/pricing">
+              Обновить
+              <img class="ext-arrow" src="/assets/images/ext-arrow-white.svg" alt="">
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script type="text/javascript">
+  docsearch({
+    appId: 'IBXE7R5KFS',
+    apiKey: '65f451796f36a6d7df9814965f5de7ac',
+    indexName: 'insomnia_docs',
+    inputSelector: '#algolia-input',
+    algoliaOptions: {
+      hitsPerPage: 8
+    }
+    // ,debug: true // Set debug to true if you want to inspect the dropdown
+  })
+</script>
+      <div class="container">
+    <div class="container-fluid article-detail-container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="flex-shrink-0 bg-white sticky-top z-sidebar">
+  <ul class="list-unstyled ps-0">
+    <li class="mb-1">
+    
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#get-started-collapse" aria-expanded="true">
+        <span>
+          Начать
+        </span>
+      </button>
+        <div class="collapse " id="get-started-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/get-started">
+                Введение в Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/install">
+                Установка Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/migrate-from-designer">
+                Миграция из Designer
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/import-export-data">
+                Импорт и экспорт данных
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/environment-variables">
+                Переменные среды
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/http-proxy">
+                HTTP(S) прокси
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/insomnia-config-file">
+                Файл конфигурации Insomnia
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#requests-collapse" aria-expanded="true">
+        <span>
+          Запросы и ответы
+        </span>
+      </button>
+        <div class="collapse " id="requests-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/responses">
+                Ответы
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/request-collections">
+                Коллекция запросов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/request-timeouts">
+                Таймауты запроса
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/chaining-requests">
+                Цепочка запросов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/post-csv-data">
+                Размещение данных CSV
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/soap-requests">
+                Запросы SOAP
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#collaboration-collapse" aria-expanded="true">
+        <span>
+          Сотрудничество
+        </span>
+      </button>
+        <div class="collapse  show " id="collaboration-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/teams">
+                Команды
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/projects">
+                Проекты
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/git-sync">
+                Синхронизировать с Git
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start  list-active ">
+              <a href="/insomnia/version-control-sync">
+                Синхронизация контроля версий
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#design-collapse" aria-expanded="true">
+        <span>
+          Дизайн API
+        </span>
+      </button>
+        <div class="collapse " id="design-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/design-documents">
+                Проектная документация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/linting">
+                Линтинг
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/graphql-for-openapi">
+                GraphQL для OpenAPI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/live-preview">
+                Превью в реальном времени
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#testing-collapse" aria-expanded="true">
+        <span>
+          Тестирование
+        </span>
+      </button>
+        <div class="collapse " id="testing-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/unit-testing">
+                Модульное и стресс-тестирование
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#security-collapse" aria-expanded="true">
+        <span>
+          Безопасность
+        </span>
+      </button>
+        <div class="collapse " id="security-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/security-features">
+                Основные функции безопасности
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/security-standards">
+                Стандарты безопасности
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/signup-and-auth">
+                Регистрация и аутентификация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/data-encryption">
+                Шифрование данных
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#features-collapse" aria-expanded="true">
+        <span>
+          Встроенные функции
+        </span>
+      </button>
+        <div class="collapse " id="features-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/authentication">
+                Аутентификация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/client-certificates">
+                Сертификаты клиентов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/generate-code-snippet">
+                Создать фрагмент кода
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/cookie-management">
+                Управление файлами cookie
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/encoding">
+                Кодирование
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/graphql-queries">
+                GraphQL-запросы
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/grpc">
+                gRPC
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/run-in-insomnia-button">
+                Кнопка «Run» в Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/key-maps">
+                Карта клавиш
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#plugins-collapse" aria-expanded="true">
+        <span>
+          Плагины
+        </span>
+      </button>
+        <div class="collapse " id="plugins-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/introduction-to-plugins">
+                Введение в плагины
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/context-object-reference">
+                Справочник по контекстным объектам
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/template-tags">
+                Теги шаблона
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/hooks-and-actions">
+                Хуки и действия
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/custom-themes">
+                Пользовательские темы
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#troubleshooting-collapse" aria-expanded="true">
+        <span>
+          Устранение неполадок
+        </span>
+      </button>
+        <div class="collapse " id="troubleshooting-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/faq">
+                FAQ
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/application-data">
+                Данные Приложения
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/ssl-validation">
+                Валидация SSL
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/password-recovery">
+                Восстановление пароля
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#cli-collapse" aria-expanded="true">
+        <span>
+          Inso CLI
+        </span>
+      </button>
+        <div class="collapse " id="cli-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/introduction">
+                Introduction to Inso CLI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/install">
+                Install Inso CLI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/cli-command-reference">
+                CLI Command Reference
+              </a>
+              
+              <div class="collapse ">
+                <ul class="list-unstyled">
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-generate-config">
+                        inso generate config
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-run-test">
+                        inso run test
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-lint-spec">
+                        inso lint spec
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-export-spec">
+                        inso export spec
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-script">
+                        inso script
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/configuration">
+                Configuration
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/continuous-integration">
+                Continuous Integration
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#kong-products-collapse" aria-expanded="true">
+        <span>
+          Work with Other Kong Products
+        </span>
+      </button>
+        <div class="collapse " id="kong-products-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/publish-to-dev-portal">
+                Publish API to Dev Portal
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/declarative-config">
+                Kong Declarative Config (for decK)
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/kong-for-kubernetes">
+                Kong for Kubernetes
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+    </li>
+  </ul>
+</div>
+
+                <script>
+  let anchorForId = function (id) {
+    let anchor = document.createElement("a");
+    anchor.className = "anchor-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<img class=\"anchor-icon\" src=\"/assets/images/anchor-icon.svg\" alt=\"\"></img>";
+    anchor.title = "";
+    return anchor;
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      let className =
+        ".show-anchor-links h1, .show-anchor-links h2, .show-anchor-links h3, " +
+        ".show-anchor-links h4, .show-anchor-links h5, .show-anchor-links h6";
+      let headers = document.querySelectorAll(className);
+
+      for (var i = 0; i < headers.length; i++) {
+        let header = headers[i];
+        if (typeof header.id !== "undefined" && header.id !== "") {
+          header.prepend(anchorForId(header.id));
+        }
+      }
+    }
+  };
+</script>
+
+            </div>
+            <div class="col-md-6 col-lg-7 show-anchor-links">
+                <h1>Синхронизация контроля версий</h1>
+                <p class="alert alert-primary"><strong>Примечание</strong>: В настоящее время синхронизация управления версиями применяется только к удаленным коллекциям. Коллекции используют нашу собственную Insomnia Sync для управления версиями. Эта функция предоставляется с платными подписками. Смотрите <a href="https://insomnia.rest/pricing">Цены</a> для получения дополнительной информации. Чтобы узнать о синхронизации Git для документов, обратитесь к <a href="/insomnia/git-sync">Git Sync</a>.</p>
+
+<p>В этом разделе вы найдете документацию по коллекциям <a href="#sync">Sync</a> и <a href="#snapshots">Snapshots</a>.</p>
+
+<h2 id="sync">Sync</h2>
+
+<p>Синхронизация для удаленных коллекций предоставляет следующие возможности помимо базовой функциональности Insomnia:</p>
+
+<ul>
+  <li>Снимок содержимого коллекции запросов</li>
+  <li>Вернуть коллекцию запросов к предыдущему снимку</li>
+  <li>Делитесь снимками на разных устройствах или с членами вашей команды</li>
+  <li>Создавать и работать над отдельными ветками</li>
+</ul>
+
+<p>Доступ к основным функциям синхронизации (после включения автоматически или вручную) можно получить из раскрывающегося списка в правом верхнем углу приложения, когда вы находитесь в удаленной коллекции.</p>
+
+<p><img src="/assets/images/version-control.png" alt="При платной подписке нажмите большую кнопку с названием ветки в Коллекции." />
+<em>Для параметров управления версиями в Коллекции нажмите кнопку с большим именем ветки.</em></p>
+
+<h2 id="включить-sync">Включить Sync</h2>
+
+<p>При создании коллекции запросов в удаленном проекте Insomnia попытается автоматически включить синхронизацию и отправить исходный снимок.</p>
+
+<h3 id="включить-вручную-sync">Включить вручную Sync</h3>
+
+<p>Если Insomnia не может или не включила автоматическую синхронизацию, вы можете настроить это вручную. Сначала нажмите <strong>Setup Sync</strong>, затем <strong>Create Local Project</strong>. Затем вы можете создать и отправить свой Снепшот.</p>
+
+<p class="alert alert-primary"><strong>Примечание</strong>: Не видите меню синхронизации? Убедитесь, что вы вошли в систему, щелкнув значок человека в правом верхнем углу приложения. Если вы видите вариант выхода, вы вошли в систему. Если вы по-прежнему не видите меню «Синхронизация», убедитесь, что вы находитесь в удаленном проекте с панели инструментов.</p>
+
+<p><img src="/assets/images/setup-sync.png" alt="Включите синхронизацию Git в коллекции, нажав кнопку «Настроить синхронизацию»." />
+<em>Включите синхронизацию Git в коллекции, нажав кнопку «Настроить синхронизацию».</em></p>
+
+<p>Когда синхронизация включена для коллекции внутри проекта, все пользователи, имеющие доступ к проекту, также получают доступ к этой коллекции. Вы можете управлять участниками в своем проекте с <a href="https://app.insomnia.rest/app/signup/">веб-панели управления</a>.</p>
+
+<h2 id="снепшоты">Снепшоты</h2>
+
+<p>В этом разделе представлена информация об использовании платной функции моментальных снимков для удаленных коллекций. Информацию о ценах смотрите на нашей странице <a href="https://insomnia.rest/pricing">Цен</a>.</p>
+
+<h3 id="создать-снимок">Создать снимок</h3>
+
+<p>Чтобы создать снимок, откройте <strong>удаленную Коллекцию</strong> и щелкните раскрывающееся меню ветки рядом с «Параметры», а затем щелкните <strong>Создать снимок</strong>. Откроется модальное окно <strong>Создать снимок</strong>.</p>
+
+<p><img src="/assets/images/create-snapshot.png" alt="Чтобы создать новый снимок, щелкните раскрывающееся меню ветки рядом с «Настройки» и выберите «Создать снимок»." />
+<em>В удаленной коллекции щелкните раскрывающееся меню ветки и нажмите «Создать снимок».</em></p>
+
+<p>Снимки представляют все данные в Коллекции (запросы, папки, среды) в определенный момент времени. Помимо данных в Коллекции, Снимок также детализирует:</p>
+
+<ul>
+  <li>Автор снимка</li>
+  <li>Время создания снимка</li>
+  <li>Сообщение с описанием любых изменений в снимке</li>
+</ul>
+
+<p>Для создания снимка требуется два действия:</p>
+
+<ol>
+  <li>Опишите изменения, содержащиеся в снимке.</li>
+  <li>Выберите, какие изменения нужно включить.</li>
+</ol>
+
+<h3 id="написать-снимок-сообщения">Написать снимок сообщения</h3>
+
+<p>Сообщения моментальных снимков должны описывать включенные изменения как можно более подробно, так как это описание поможет идентифицировать моментальный снимок, если вам когда-либо понадобится вернуться к нему.</p>
+
+<h3 id="добавить-изменения-в-снимок">Добавить изменения в снимок</h3>
+
+<p>Изменения, внесенные в коллекцию запросов, можно добавлять на детальном уровне. Изменения и удаления существующих запросов, папок и т. д. (Объекты AKA) будут отображаться в разделе «Измененные объекты», а новые добавления появятся в разделе «Неверсированные объекты» и по умолчанию не выбраны.</p>
+
+<h3 id="поделиться-снимками">Поделиться снимками</h3>
+
+<p>После создания снимка вы можете поделиться им с вашей учетной записью Insomnia или командой. Отправить снимки можно двумя способами:</p>
+
+<ul>
+  <li>Используйте опцию Create and Push при создании снимка</li>
+  <li>Отправляйте несинхронизированные снимки из главного меню синхронизации</li>
+</ul>
+
+<p>Если есть новые доступные снимки, которых еще нет на вашем устройстве (например, от команды), их можно будет извлечь из меню синхронизации.</p>
+
+<h3 id="работа-с-ветками">Работа с ветками</h3>
+
+<p>Все снимки, созданные для синхронизации, хранятся в ветке. Ветви идентифицируются по имени, и каждая из них поддерживает список снэпшотов, которые были созданы для нее (т. е. ее история). Ветки можно создавать или удалять в любое время, делиться ими с членами команды и даже объединять.</p>
+
+<p>Ветви могут быть полезны по многим причинам, но два основных варианта использования следующие:</p>
+
+<ul>
+  <li>Отделяйте личную работу от других членов команды</li>
+  <li>Работа над экспериментальными изменениями, которые могут существовать или не существовать в долгосрочной перспективе</li>
+</ul>
+
+<p>Управление ветками осуществляется в диалоговом окне ветвей. Здесь вы можете создавать локальные ветки, объединять ветки и получать удаленные ветки.</p>
+
+<h3 id="поделиться-коллекцией-запросов">Поделиться коллекцией запросов</h3>
+
+<p>Чтобы начать совместное использование рабочих мест со своей командой, см. <a href="/insomnia/team-collaboration">Совместная работа в команде</a>.</p>
+
+<h3 id="вернуться-к-предыдущему-снимку">Вернуться к предыдущему снимку</h3>
+
+<p>Вы можете вернуть коллекцию к предыдущему снимку. Найдите снимок, к которому хотите вернуться, перейдя в раскрывающееся меню ветки и нажав <strong>История</strong>. Затем нажмите <strong>Восстановить</strong> на снимке, к которому вы хотите вернуться.</p>
+
+<p>Когда вы восстанавливаете снимок, он отображает изменения локально, и вам нужно будет вручную сделать снимок изменений.</p>
+
+            </div>
+            <div class="col-md-3 col-lg-2 text-start z-sidebar">
+                <div class="sticky-top">
+                    <div>
+                        <span><img src="/assets/images/github-icon.svg" alt="" class="github-icon me-2"></span>
+                        <a href="https://github.com/Kong/insomnia-docs/edit/main/docs/insomnia/version-control-sync.md" alt="Редактировать эту страницу" class="github-link">
+                            Редактировать эту страницу
+                        </a>
+                    </div>
+                    <div>
+                        <span><img src="/assets/images/report-problem-icon.svg" alt="" class="github-icon me-2"></span>
+                        <a href="https://github.com/Kong/insomnia-docs/issues" alt="Сообщить о проблеме" class="github-link">
+                            Сообщить о проблеме
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="footer mt-auto h-100 p-5 text-black" id="docs-footer">
+    <div class="container">
+        <div class="row align-items-md-stretch">
+            <div class="col-md-3">
+                <ul>КОМПАНИЯ
+                    <li><a href="https://insomnia.rest/">Insomnia</a></li>
+                    <li><a href="https://insomnia.rest/blog">Блог</a></li>
+                    <li><a href="https://insomnia.rest/changelog">Журнал изменений</a></li>
+                    <li><a href="https://insomnia.rest/pricing">Ценообразование</a></li>
+                    <li><a href="https://jobs.lever.co/kong?department=Engineering">Карьера</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>ПРОДУКТЫ
+                    <li><a href="https://insomnia.rest/products/insomnia">Insomnia</a></li>
+                    <li><a href="https://insomnia.rest/products/inso">Inso (CLI)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>РЕСУРСЫ
+                    <li><a href="https://app.insomnia.rest/app/login/">Войти</a></li>
+                    <li><a href="#">Документация</a></li>
+                    <li><a href="https://insomnia.rest/support">Поддержка</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>ЮРИДИЧЕСКИЕ
+                    <li><a href="https://insomnia.rest/privacy">Политика конфиденциальности</a></li>
+                    <li><a href="https://insomnia.rest/terms">Условия и положения</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row align-items-md-stretch">
+            <div class="col-md-12">
+                <small id="footer-copyright">© Kong Inc. 2021</small>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+<script type="text/javascript">window.Beacon('init', 'fce2431f-e83d-4205-b0c6-80fd9c2dc95e')</script>
+ -->
+  </body>
+</html>

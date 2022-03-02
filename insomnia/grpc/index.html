@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="/assets/images/insomnia-docs-share.png">
+    <link rel="shortcut icon" type="image/svg" href="/assets/images/insomnia-favicon.svg">
+    
+    <link rel="canonical" href="https://insomnia.w3ref.ru/insomnia/grpc/">
+    
+    
+        <title>gRPC | Документация Insomnia</title>
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!--  Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- Algolia Styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+</head>
+
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a href="/">
+    <img src="/assets/images/insomnia-docs-logo.png" alt="Insomnia лого" id="inso-logo">
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <form class="form-inline">
+        <input id="algolia-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <!-- <button class="btn btn-light my-2 my-sm-0" id="main-search" type="button">Search</button> -->
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/insomnia/get-started">Документация</a>
+        </li>
+        <li class="nav-item">
+            <span>
+              <a class="nav-link" href="https://insomnia.rest/download">
+                Скачать
+                <img class="ext-arrow" src="/assets/images/ext-arrow-white.svg" alt="">
+              </a>
+            </span>
+          </li>
+        <li class="nav-item">
+          <span>
+            <a class="nav-link" href="https://insomnia.rest/pricing">
+              Обновить
+              <img class="ext-arrow" src="/assets/images/ext-arrow-white.svg" alt="">
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script type="text/javascript">
+  docsearch({
+    appId: 'IBXE7R5KFS',
+    apiKey: '65f451796f36a6d7df9814965f5de7ac',
+    indexName: 'insomnia_docs',
+    inputSelector: '#algolia-input',
+    algoliaOptions: {
+      hitsPerPage: 8
+    }
+    // ,debug: true // Set debug to true if you want to inspect the dropdown
+  })
+</script>
+      <div class="container">
+    <div class="container-fluid article-detail-container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="flex-shrink-0 bg-white sticky-top z-sidebar">
+  <ul class="list-unstyled ps-0">
+    <li class="mb-1">
+    
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#get-started-collapse" aria-expanded="true">
+        <span>
+          Начать
+        </span>
+      </button>
+        <div class="collapse " id="get-started-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/get-started">
+                Введение в Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/install">
+                Установка Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/migrate-from-designer">
+                Миграция из Designer
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/import-export-data">
+                Импорт и экспорт данных
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/environment-variables">
+                Переменные среды
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/http-proxy">
+                HTTP(S) прокси
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/insomnia-config-file">
+                Файл конфигурации Insomnia
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#requests-collapse" aria-expanded="true">
+        <span>
+          Запросы и ответы
+        </span>
+      </button>
+        <div class="collapse " id="requests-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/responses">
+                Ответы
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/request-collections">
+                Коллекция запросов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/request-timeouts">
+                Таймауты запроса
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/chaining-requests">
+                Цепочка запросов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/post-csv-data">
+                Размещение данных CSV
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/soap-requests">
+                Запросы SOAP
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#collaboration-collapse" aria-expanded="true">
+        <span>
+          Сотрудничество
+        </span>
+      </button>
+        <div class="collapse " id="collaboration-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/teams">
+                Команды
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/projects">
+                Проекты
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/git-sync">
+                Синхронизировать с Git
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/version-control-sync">
+                Синхронизация контроля версий
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#design-collapse" aria-expanded="true">
+        <span>
+          Дизайн API
+        </span>
+      </button>
+        <div class="collapse " id="design-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/design-documents">
+                Проектная документация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/linting">
+                Линтинг
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/graphql-for-openapi">
+                GraphQL для OpenAPI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/live-preview">
+                Превью в реальном времени
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#testing-collapse" aria-expanded="true">
+        <span>
+          Тестирование
+        </span>
+      </button>
+        <div class="collapse " id="testing-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/unit-testing">
+                Модульное и стресс-тестирование
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#security-collapse" aria-expanded="true">
+        <span>
+          Безопасность
+        </span>
+      </button>
+        <div class="collapse " id="security-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/security-features">
+                Основные функции безопасности
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/security-standards">
+                Стандарты безопасности
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/signup-and-auth">
+                Регистрация и аутентификация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/data-encryption">
+                Шифрование данных
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#features-collapse" aria-expanded="true">
+        <span>
+          Встроенные функции
+        </span>
+      </button>
+        <div class="collapse  show " id="features-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/authentication">
+                Аутентификация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/client-certificates">
+                Сертификаты клиентов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/generate-code-snippet">
+                Создать фрагмент кода
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/cookie-management">
+                Управление файлами cookie
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/encoding">
+                Кодирование
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/graphql-queries">
+                GraphQL-запросы
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start  list-active ">
+              <a href="/insomnia/grpc">
+                gRPC
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/run-in-insomnia-button">
+                Кнопка «Run» в Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/key-maps">
+                Карта клавиш
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#plugins-collapse" aria-expanded="true">
+        <span>
+          Плагины
+        </span>
+      </button>
+        <div class="collapse " id="plugins-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/introduction-to-plugins">
+                Введение в плагины
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/context-object-reference">
+                Справочник по контекстным объектам
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/template-tags">
+                Теги шаблона
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/hooks-and-actions">
+                Хуки и действия
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/custom-themes">
+                Пользовательские темы
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#troubleshooting-collapse" aria-expanded="true">
+        <span>
+          Устранение неполадок
+        </span>
+      </button>
+        <div class="collapse " id="troubleshooting-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/faq">
+                FAQ
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/application-data">
+                Данные Приложения
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/ssl-validation">
+                Валидация SSL
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/password-recovery">
+                Восстановление пароля
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#cli-collapse" aria-expanded="true">
+        <span>
+          Inso CLI
+        </span>
+      </button>
+        <div class="collapse " id="cli-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/introduction">
+                Introduction to Inso CLI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/install">
+                Install Inso CLI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/cli-command-reference">
+                CLI Command Reference
+              </a>
+              
+              <div class="collapse ">
+                <ul class="list-unstyled">
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-generate-config">
+                        inso generate config
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-run-test">
+                        inso run test
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-lint-spec">
+                        inso lint spec
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-export-spec">
+                        inso export spec
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-script">
+                        inso script
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/configuration">
+                Configuration
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/continuous-integration">
+                Continuous Integration
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#kong-products-collapse" aria-expanded="true">
+        <span>
+          Work with Other Kong Products
+        </span>
+      </button>
+        <div class="collapse " id="kong-products-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/publish-to-dev-portal">
+                Publish API to Dev Portal
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/declarative-config">
+                Kong Declarative Config (for decK)
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/kong-for-kubernetes">
+                Kong for Kubernetes
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+    </li>
+  </ul>
+</div>
+
+                <script>
+  let anchorForId = function (id) {
+    let anchor = document.createElement("a");
+    anchor.className = "anchor-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<img class=\"anchor-icon\" src=\"/assets/images/anchor-icon.svg\" alt=\"\"></img>";
+    anchor.title = "";
+    return anchor;
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      let className =
+        ".show-anchor-links h1, .show-anchor-links h2, .show-anchor-links h3, " +
+        ".show-anchor-links h4, .show-anchor-links h5, .show-anchor-links h6";
+      let headers = document.querySelectorAll(className);
+
+      for (var i = 0; i < headers.length; i++) {
+        let header = headers[i];
+        if (typeof header.id !== "undefined" && header.id !== "") {
+          header.prepend(anchorForId(header.id));
+        }
+      }
+    }
+  };
+</script>
+
+            </div>
+            <div class="col-md-6 col-lg-7 show-anchor-links">
+                <h1>gRPC</h1>
+                <p>С появлением Интернета вещей, микросервисов и ячеистых сетей API-интерфейсы должны быть более производительными и масштабируемыми, чем когда-либо прежде. Это привело к растущему внедрению <a href="https://grpc.io/">gRPC</a>, высокопроизводительной универсальной среды RPC с открытым исходным кодом, разработанной в Google.</p>
+
+<p>Insomnia поддерживает выполнение запросов gRPC вместе с REST и GraphQL.</p>
+
+<h2 id="создать-запрос">Создать запрос</h2>
+
+<p>Чтобы создать новый запрос gRPC, нажмите + на боковой панели, а затем <strong>Новый запрос</strong>.</p>
+
+<p>Затем в открывшемся модальном окне задайте имя для вашего запроса и выберите <strong>gRPC</strong> из раскрывающегося списка методов. Нажмите <strong>Создать</strong>.</p>
+
+<p>Вам будет предложено выбрать файл proto. Нажмите <strong>Добавить прото-файл</strong> и выберите прото-файл из вашей файловой системы. Вы можете получить пример прото-файла из <a href="https://grpcb.in/">grpcb.in</a>. После добавления он должен быть выбран автоматически. Нажмите «Сохранить».</p>
+
+<p>Теперь вы должны увидеть запрос на боковой панели, а при нажатии <strong>Выбрать метод</strong> вы должны увидеть службы из вашего прото-файла в списке.</p>
+
+<h2 id="протофайловое-управление">Протофайловое управление</h2>
+
+<p>В текущей итерации Insomnia позволяет вам загружать ваш прото-файл или набор прото-файлов (каталог) в рабочую область и использовать его с несколькими запросами. Insomnia проглотит содержимое ваших прото-файлов и не будет связано с исходным файлом в вашей файловой системе. Это означает, что если вы добавите свой прото-файл в Insomnia, а затем измените исходный файл, вам нужно будет загрузить его повторно.</p>
+
+<p>Таким образом, прото-файл также не может импортировать другой прото-файл из вашей файловой системы, поскольку ссылка на относительный путь будет потеряна. Вы можете загрузить каталог, содержащий несколько прото-файлов, и они могут импортировать другие прото-файлы в эту структуру каталогов (см. ниже). В будущих итерациях мы намерены расширить способы ввода прото-файла, включая синхронизацию с файловой системой, загрузку из сетевого расположения.</p>
+
+<h3 id="добавить-прото-файл">Добавить прото файл</h3>
+
+<p>Мы добавили прото-файл при создании запроса выше. Всякий раз, когда вам нужно выбрать прото-файл, вам будет предоставлена возможность добавить новый. В приведенном выше примере мы добавили прото-файл при создании нового запроса, но допустим, теперь мы хотим изменить прото-файл, связанный с текущим запросом, добавив новый. Перейдите к запросу и выберите <strong>щелкните, чтобы изменить прото-файл</strong>.</p>
+
+<p>Это снова откроет модальные файлы proto и отобразит тот, который мы добавили ранее. Нажмите <strong>Добавить протофайл</strong> и добавьте новый. Теперь мы видим два прото-файла, добавленных в рабочую область.</p>
+
+<h3 id="добавить-каталог">Добавить каталог</h3>
+
+<p>Нажмите <strong>Добавить каталог</strong>, чтобы добавить сразу несколько.</p>
+
+<p>«root.proto» импортирует все остальные прото-файлы, перечисленные в каталоге <strong>Library</strong>.</p>
+
+<h3 id="переименовать-прото-файл">Переименовать прото-файл</h3>
+
+<p>Дважды щелкните имя прото-файла, чтобы отредактировать его. Файлы внутри каталога не могут быть переименованы.</p>
+
+<h3 id="повторно-загрузить">Повторно загрузить</h3>
+
+<p>Нажмите кнопку загрузки и выберите прото-файл из вашей файловой системы. Это может быть любой файл, это не обязательно должен быть один и тот же файл. Просто помните, что когда вы повторно загружаете прото-файл, все запросы, которые ссылаются на файл, который вы изменили, также будут обновлены. В идеале вы будете повторно загружать один и тот же прото-файл только тогда, когда определение сервиса изменилось, а не вообще новый файл.</p>
+
+<h3 id="удалить">Удалить</h3>
+
+<p>Нажмите на кнопку удаления. Вам будет предложено сообщение с подтверждением, указывающее, что запросы, использующие этот прото-файл, могут быть нарушены, потому что информация об исходном прото-файле была потеряна. В будущем мы намерены расширить возможности удаления прото-файлов, чтобы обеспечить больший контроль над зависимыми запросами.</p>
+
+<h2 id="делать-запросы">Делать запросы</h2>
+
+<p>Insomnia поддерживает все четыре типа RPC, определенные gRPC. Это: <a href="https://grpc.io/docs/what-is-grpc/core-concepts/#unary-rpc">Unary</a>, <a href="https://grpc.io/docs/what-is-grpc/core-concepts/#client-streaming-rpc">Client Streaming</a>, <a href="https://grpc.io/docs/what-is-grpc/core-concepts/#server-streaming-rpc">Server Streaming</a> и <a href="https://grpc.io/docs/what-is-grpc/core-concepts/#bidirectional-streaming-rpc">Bidirectional Streaming</a>. В следующих примерах используется <a href="https://github.com/moul/pb/blob/master/hello/hello.proto">hello.proto</a> из grpcb.in.</p>
+
+<h3 id="унарный">Унарный</h3>
+
+<p><code class="language-plaintext highlighter-rouge">/hello.HelloService/SayHello</code> — это унарный RPC. Вы отправляете одно сообщение, и сервер отвечает одним сообщением.</p>
+
+<p>Укажите текст и нажмите <strong>Отправить</strong>.</p>
+
+<h3 id="потоковая-передача-сервера">Потоковая передача сервера</h3>
+
+<p><code class="language-plaintext highlighter-rouge">/hello.HelloService/LotsOfReplies</code> — сервер, выполняющий потоковую передачу RPC. Вы отправляете одно сообщение, а сервер отвечает несколькими сообщениями.</p>
+
+<p>Укажите текст и нажмите <strong>Отправить</strong>.</p>
+
+<p class="alert alert-primary"><strong>Note</strong>: Скорость ответа зависит от сервера. В приведенном ниже примере второй запрос использует grpcbin.proto, где серверный поток отвечает намного медленнее и его легче визуализировать.</p>
+
+<h3 id="клиентская-потоковая-передача">Клиентская потоковая передача</h3>
+
+<p><code class="language-plaintext highlighter-rouge">/hello.HelloService/LotsOfGreetings</code> — клиентский потоковый RPC. Вы отправляете несколько сообщений, а сервер отвечает одним сообщением.</p>
+
+<p>Нажмите «Пуск», чтобы открыть канал с сервером. Теперь отредактируйте тело с содержимым вашего первого сообщения и нажмите кнопку <strong>Stream</strong>, чтобы отправить это сообщение. Вы должны увидеть снимок сообщения, доступный только для чтения, в виде вкладки. Теперь вы можете снова редактировать содержимое на вкладке «Тело» и нажимать «Поток» каждый раз, когда хотите отправить новое сообщение. Как только все сообщения будут отправлены, нажмите <strong>Commit</strong>, и сервер должен отреагировать соответствующим образом.</p>
+
+<h3 id="двунаправленная-потоковая-передача">Двунаправленная потоковая передача</h3>
+
+<p><code class="language-plaintext highlighter-rouge">/hello.HelloService/BiDiHello</code> — это двунаправленный потоковый RPC. Вы отправляете несколько сообщений, и сервер отвечает несколькими сообщениями.</p>
+
+<p>Как следует из названия, это комбинация серверной и клиентской потоковой передачи. Таким образом, шаги по отправке сообщений идентичны клиентской потоковой передаче выше, а способ, которым сервер выбирает ответ, идентичен серверной потоковой передаче. Не забудьте нажать «commit», как только вы закончите отправлять все свои сообщения, и позвольте серверу разорвать соединение.</p>
+
+<h2 id="отменить-запрос">Отменить запрос</h2>
+
+<p>Каждый раз, когда был отправлен запрос (унарная, серверная потоковая передача) или открыт поток (клиентская и двунаправленная потоковая передача), кнопка «Отправить» или «Пуск» изменится на «Отмена». Нажатие этой кнопки прервет соединение и покажет соответствующее сообщение. Вы можете одновременно выполнять несколько запросов и отменять их по отдельности.</p>
+
+<h2 id="tlsssl">TLS/SSL</h2>
+
+<p>Часто конечная точка gRPC будет защищена TLS, и Insomnia позволит вам подключаться к этим конечным точкам с помощью простого SSL. Возможность предоставления пользовательских сертификатов появится в будущем.</p>
+
+<p>Чтобы включить TLS, добавьте к хосту префикс <code class="language-plaintext highlighter-rouge">grpcs://</code>.</p>
+
+<p>Например, grpcb.in имеет незащищенную конечную точку по адресу <code class="language-plaintext highlighter-rouge">grpcb.in:9000</code> и защищенную конечную точку по адресу <code class="language-plaintext highlighter-rouge">grpcb.in:9001</code>.</p>
+
+<p>Выполнение запроса к <code class="language-plaintext highlighter-rouge">grpcb.in:9001</code> не удастся.</p>
+
+<p>Выполнение запроса к <code class="language-plaintext highlighter-rouge">grpcs://grpcb.in:9001</code> завершится успешно.</p>
+
+<h2 id="переменные-среды-и-теги-шаблона">Переменные среды и теги шаблона</h2>
+
+<p>В выпуске 2021.1 Insomnia представлена поддержка переменных среды и тегов шаблонов в gRPC. Переменные среды и шаблоны Nunjucks можно использовать как в адресной строке, так и в теле сообщения.</p>
+
+<h2 id="известные-ограничения">Известные ограничения</h2>
+
+<p>Начиная с версии 2021.1 gRPC в Insomnia не включает:</p>
+
+<ul>
+  <li>Поддержка выполнения запросов gRPC в модульных тестах.</li>
+  <li>Поддержка или запрос цепочки</li>
+  <li>Поддержка метаданных или крайних сроков gRPC</li>
+  <li>Постоянство запросов/ответов и истории</li>
+  <li>Перемещение запросов gRPC между рабочими областями
+    <ul>
+      <li>Если папка, содержащая запрос gRPC, перемещена в другую рабочую область, запрос будет перемещен, а прото-файл — нет.</li>
+    </ul>
+  </li>
+</ul>
+
+            </div>
+            <div class="col-md-3 col-lg-2 text-start z-sidebar">
+                <div class="sticky-top">
+                    <div>
+                        <span><img src="/assets/images/github-icon.svg" alt="" class="github-icon me-2"></span>
+                        <a href="https://github.com/Kong/insomnia-docs/edit/main/docs/insomnia/grpc.md" alt="Редактировать эту страницу" class="github-link">
+                            Редактировать эту страницу
+                        </a>
+                    </div>
+                    <div>
+                        <span><img src="/assets/images/report-problem-icon.svg" alt="" class="github-icon me-2"></span>
+                        <a href="https://github.com/Kong/insomnia-docs/issues" alt="Сообщить о проблеме" class="github-link">
+                            Сообщить о проблеме
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="footer mt-auto h-100 p-5 text-black" id="docs-footer">
+    <div class="container">
+        <div class="row align-items-md-stretch">
+            <div class="col-md-3">
+                <ul>КОМПАНИЯ
+                    <li><a href="https://insomnia.rest/">Insomnia</a></li>
+                    <li><a href="https://insomnia.rest/blog">Блог</a></li>
+                    <li><a href="https://insomnia.rest/changelog">Журнал изменений</a></li>
+                    <li><a href="https://insomnia.rest/pricing">Ценообразование</a></li>
+                    <li><a href="https://jobs.lever.co/kong?department=Engineering">Карьера</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>ПРОДУКТЫ
+                    <li><a href="https://insomnia.rest/products/insomnia">Insomnia</a></li>
+                    <li><a href="https://insomnia.rest/products/inso">Inso (CLI)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>РЕСУРСЫ
+                    <li><a href="https://app.insomnia.rest/app/login/">Войти</a></li>
+                    <li><a href="#">Документация</a></li>
+                    <li><a href="https://insomnia.rest/support">Поддержка</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>ЮРИДИЧЕСКИЕ
+                    <li><a href="https://insomnia.rest/privacy">Политика конфиденциальности</a></li>
+                    <li><a href="https://insomnia.rest/terms">Условия и положения</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row align-items-md-stretch">
+            <div class="col-md-12">
+                <small id="footer-copyright">© Kong Inc. 2021</small>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+<script type="text/javascript">window.Beacon('init', 'fce2431f-e83d-4205-b0c6-80fd9c2dc95e')</script>
+ -->
+  </body>
+</html>

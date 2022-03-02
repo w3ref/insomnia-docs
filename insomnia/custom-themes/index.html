@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="/assets/images/insomnia-docs-share.png">
+    <link rel="shortcut icon" type="image/svg" href="/assets/images/insomnia-favicon.svg">
+    
+    <link rel="canonical" href="https://insomnia.w3ref.ru/insomnia/custom-themes/">
+    
+    
+        <title>Пользовательские темы | Документация Insomnia</title>
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!--  Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- Algolia Styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+</head>
+
+  <body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a href="/">
+    <img src="/assets/images/insomnia-docs-logo.png" alt="Insomnia лого" id="inso-logo">
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <form class="form-inline">
+        <input id="algolia-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <!-- <button class="btn btn-light my-2 my-sm-0" id="main-search" type="button">Search</button> -->
+      </form>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/insomnia/get-started">Документация</a>
+        </li>
+        <li class="nav-item">
+            <span>
+              <a class="nav-link" href="https://insomnia.rest/download">
+                Скачать
+                <img class="ext-arrow" src="/assets/images/ext-arrow-white.svg" alt="">
+              </a>
+            </span>
+          </li>
+        <li class="nav-item">
+          <span>
+            <a class="nav-link" href="https://insomnia.rest/pricing">
+              Обновить
+              <img class="ext-arrow" src="/assets/images/ext-arrow-white.svg" alt="">
+            </a>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script type="text/javascript">
+  docsearch({
+    appId: 'IBXE7R5KFS',
+    apiKey: '65f451796f36a6d7df9814965f5de7ac',
+    indexName: 'insomnia_docs',
+    inputSelector: '#algolia-input',
+    algoliaOptions: {
+      hitsPerPage: 8
+    }
+    // ,debug: true // Set debug to true if you want to inspect the dropdown
+  })
+</script>
+      <div class="container">
+    <div class="container-fluid article-detail-container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="flex-shrink-0 bg-white sticky-top z-sidebar">
+  <ul class="list-unstyled ps-0">
+    <li class="mb-1">
+    
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#get-started-collapse" aria-expanded="true">
+        <span>
+          Начать
+        </span>
+      </button>
+        <div class="collapse " id="get-started-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/get-started">
+                Введение в Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/install">
+                Установка Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/migrate-from-designer">
+                Миграция из Designer
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/import-export-data">
+                Импорт и экспорт данных
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/environment-variables">
+                Переменные среды
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/http-proxy">
+                HTTP(S) прокси
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/insomnia-config-file">
+                Файл конфигурации Insomnia
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#requests-collapse" aria-expanded="true">
+        <span>
+          Запросы и ответы
+        </span>
+      </button>
+        <div class="collapse " id="requests-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/responses">
+                Ответы
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/request-collections">
+                Коллекция запросов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/request-timeouts">
+                Таймауты запроса
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/chaining-requests">
+                Цепочка запросов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/post-csv-data">
+                Размещение данных CSV
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/soap-requests">
+                Запросы SOAP
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#collaboration-collapse" aria-expanded="true">
+        <span>
+          Сотрудничество
+        </span>
+      </button>
+        <div class="collapse " id="collaboration-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/teams">
+                Команды
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/projects">
+                Проекты
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/git-sync">
+                Синхронизировать с Git
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/version-control-sync">
+                Синхронизация контроля версий
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#design-collapse" aria-expanded="true">
+        <span>
+          Дизайн API
+        </span>
+      </button>
+        <div class="collapse " id="design-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/design-documents">
+                Проектная документация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/linting">
+                Линтинг
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/graphql-for-openapi">
+                GraphQL для OpenAPI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/live-preview">
+                Превью в реальном времени
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#testing-collapse" aria-expanded="true">
+        <span>
+          Тестирование
+        </span>
+      </button>
+        <div class="collapse " id="testing-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/unit-testing">
+                Модульное и стресс-тестирование
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#security-collapse" aria-expanded="true">
+        <span>
+          Безопасность
+        </span>
+      </button>
+        <div class="collapse " id="security-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/security-features">
+                Основные функции безопасности
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/security-standards">
+                Стандарты безопасности
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/signup-and-auth">
+                Регистрация и аутентификация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/data-encryption">
+                Шифрование данных
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#features-collapse" aria-expanded="true">
+        <span>
+          Встроенные функции
+        </span>
+      </button>
+        <div class="collapse " id="features-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/authentication">
+                Аутентификация
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/client-certificates">
+                Сертификаты клиентов
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/generate-code-snippet">
+                Создать фрагмент кода
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/cookie-management">
+                Управление файлами cookie
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/encoding">
+                Кодирование
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/graphql-queries">
+                GraphQL-запросы
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/grpc">
+                gRPC
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/run-in-insomnia-button">
+                Кнопка «Run» в Insomnia
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/key-maps">
+                Карта клавиш
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#plugins-collapse" aria-expanded="true">
+        <span>
+          Плагины
+        </span>
+      </button>
+        <div class="collapse  show " id="plugins-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/introduction-to-plugins">
+                Введение в плагины
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/context-object-reference">
+                Справочник по контекстным объектам
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/template-tags">
+                Теги шаблона
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/hooks-and-actions">
+                Хуки и действия
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start  list-active ">
+              <a href="/insomnia/custom-themes">
+                Пользовательские темы
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#troubleshooting-collapse" aria-expanded="true">
+        <span>
+          Устранение неполадок
+        </span>
+      </button>
+        <div class="collapse " id="troubleshooting-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/faq">
+                FAQ
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/application-data">
+                Данные Приложения
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/ssl-validation">
+                Валидация SSL
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/password-recovery">
+                Восстановление пароля
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#cli-collapse" aria-expanded="true">
+        <span>
+          Inso CLI
+        </span>
+      </button>
+        <div class="collapse " id="cli-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/introduction">
+                Introduction to Inso CLI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/install">
+                Install Inso CLI
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/cli-command-reference">
+                CLI Command Reference
+              </a>
+              
+              <div class="collapse ">
+                <ul class="list-unstyled">
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-generate-config">
+                        inso generate config
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-run-test">
+                        inso run test
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-lint-spec">
+                        inso lint spec
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-export-spec">
+                        inso export spec
+                      </a>
+                    </li>
+                  
+                    
+                    <li class="doc-link ps-3 pt-1 text-start ">
+                      <a href="/inso-cli/cli-command-reference/inso-script">
+                        inso script
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/configuration">
+                Configuration
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/inso-cli/continuous-integration">
+                Continuous Integration
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+      <button class="nav-button btn btn-toggle align-items-center rounded collapsed text-start ps-0" data-bs-toggle="collapse" data-bs-target="#kong-products-collapse" aria-expanded="true">
+        <span>
+          Work with Other Kong Products
+        </span>
+      </button>
+        <div class="collapse " id="kong-products-collapse">
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/publish-to-dev-portal">
+                Publish API to Dev Portal
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/declarative-config">
+                Kong Declarative Config (for decK)
+              </a>
+              
+            </li>
+          
+            
+            <li class="doc-link ps-3 pb-1 text-start ">
+              <a href="/insomnia/kong-for-kubernetes">
+                Kong for Kubernetes
+              </a>
+              
+            </li>
+          
+        </ul>
+      </div>
+      
+    </li>
+  </ul>
+</div>
+
+                <script>
+  let anchorForId = function (id) {
+    let anchor = document.createElement("a");
+    anchor.className = "anchor-link";
+    anchor.href      = "#" + id;
+    anchor.innerHTML = "<img class=\"anchor-icon\" src=\"/assets/images/anchor-icon.svg\" alt=\"\"></img>";
+    anchor.title = "";
+    return anchor;
+  };
+
+  document.onreadystatechange = function () {
+    if (this.readyState === "complete") {
+      let className =
+        ".show-anchor-links h1, .show-anchor-links h2, .show-anchor-links h3, " +
+        ".show-anchor-links h4, .show-anchor-links h5, .show-anchor-links h6";
+      let headers = document.querySelectorAll(className);
+
+      for (var i = 0; i < headers.length; i++) {
+        let header = headers[i];
+        if (typeof header.id !== "undefined" && header.id !== "") {
+          header.prepend(anchorForId(header.id));
+        }
+      }
+    }
+  };
+</script>
+
+            </div>
+            <div class="col-md-6 col-lg-7 show-anchor-links">
+                <h1>Пользовательские темы</h1>
+                <p>Создайте собственную тему Insomnia, создав <a href="/insomnia/introduction-to-plugins/">плагин</a>.</p>
+
+<p class="alert alert-primary"><strong>Note</strong>: Чтобы начать работу с некоторыми живыми примерами, см. наш встроенный модуль <a href="https://github.com/Kong/insomnia/tree/develop/plugins/insomnia-plugin-core-themes">insomnia-plugin-themes</a>.</p>
+
+<h2 id="как-создать-собственную-тему">Как создать собственную тему</h2>
+
+<ol>
+  <li>
+    <p>Создайте новый проект для своей темы. Если вы планируете сделать эту тему доступной через NPM, начните название проекта с <code class="language-plaintext highlighter-rouge">insomnia-plugin-</code>. Следующий пример называется <code class="language-plaintext highlighter-rouge">insomnia-plugin-dark-colorblind-theme</code>.</p>
+  </li>
+  <li>
+    <p>Следуя инструкциям плагина, напишите свой <a href="https://docs.insomnia.rest/insomnia/introduction-to-plugins#plugin-packagejson">плагин package.json</a>. В файле ввода экспортируйте свои темы.</p>
+  </li>
+  <li>
+    <p>Начните с базового шаблона. Каждый раздел конфигурации имеет свойства <code class="language-plaintext highlighter-rouge">background</code>, <code class="language-plaintext highlighter-rouge">foreground</code> и <code class="language-plaintext highlighter-rouge">highlight</code> с изменяемыми свойствами цвета.</p>
+  </li>
+</ol>
+
+<p>Дополнительные сведения о том, какие имена свойств цвета соответствуют элементам пользовательского интерфейса, смотрите в комментариях к коду.</p>
+
+<p class="alert alert-primary"><strong>Note</strong>: Приведенные ниже комментарии к коду не являются исчерпывающими, и стили могут применяться в других местах.</p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">themes</span> <span class="o">=</span> <span class="p">[{</span>
+  <span class="na">name</span><span class="p">:</span>        <span class="dl">'</span><span class="s1">dark-colorblind</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// theme name in kebab-case</span>
+  <span class="na">displayName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Dark Colorblind</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// formatted theme name</span>
+  <span class="na">theme</span><span class="p">:</span> <span class="p">{</span>
+    <span class="c1">// Background, foreground, and highlight values nested directly in the theme </span>
+    <span class="c1">// object will serve as the default overwrites for all properties you add.</span>
+    <span class="na">background</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">default</span><span class="p">:</span>    <span class="dl">'</span><span class="s1">#21262D</span><span class="dl">'</span><span class="p">,</span>  <span class="c1">// primary background color</span>
+      <span class="na">success</span><span class="p">:</span>    <span class="dl">'</span><span class="s1">#1F6FEB</span><span class="dl">'</span><span class="p">,</span>  <span class="c1">// POST request, 200 OK, parameter names</span>
+      <span class="na">notice</span><span class="p">:</span>     <span class="dl">'</span><span class="s1">#E8F086</span><span class="dl">'</span><span class="p">,</span>  <span class="c1">// PATCH request</span>
+      <span class="na">warning</span><span class="p">:</span>    <span class="dl">'</span><span class="s1">#A691AE</span><span class="dl">'</span><span class="p">,</span>  <span class="c1">// PUT request</span>
+      <span class="na">danger</span><span class="p">:</span>     <span class="dl">'</span><span class="s1">#FF4242</span><span class="dl">'</span><span class="p">,</span>  <span class="c1">// DELETE request</span>
+      <span class="na">surprise</span><span class="p">:</span>   <span class="dl">'</span><span class="s1">#FFC20A</span><span class="dl">'</span><span class="p">,</span>  <span class="c1">// accent (Dashboard link, GET request, </span>
+                              <span class="c1">// SEND button, branch button, add plugin button)</span>
+      <span class="na">info</span><span class="p">:</span>       <span class="dl">'</span><span class="s1">#58A6FF</span><span class="dl">'</span>   <span class="c1">// OPTIONS AND HEAD request</span>
+    <span class="p">},</span>
+    <span class="na">foreground</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">default</span><span class="p">:</span>     <span class="dl">'</span><span class="s1">#fff</span><span class="dl">'</span><span class="p">,</span>    <span class="c1">// primary font color</span>
+      <span class="na">success</span><span class="p">:</span>     <span class="dl">'</span><span class="s1">#fff</span><span class="dl">'</span><span class="p">,</span>    <span class="c1">// secondary font color for success background</span>
+      <span class="na">notice</span><span class="p">:</span>      <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span><span class="p">,</span>    <span class="c1">// secondary font color for notice background</span>
+      <span class="na">warning</span><span class="p">:</span>     <span class="dl">'</span><span class="s1">#fff</span><span class="dl">'</span><span class="p">,</span>    <span class="c1">// secondary font color for warning background</span>
+      <span class="na">danger</span><span class="p">:</span>      <span class="dl">'</span><span class="s1">#fff</span><span class="dl">'</span><span class="p">,</span>    <span class="c1">// secondary font color for danger background</span>
+      <span class="na">surprise</span><span class="p">:</span>    <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span><span class="p">,</span>    <span class="c1">// secondary font color for surprise background</span>
+      <span class="na">info</span><span class="p">:</span>        <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span>     <span class="c1">// secondary font color for info background</span>
+    <span class="p">},</span>
+    <span class="na">highlight</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">default</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#D3D3D3</span><span class="dl">'</span>      <span class="c1">// sidebar highlight color</span>
+    <span class="p">},</span>
+    <span class="c1">// The styles object targets sub-components of the Insomnia application.</span>
+    <span class="na">styles</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">appHeader</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">foreground</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">surprise</span><span class="p">:</span>   <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span>  <span class="c1">// header branch button font color</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="na">paneHeader</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">foreground</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">surprise</span><span class="p">:</span>   <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// pane accent font color</span>
+          <span class="na">info</span><span class="p">:</span>       <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span>  <span class="c1">// pane response font color</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="na">editor</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">foreground</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">default</span><span class="p">:</span>    <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// primary editor font color</span>
+          <span class="na">surprise</span><span class="p">:</span>   <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// editor accent font color</span>
+          <span class="na">info</span><span class="p">:</span>       <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span>  <span class="c1">// editor response font color</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="na">dialog</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">background</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">default</span><span class="p">:</span>    <span class="dl">'</span><span class="s1">#2E4052</span><span class="dl">'</span> <span class="c1">// modal primary background color</span>
+        <span class="p">},</span>
+        <span class="na">foreground</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">default</span><span class="p">:</span>    <span class="dl">'</span><span class="s1">#fff</span><span class="dl">'</span>    <span class="c1">// modal primary font color</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}]</span>
+</code></pre></div></div>
+
+<h2 id="параметры-стилей">Параметры стилей</h2>
+
+<p>Доступны следующие свойства <code class="language-plaintext highlighter-rouge">style</code>. Каждый из них может содержать свои собственные свойства <code class="language-plaintext highlighter-rouge">background</code>, <code class="language-plaintext highlighter-rouge">foreground</code> и <code class="language-plaintext highlighter-rouge">highlight</code>.</p>
+
+<ul>
+  <li>appHeader</li>
+  <li>dialog</li>
+  <li>dialogFooter</li>
+  <li>dialogHeader</li>
+  <li>dropdown</li>
+  <li>editor</li>
+  <li>link</li>
+  <li>overlay</li>
+  <li>pane</li>
+  <li>paneHeader</li>
+  <li>sidebar</li>
+  <li>sidebarHeader</li>
+  <li>sidebarList</li>
+  <li>tooltip</li>
+  <li>transparentOverlay</li>
+</ul>
+
+<h2 id="пользовательские-css">Пользовательские CSS</h2>
+
+<p>В дополнение к базовым изменениям и подкомпонентам вы можете добавить пользовательский CSS, используя свойство <code class="language-plaintext highlighter-rouge">rawCss</code>.</p>
+
+<p class="alert alert-primary"><strong>Note</strong>: Как правило, лучше использовать предопределенные свойства для настройки темы, а не использовать пользовательский CSS. Это гарантирует, что ваша тема не сломается в будущем, когда мы внесем изменения в Insomnia.</p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">themes</span> <span class="o">=</span> <span class="p">[{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">my-dark-theme</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">displayName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">My Dark Theme</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">theme</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">rawCss</span><span class="p">:</span> <span class="s2">`
+      .tooltip, .dropdown__menu {
+        opacity: 0.95;
+      }
+    `</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}];</span>
+</code></pre></div></div>
+
+<h2 id="схема-плагина-темы">Схема плагина темы</h2>
+
+<p>Следующее определяет схему плагина темы. Если свойство не установлено, оно будет использовать Insomnia по умолчанию.</p>
+
+<div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">ThemeBlock</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">?:</span> <span class="p">{</span>
+    <span class="k">default</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">success</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">notice</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">warning</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">danger</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">surprise</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">info</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">foreground</span><span class="p">?:</span> <span class="p">{</span>
+    <span class="k">default</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">success</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">notice</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">warning</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">danger</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">surprise</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">info</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">highlight</span><span class="p">?:</span> <span class="p">{</span>
+    <span class="na">default</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">xxs</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">xs</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">sm</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">md</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">lg</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+    <span class="nx">xl</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="kr">interface</span> <span class="nx">ThemeInner</span> <span class="kd">extends</span> <span class="nx">ThemeBlock</span> <span class="p">{</span>
+  <span class="nl">rawCss</span><span class="p">?:</span> <span class="kr">string</span><span class="p">,</span>
+  <span class="nx">styles</span><span class="p">:</span> <span class="p">?{</span>
+    <span class="nx">dialog</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">dialogFooter</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">dialogHeader</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">dropdown</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">editor</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">link</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">overlay</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">pane</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">paneHeader</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">sidebar</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">sidebarHeader</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">sidebarList</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">tooltip</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+    <span class="nx">transparentOverlay</span><span class="p">?:</span> <span class="nx">ThemeBlock</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+            </div>
+            <div class="col-md-3 col-lg-2 text-start z-sidebar">
+                <div class="sticky-top">
+                    <div>
+                        <span><img src="/assets/images/github-icon.svg" alt="" class="github-icon me-2"></span>
+                        <a href="https://github.com/Kong/insomnia-docs/edit/main/docs/insomnia/custom-themes.md" alt="Редактировать эту страницу" class="github-link">
+                            Редактировать эту страницу
+                        </a>
+                    </div>
+                    <div>
+                        <span><img src="/assets/images/report-problem-icon.svg" alt="" class="github-icon me-2"></span>
+                        <a href="https://github.com/Kong/insomnia-docs/issues" alt="Сообщить о проблеме" class="github-link">
+                            Сообщить о проблеме
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="footer mt-auto h-100 p-5 text-black" id="docs-footer">
+    <div class="container">
+        <div class="row align-items-md-stretch">
+            <div class="col-md-3">
+                <ul>КОМПАНИЯ
+                    <li><a href="https://insomnia.rest/">Insomnia</a></li>
+                    <li><a href="https://insomnia.rest/blog">Блог</a></li>
+                    <li><a href="https://insomnia.rest/changelog">Журнал изменений</a></li>
+                    <li><a href="https://insomnia.rest/pricing">Ценообразование</a></li>
+                    <li><a href="https://jobs.lever.co/kong?department=Engineering">Карьера</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>ПРОДУКТЫ
+                    <li><a href="https://insomnia.rest/products/insomnia">Insomnia</a></li>
+                    <li><a href="https://insomnia.rest/products/inso">Inso (CLI)</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>РЕСУРСЫ
+                    <li><a href="https://app.insomnia.rest/app/login/">Войти</a></li>
+                    <li><a href="#">Документация</a></li>
+                    <li><a href="https://insomnia.rest/support">Поддержка</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>ЮРИДИЧЕСКИЕ
+                    <li><a href="https://insomnia.rest/privacy">Политика конфиденциальности</a></li>
+                    <li><a href="https://insomnia.rest/terms">Условия и положения</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row align-items-md-stretch">
+            <div class="col-md-12">
+                <small id="footer-copyright">© Kong Inc. 2021</small>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+<script type="text/javascript">window.Beacon('init', 'fce2431f-e83d-4205-b0c6-80fd9c2dc95e')</script>
+ -->
+  </body>
+</html>
