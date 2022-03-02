@@ -1,15 +1,15 @@
 ---
 layout: article-detail
-title:  Context Object Reference
-category: "Plugins"
+title:  Справочник по контекстным объектам
+category: "Плагины"
 category-url: plugins
 ---
 
-This document is a Context object reference. Context methods provide helpers for plugins to communicate, interact, and integrate with Insomnia. For example, these can be used to show an alert or alter a request header.
+Этот документ является ссылкой на объект Context. Контекстные методы предоставляют подключаемым модулям помощников для связи, взаимодействия и интеграции с Insomnia. Например, их можно использовать для отображения предупреждения или изменения заголовка запроса.
 
 ## context.request
 
-The request context contains helpers to interact with an Insomnia request.
+Контекст запроса содержит помощники для взаимодействия с запросом Insomnia.
 
 ```ts
 interface RequestContext {
@@ -64,7 +64,7 @@ interface RequestBodyParameter {
 }
 ```
 
-### Example: Set Content-Type header on every POST request
+### Пример: установка заголовка Content-Type для каждого POST-запроса.
 
 ```ts
 // Request hook to set header on every request
@@ -77,7 +77,7 @@ module.exports.requestHooks = [
 ];
 ```
 
-### Example: Alter request body
+### Пример: Изменить тело запроса
 
 ```ts
 // Replace "FOO" with "BAR" within a request body before sending
@@ -94,7 +94,7 @@ module.exports.requestHooks = [
 ];
 ```
 
-### Example: Override request body
+### Пример: переопределить тело запроса
 
 ```ts
 module.exports.requestHooks = [
@@ -109,7 +109,7 @@ module.exports.requestHooks = [
 
 ## context.response
 
-The response context contains helpers to interact with an Insomnia response.
+Контекст ответа содержит помощники для взаимодействия с ответом Insomnia.
 
 ```ts
 interface ResponseContext {
@@ -128,9 +128,9 @@ interface ResponseContext {
 
 ```
 
-### Example: Save response to file
+### Пример: Сохранить ответ в файл
 
-This example shows how you can write a response to a file.
+В этом примере показано, как вы можете написать ответ в файл.
 
 ```ts
 const fs = require('fs');
@@ -145,18 +145,18 @@ module.exports.responseHooks = [
 ];
 ```
 
-### Example: Alter a response body
+### Пример: изменение тела ответа
 
-The response body works with [NodeJS Buffers](https://nodejs.org/api/buffer.html). To change the response body through a plugin, you'll need to translate to and from a Buffer.
+Тело ответа работает с [буферами NodeJS](https://nodejs.org/api/buffer.html). Чтобы изменить тело ответа с помощью плагина, вам нужно перевести его в буфер и обратно.
 
-The below example ties into `responseHooks` and shows how to work with the NodeJS Buffers to:
+Пример ниже связан с `responseHooks` и показывает, как работать с буферами NodeJS для:
 
-* Convert a Buffer to a string
-* Parse a string to a JS object
-* Modify the response by:
-  * Generating a random number
-  * Prompting to user for information in a modal
-* Convert the JS object to a string and then to a Buffer
+* Преобразование буфера в строку
+* Разобрать строку в JS-объект
+* Измените ответ:
+   * Генерация случайного числа
+   * Подсказка пользователю для получения информации в модальном режиме
+* Преобразование объекта JS в строку, а затем в буфер
 
 ```ts
 const bufferToJsonObj = buf => JSON.parse(buf.toString('utf-8'));
@@ -181,11 +181,11 @@ module.exports.responseHooks = [
   }
 ]
 ```
-_This example adds a `__randomNumber` and `__customValue` property to a JSON response. Update the functionality as needed._
+_В этом примере к ответу JSON добавляются свойства `__randomNumber` и `__customValue`. Обновите функциональность по мере необходимости._
 
 ## context.store
 
-Plugins can store persistent data via the storage context. Data is only accessible to the plugin that stored it.
+Плагины могут хранить постоянные данные через контекст хранилища. Данные доступны только тому плагину, который их сохранил.
 
 ```ts
 interface StoreContext {
@@ -200,7 +200,7 @@ interface StoreContext {
 
 ## context.app
 
-The app context contains a general set of helpers that are global to the application.
+Контекст приложения содержит общий набор помощников, которые являются глобальными для приложения.
 
 ```ts
 interface AppContext {
@@ -237,7 +237,7 @@ interface AppContext {
 
 ## context.data
 
-The data context contains helpers related to importing and exporting Insomnia workspaces.
+Контекст данных содержит помощники, связанные с импортом и экспортом рабочих пространств Insomnia.
 
 ```ts
 interface ImportOptions {
@@ -262,7 +262,7 @@ interface DataContext {
 
 ## context.network
 
-The network context contains helpers related to sending network requests.
+Сетевой контекст содержит помощники, связанные с отправкой сетевых запросов.
 
 ```ts
 interface NetworkContext {

@@ -1,15 +1,15 @@
 ---
 layout: article-detail
-title:  Hooks and Actions
-category: "Plugins"
+title:  Хуки и действия
+category: "Плагины"
 category-url: plugins
 ---
 
-Hooks and actions allow you to add additional functionality to your custom plugins through requests, responses, and UI interactions. Hooks rely on a request or response. Actions rely on a UI interaction.
+Хуки и действия позволяют добавлять дополнительные функции в ваши пользовательские плагины с помощью запросов, ответов и взаимодействий с пользовательским интерфейсом. Хуки полагаются на запрос или ответ. Действия зависят от взаимодействия с пользовательским интерфейсом.
 
-## Request and Response Hooks
+## Хуки запроса и ответа
 
-Plugins can implement hook functions that get called when certain events happen. A plugin can currently export two different types of hooks, `RequestHook` and `ResponseHook`.
+Плагины могут реализовывать функции ловушек, которые вызываются, когда происходят определенные события. В настоящее время плагин может экспортировать два разных типа хуков: `RequestHook` и `ResponseHook`.
 
 ```ts
 interface RequestHook {
@@ -28,9 +28,9 @@ module.exports.requestHooks = Array<(context: RequestHook) => void>;
 module.exports.responseHooks = Array<(context: ResponseHook) => void>;
 ```
 
-## Request Actions
+## Запросить действия
 
-Actions can be added to the bottom of the request dropdown context menu (right click on a request in the sidebar) by defining a request action plugin.
+Действия можно добавить в нижнюю часть раскрывающегося контекстного меню запроса (щелкните правой кнопкой мыши запрос на боковой панели), определив подключаемый модуль действия запроса.
 
 ```ts
 interface RequestAction {
@@ -46,9 +46,9 @@ interface RequestAction {
 module.exports.requestActions = Array<RequestAction>
 ```
 
-### Example: Plugin to get request details in a modal
+### Пример: Плагин для получения сведений о запросе в модальном окне.
 
-This plugin adds a **See request data** option to the dropdown menu that appears when you right click on a request in the sidebar.
+Этот плагин добавляет параметр **Просмотреть данные запроса** в раскрывающееся меню, которое появляется, когда вы щелкаете правой кнопкой мыши запрос на боковой панели.
 
 ```ts
 module.exports.requestActions = [
@@ -63,9 +63,9 @@ module.exports.requestActions = [
 ];
 ```
 
-### Example: Send request
+### Пример: Отправить запрос
 
-This plugin adds a **Send request** option to the dropdown menu that appears when you right click on a request in the sidebar.
+Этот плагин добавляет опцию **Отправить запрос** в раскрывающееся меню, которое появляется, когда вы щелкаете правой кнопкой мыши запрос на боковой панели.
 
 ```ts
 module.exports.requestActions = [
@@ -81,9 +81,9 @@ module.exports.requestActions = [
 ];
 ```
 
-## Folder Actions
+## Действия с папками
 
-Actions can be added to the bottom of the folder dropdown menu by defining a folder (request group) action plugin.
+Действия можно добавить в нижнюю часть раскрывающегося меню папки, определив подключаемый модуль действия папки (группы запросов).
 
 ```ts
 interface RequestGroupAction {
@@ -98,9 +98,9 @@ interface RequestGroupAction {
 module.exports.requestGroupActions = Array<RequestGroupAction>
 ```
 
-### Example: Plugin to send all requests in a folder
+### Пример: Плагин для отправки всех запросов в папку
 
-This plugin adds a **Send Requests** option to the dropdown menu that appears when you click on a request folder. **Send Requests** sends all requests in that folder at once.
+Этот плагин добавляет опцию **Отправить запросы** в раскрывающееся меню, которое появляется, когда вы нажимаете на папку с запросами. **Отправить запросы** отправляет все запросы в этой папке одновременно.
 
 ```ts
 module.exports.requestGroupActions = [
@@ -123,12 +123,12 @@ module.exports.requestGroupActions = [
 ];
 ```
 
-## Workspace Actions
+## Действия в рабочей области
 
-Actions can be added to the Collection or Document settings dropdown by defining a workspace action plugin. These apply to both types of workspaces, Request Collections and Design Documents.
+Действия можно добавить в раскрывающийся список настроек «Коллекция» или «Документ», определив подключаемый модуль действий рабочей области. Они применимы к обоим типам рабочих областей, коллекциям запросов и проектным документам.
 
 {:.alert .alert-primary}
-**Note**: "Workspace" is a name in our codebase we use to refer to both Documents and Collections.
+**Note**: «Рабочее пространство» — это имя в нашей кодовой базе, которое мы используем для обозначения как документов, так и коллекций.
 
 ```ts
 interface WorkspaceAction {
@@ -144,9 +144,9 @@ interface WorkspaceAction {
 module.exports.workspaceActions = Array<WorkspaceAction>;
 ```
 
-### Example: Plugin to export the current workspace
+### Пример: Плагин для экспорта текущей рабочей области
 
-This plugin adds a custom option to the Document or Collection dropdown menu that exports the current Document or Collection.
+Этот плагин добавляет пользовательскую опцию в раскрывающееся меню «Документ или коллекция», которая экспортирует текущий документ или коллекцию.
 
 ```ts
 const fs = require('fs');
@@ -166,9 +166,9 @@ module.exports.workspaceActions = [{
 }];
 ```
 
-## Document Actions
+## Документ Действия
 
-Actions can be added to a Dashboard card context menu for a Document. This action does not work for Collections.
+Действия можно добавить в контекстное меню карточки Dashboard для документа. Это действие не работает для коллекций.
 
 ```ts
 interface DocumentAction {
@@ -186,9 +186,9 @@ interface DocumentAction {
 module.exports.documentActions = Array<DocumentAction>;
 ```
 
-## Config Generator
+## Генератор конфигураций
 
-Config generators show in the Document settings dropdown, and can be used to generate configuration from an OpenAPI spec.
+Генераторы конфигурации отображаются в раскрывающемся списке «Параметры документа» и могут использоваться для создания конфигурации из спецификации OpenAPI.
 
 ```ts
 interface ConfigGenerator {

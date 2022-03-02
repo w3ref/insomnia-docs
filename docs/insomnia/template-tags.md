@@ -1,41 +1,41 @@
 ---
 layout: article-detail
-title:  Template Tags
-category: "Plugins"
+title:  Теги шаблона
+category: "Плагины"
 category-url: plugins
 ---
 
-Template tags are closely related to [Environment Variables](/insomnia/environment-variables/). The main difference between Template Tags and Environment Variables is that Template Tags act more like operations, and not variables.
+Теги шаблона тесно связаны с [переменными среды](/insomnia/environment-variables/). Основное различие между тегами шаблона и переменными среды заключается в том, что теги шаблона действуют больше как операции, а не как переменные.
 
-Tags can do things like transform strings, generate random numbers, handle UUIDs, and create timestamps.
+Теги могут выполнять такие действия, как преобразование строк, генерация случайных чисел, обработка UUID и создание меток времени.
 
-## Use Template Tags
+## Используйте теги шаблона
 
-To insert a template tag, press CTRL+Space wherever [Environment Variables](/insomnia/environment-variables/) can be used. Template tags will appear below Environment Variables in the autocomplete list, and are marked with an `ƒ` symbol.
+Чтобы вставить тег шаблона, нажмите CTRL+Пробел везде, где можно использовать [Переменные среды](/insomnia/environment-variables/). Теги шаблона появятся под Переменными среды в списке автозаполнения и помечены символом `ƒ`.
 
-## Custom Template Tags
+## Пользовательские теги шаблона
 
-You may want to extend Insomnia functionality with custom behaviors, and can do so by creating your custom template tag as an [Insomnia plugin](/insomnia/introduction-to-plugins/). Once you've added your custom plugin to your Insomnia application, the template tag will show up exactly as if it were a native Insomnia tag.
+Вы можете захотеть расширить функциональность Insomnia с помощью настраиваемого поведения, и вы можете сделать это, создав собственный тег шаблона в виде [плагина Insomnia](/insomnia/introduction-to-plugins/). После того как вы добавите свой собственный подключаемый модуль в приложение Insomnia, тег шаблона будет отображаться точно так же, как если бы это был собственный тег Insomnia.
 
-## Response and Request Tags
+## Теги ответа и запроса
 
-Response and request tags enable you to reference values between and from responses and requests.
+Теги ответа и запроса позволяют ссылаться на значения между ответами и запросами и из них.
 
-### The Response Tag
+### Тег ответа
 
-Use a response tag to reference values from other responses, or [Request Chaining](/insomnia/chaining-requests).
+Используйте тег ответа для ссылки на значения из других ответов или [цепочку запросов](/insomnia/chaining-requests).
 
-This can be useful when including the ID of a created resource in a `GET` request right after creating it with a `POST` request. It's also useful when referencing a reusable login token from a response in an environment variable.
+Это может быть полезно при включении идентификатора созданного ресурса в запрос `GET` сразу после его создания с помощью запроса `POST`. Это также полезно при ссылке на повторно используемый токен входа из ответа в переменной среды.
 
-### The Request Tag
+### Тег запроса
 
-The request tag is useful for referencing values from the current request. 
+Тег запроса полезен для ссылки на значения из текущего запроса.
 
-For example, use a request tag to extract a CSRF token from a cookie so you can use that value as a form value or header.
+Например, используйте тег запроса для извлечения маркера CSRF из файла cookie, чтобы вы могли использовать это значение в качестве значения формы или заголовка.
 
-## Template Tag Schema
+## Схема тега шаблона
 
-This example shows the usage of `TemplateTag` to render custom values.
+В этом примере показано использование `TemplateTag` для отображения пользовательских значений.
 
 ```ts
 interface RenderContext {
@@ -79,9 +79,9 @@ interface TemplateTag {
 };
 ```
 
-### Example: Template tag to generate random integer
+### Пример: Тег шаблона для генерации случайного целого числа
 
-This example template tag generates a random integer between 0 and 100.
+Этот пример тега шаблона генерирует случайное целое число от 0 до 100.
 
 ```ts
 /**

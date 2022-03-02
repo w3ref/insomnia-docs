@@ -1,27 +1,27 @@
 ---
 layout: article-detail
-title:  Custom Themes
-category: "Plugins"
+title:  Пользовательские темы
+category: "Плагины"
 category-url: plugins
 ---
 
-Make a custom Insomnia theme by creating an Insomnia [plugin](/insomnia/introduction-to-plugins/).
+Создайте собственную тему Insomnia, создав [плагин](/insomnia/introduction-to-plugins/).
 
 {:.alert .alert-primary}
-**Note**: To get started with some live examples, see our built-in [insomnia-plugin-themes](https://github.com/Kong/insomnia/tree/develop/plugins/insomnia-plugin-core-themes) module.
+**Note**: Чтобы начать работу с некоторыми живыми примерами, см. наш встроенный модуль [insomnia-plugin-themes](https://github.com/Kong/insomnia/tree/develop/plugins/insomnia-plugin-core-themes).
 
-## How to Build a Custom Theme
+## Как создать собственную тему
 
-1. Create a new project for your theme. If you plan to make this theme available via NPM, start your project name with `insomnia-plugin-`. The following example is called `insomnia-plugin-dark-colorblind-theme`.
+1. Создайте новый проект для своей темы. Если вы планируете сделать эту тему доступной через NPM, начните название проекта с `insomnia-plugin-`. Следующий пример называется `insomnia-plugin-dark-colorblind-theme`.
 
-2. Following plugin instructions, write your [plugin package.json](https://docs.insomnia.rest/insomnia/introduction-to-plugins#plugin-packagejson). In your entry file, export your theme(s).
+2. Следуя инструкциям плагина, напишите свой [плагин package.json](https://docs.insomnia.rest/insomnia/introduction-to-plugins#plugin-packagejson). В файле ввода экспортируйте свои темы.
 
-3. Start with a baseline template. Each section of the configuration has `background`, `foreground`, and `highlight` properties, with modifiable color properties.
+3. Начните с базового шаблона. Каждый раздел конфигурации имеет свойства `background`, `foreground` и `highlight` с изменяемыми свойствами цвета.
 
-  See the code comments for more information about which color property names correspond with which UI elements.
+  Дополнительные сведения о том, какие имена свойств цвета соответствуют элементам пользовательского интерфейса, смотрите в комментариях к коду.
 
   {:.alert .alert-primary}
-  **Note**: The code comments below are not comprehensive and styles may apply elsewhere.
+  **Note**: Приведенные ниже комментарии к коду не являются исчерпывающими, и стили могут применяться в других местах.
 
 ```ts
 module.exports.themes = [{
@@ -85,9 +85,9 @@ module.exports.themes = [{
 }]
 ```
 
-## Styles Parameters
+## Параметры стилей
 
-The following `style` properties are available. Each of these can hold their own `background`, `foreground`, and `highlight` properties.
+Доступны следующие свойства `style`. Каждый из них может содержать свои собственные свойства `background`, `foreground` и `highlight`.
 
 * appHeader
 * dialog
@@ -105,12 +105,12 @@ The following `style` properties are available. Each of these can hold their own
 * tooltip
 * transparentOverlay
 
-## Custom CSS
+## Пользовательские CSS
 
-In addition to baseline edits and sub-components, you can add custom CSS using the `rawCss` property.
+В дополнение к базовым изменениям и подкомпонентам вы можете добавить пользовательский CSS, используя свойство `rawCss`.
 
 {:.alert .alert-primary}
-**Note**: Generally, opt to use predefined properties to customize your theme rather than using custom CSS. This ensures that your theme will not break in the future as we make changes to Insomnia.
+**Note**: Как правило, лучше использовать предопределенные свойства для настройки темы, а не использовать пользовательский CSS. Это гарантирует, что ваша тема не сломается в будущем, когда мы внесем изменения в Insomnia.
 
 ```ts
 module.exports.themes = [{
@@ -126,9 +126,9 @@ module.exports.themes = [{
 }];
 ```
 
-## Theme Plugin Schema
+## Схема плагина темы
 
-The following defines the theme plugin schema. If a property is not set, it will use the Insomnia default.
+Следующее определяет схему плагина темы. Если свойство не установлено, оно будет использовать Insomnia по умолчанию.
 
 ```ts
 interface ThemeBlock {

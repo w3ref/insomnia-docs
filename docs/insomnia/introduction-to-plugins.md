@@ -1,77 +1,77 @@
 ---
 layout: article-detail
-title:  Introduction to Plugins
-category: "Plugins"
+title:  Введение в плагины
+category: "Плагины"
 category-url: plugins
 ---
 
-This section provides an overview of Insomnia’s plugins, which can be used to extend the functionality of Insomnia. Plugins are commonly used when more advanced behavior is needed, like custom authentication mechanisms and complex workflows.
+В этом разделе представлен обзор плагинов Insomnia, которые можно использовать для расширения функциональности Insomnia. Плагины обычно используются, когда требуется более сложное поведение, например настраиваемые механизмы аутентификации и сложные рабочие процессы.
 
-You can create your own Insomnia plugin and upload it via **Insomnia Preferences** within the app or via NPM. Generally, plugins do the following:
+Вы можете создать свой собственный плагин Insomnia и загрузить его через **Настройки Insomnia** в приложении или через NPM. Как правило, плагины делают следующее:
 
-* Add a [custom template tag](/insomnia/template-tags) for rendering custom values
-* Define a [hook](/insomnia/hooks-and-actions) that can do things like intercept requests and responses to add custom behavior
+* Добавьте [пользовательский тег шаблона](/insomnia/template-tags) для отображения пользовательских значений.
+* Определите [хук](/insomnia/hooks-and-actions), который может делать такие вещи, как перехват запросов и ответов, чтобы добавить собственное поведение.
 
-Browse our current community NPM plugins on the [Insomnia Plugin Hub](https://insomnia.rest/plugins).
+Просмотрите наши текущие плагины NPM сообщества на [Insomnia Plugin Hub](https://insomnia.rest/plugins).
 
-## Add a Plugin
+## Добавить плагин
 
-To add an Insomnia plugin, go to **Preferences**, represented by the cog icon in the top right corner of your application. Then click the **Plugins** tab. Enter the name of the plugin you want to add, then click **Install Plugin**.
+Чтобы добавить плагин Insomnia, перейдите в **Настройки**, представленные значком шестеренки в правом верхнем углу вашего приложения. Затем перейдите на вкладку **Плагины**. Введите название плагина, который вы хотите добавить, затем нажмите **Установить плагин**.
 
-You do not have to reload the app for the plugin apply after it's added. Plugins are enabled by default.
+Вам не нужно перезагружать приложение для применения плагина после его добавления. Плагины включены по умолчанию.
 
-## Disable a Plugin
+## Отключить плагин
 
-To disable an Insomnia plugin, go to **Preferences**, represented by the cog icon in the top right corner of your application. Then click the **Plugins** tab. Toggle **Enable?** for the plugin you want to disable.
+Чтобы отключить плагин Insomnia, перейдите в **Настройки**, представленные значком шестеренки в правом верхнем углу вашего приложения. Затем перейдите на вкладку **Плагины**. Переключите **Включить?** для плагина, который вы хотите отключить.
 
-## Remove a Plugin
+## Удалить плагин
 
-To remove an Insomnia Plugin permanently, navigate to the following location on your machine and delete the plugin folder manually:
+Чтобы навсегда удалить плагин Insomnia, перейдите в следующую папку на своем компьютере и вручную удалите папку плагина:
 
-* MacOS:   `~/Library/Application Support/Insomnia/plugins/` (escaped version: `~/Library/Application\ Support/Insomnia/plugins/`)
+* MacOS:   `~/Library/Application Support/Insomnia/plugins/` (экранированная версия: `~/Library/Application\ Support/Insomnia/plugins/`)
 * Windows: `%APPDATA%\Insomnia\plugins\`
-* Linux:   `$XDG_CONFIG_HOME/Insomnia/plugins/` or `~/.config/Insomnia/plugins/`
+* Linux:   `$XDG_CONFIG_HOME/Insomnia/plugins/` или `~/.config/Insomnia/plugins/`
 
-You can always [re-add the plugin](#add-a-plugin) if it's still available.
+Вы всегда можете [повторно добавить плагин](#add-a-plugin), если он еще доступен.
 
-## Create a Plugin
+## Создать плагин
 
-An Insomnia plugin is a NodeJS module that is placed in a specific directory that Insomnia will recognize.
+Плагин Insomnia — это модуль NodeJS, который размещается в определенном каталоге, распознаваемом Insomnia.
 
-### Plugin File Location
+### Местоположение файла плагина
 
-In order for Insomnia to recognize your plugin as an Insomnia plugin, your files must live in the following locations:
+Чтобы Insomnia распознала ваш плагин как плагин Insomnia, ваши файлы должны находиться в следующих местах:
 
-* MacOS:   `~/Library/Application Support/Insomnia/plugins/` (escaped version: `~/Library/Application\ Support/Insomnia/plugins/`)
+* MacOS:   `~/Library/Application Support/Insomnia/plugins/` (экранированная версия: `~/Library/Application\ Support/Insomnia/plugins/`)
 * Windows: `%APPDATA%\Insomnia\plugins\`
-* Linux:   `$XDG_CONFIG_HOME/Insomnia/plugins/` or `~/.config/Insomnia/plugins/`
+* Linux:   `$XDG_CONFIG_HOME/Insomnia/plugins/` или `~/.config/Insomnia/plugins/`
 
 {:.alert .alert-primary}
-**Note**: To quickly create a plugin in the proper path with starter files via the Insomnia app, go to **Preferences** and click on the **Plugins** tab. Click on **Generate New Plugin** and enter your plugin name. If you don't prepend the title with **insomnia-plugin-**, it will automatically be added.
+**Note**: Чтобы быстро создать плагин по правильному пути со стартовыми файлами через приложение Insomnia, перейдите в **Настройки** и щелкните вкладку **Плагины**. Нажмите **Создать новый плагин** и введите имя вашего плагина. Если вы не добавите заголовок **insomnia-plugin-**, он будет добавлен автоматически.
 
-### Plugin File Structure
+### Структура файла плагина
 
-An Insomnia plugin directory requires at least two files. In the following example, the plugin title is `base64` and contains the files `package.json` and `app.js`.
+Для каталога плагинов Insomnia требуется как минимум два файла. В следующем примере заголовок плагина `base64` и содержит файлы `package.json` и `app.js`.
 
 ```bash
 base64/             
- ├── package.json   # Node module metadata
- └── app.js         # One or more JavaScript files
+ ├── package.json   # Метаданные модуля узла
+ └── app.js         # Один или несколько файлов JavaScript
 ```
 
-### Plugin package.json
+### Плагин package.json
 
-The `package.json` configuration includes the following content:
+Конфигурация `package.json` включает следующее содержимое:
 
-* Overall
-  * name (must be prepended with `insomnia-plugin-`)
+* Общие
+  * name (должно начинаться с `insomnia-plugin-`)
   * version
-  * main (file entry point)
-* Insomnia-specific metadata
-* Optional plugin metadata
-* External dependencies
+  * main (точка входа в файл)
+* Метаданные о Insomnia
+* Дополнительные метаданные плагина
+* Внешние зависимости
 
-The following is an example minimal `package.json`. The `package.json` must contain an `insomnia` attribute to be identified as an Insomnia plugin. 
+Ниже приведен пример минимального `package.json`. `package.json` должен содержать атрибут `insomnia`, чтобы его можно было идентифицировать как плагин Insomnia.
 
 ```json-doc
 {
@@ -114,47 +114,47 @@ The following is an example minimal `package.json`. The `package.json` must cont
 }
 ```
 
-## Manage Plugins
+## Управление плагинами
 
-The **Plugins** tab in the **Preferences** menu enables the following functionality:
+Вкладка **Плагины** в меню **Настройки** включает следующие функции:
 
-* Add an existing plugin
-* Create a new plugin locally
-* Toggle a plugin to enable or disable it
-* Reveal the exact local plugin location on your machine
+* Добавить существующий плагин
+* Создайте новый плагин локально
+* Переключите плагин, чтобы включить или отключить его
+* Узнайте точное местоположение локального плагина на вашем компьютере.
 
 {:.alert .alert-primary}
-**Note**: Plugins can be downloaded and installed directly from the [Insomnia Plugin Hub](https://insomnia.rest/plugins).
+**Note**: Плагины можно загрузить и установить непосредственно с [Insomnia Plugin Hub](https://insomnia.rest/plugins).
 
-## Publish Plugins
+## Публикация плагинов
 
-Before you publish your plugin, ensure you have met the following criteria for your plugin to be recognized by Insomnia and be available on the [Insomnia Plugin Hub](https://insomnia.rest/plugins).
+Прежде чем опубликовать свой плагин, убедитесь, что вы соответствуете следующим критериям, чтобы ваш плагин был распознан Insomnia и был доступен на [Центре плагинов Insomnia](https://insomnia.rest/plugins).
 
-Your plugin must:
+Ваш плагин должен:
 
-* Include a correctly structured `package.json` file containing the `insomnia` attribute. See [Plugin package.json](#plugin-packagejson) for more info.
-* Have a package name prefixed with `insomnia-plugin-`.
-* Be publicly available.
+* Включать правильно структурированный файл `package.json`, содержащий атрибут `insomnia`. Смотрите [Плагин package.json](#plugin-packagejson) для получения дополнительной информации.
+* Иметь имя пакета с префиксом `insomnia-plugin-`.
+* Быть общедоступным.
 
-After you have verified that your plugin meets the criteria described above, publish your public plugin following the [NPM publish unscoped public packages instructions](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages). Publish an _unscoped_ package to ensure it appears on the Insomnia Plugin Hub. 
+После того, как вы убедились, что ваш подключаемый модуль соответствует критериям, описанным выше, опубликуйте общедоступный подключаемый модуль, следуя [инструкциям NPM по публикации общедоступных пакетов с незаданной областью](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages). Опубликуйте _незадействованный_ пакет, чтобы убедиться, что он появится в Центре подключаемых модулей Insomnia.
 
-If your package does not show up on the Insomnia Plugin Hub after a few days, please [contact us](https://insomnia.rest/support) with the name of your plugin and a link to the published NPM package.
+Если ваш пакет не появится в концентраторе плагинов Insomnia через несколько дней, [свяжитесь с нами](https://insomnia.rest/support), указав название вашего плагина и ссылку на опубликованный пакет NPM.
 
-### Publish Scoped Plugins
+### Публикация плагинов с ограниченной областью действия
 
-Insomnia can also use private (scoped) plugins. This commonly enables enterprise users to keep the plugin private from Insomnia.
+Insomnia также может использовать частные (ограниченные) плагины. Обычно это позволяет корпоративным пользователям скрывать плагин от Insomnia.
 
-To enable private (scoped) plugins:
+Чтобы включить частные (ограниченные) плагины:
 
-1. Navigate to the `plugins` directory in [Application Data](/insomnia/application-data).
-2. Run `npm install @scoped/plugin`.
+1. Перейдите в каталог `plugins` в [Данные приложения](/insomnia/application-data).
+2. Запустите `npm install @scoped/plugin`.
 
-## Debug in the Insomnia App
+## Отладка в приложении Insomnia
 
-The Insomnia app enables debugging with Chrome DevTools. To open DevTools, click **View** then **Toggle DevTools**.
+Приложение Insomnia позволяет выполнять отладку с помощью Chrome DevTools. Чтобы открыть DevTools, нажмите **Просмотр**, а затем **Переключить DevTools**.
 
-If you want to focus specifically on the plugin you are developing, you can find it from the **Sources** tab and/or filter the **Console** based on the plugin’s file name.
+Если вы хотите сосредоточиться именно на разрабатываемом плагине, вы можете найти его на вкладке **Источники** и/или отфильтровать **Консоль** по имени файла плагина.
 
-## Template Tags
+## Теги шаблона
 
-Refer to [Template Tags](/insomnia/template-tags) for more information.
+Смотрите [Теги шаблона](/insomnia/template-tags) для получения дополнительной информации.

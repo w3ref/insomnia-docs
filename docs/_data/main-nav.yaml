@@ -90,18 +90,18 @@ toc:
         url: /insomnia/run-in-insomnia-button
       - title: Карта клавиш
         url: /insomnia/key-maps
-  - title: Plugins
+  - title: Плагины
     collapse-id: plugins
     items:
-      - title: Introduction to Plugins
+      - title: Введение в плагины
         url: /insomnia/introduction-to-plugins
-      - title: Context Object Reference
+      - title: Справочник по контекстным объектам
         url: /insomnia/context-object-reference
-      - title: Template Tags
+      - title: Теги шаблона
         url: /insomnia/template-tags
-      - title: Hooks and Actions
+      - title: Хуки и действия
         url: /insomnia/hooks-and-actions
-      - title: Custom Themes
+      - title: Пользовательские темы
         url: /insomnia/custom-themes
   - title: Troubleshooting
     collapse-id: troubleshooting
